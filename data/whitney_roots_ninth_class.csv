@@ -1,54 +1,54 @@
-stem,meaning_number,attestation_texts,language_period
-inī,,V.,A. Earlier Language
-isṇā,,,A. Earlier Language
-ubhnā,,V.,A. Earlier Language
-uṣṇā,,V.,A. Earlier Language
-kṣiṇā,,V.B.,A. Earlier Language
-gṛṇā,2,V.S.,A. Earlier Language
-gṛbhṇā,,V.B.,A. Earlier Language
-junā,,V.,A. Earlier Language
-jinā,,,A. Earlier Language
-dṛṇī,,B.,A. Earlier Language
-drūṇā,,V.B.,A. Earlier Language
-pṛṇā,,,A. Earlier Language
-pruṣṇā,,B.,A. Earlier Language
-bhrīṇā,,V.,A. Earlier Language
-mī̆nā,,V.B.,A. Earlier Language
-mṛṇā,,V.,A. Earlier Language
-ramṇā,,V.B.,A. Earlier Language
-riṇā,,,A. Earlier Language
-vṛṇī,1,V.,A. Earlier Language
-vlī̆nā,,B.,A. Earlier Language
-śamnī,,B.,A. Earlier Language
-ścamnī,,V.,A. Earlier Language
-śrathnā,,V.,A. Earlier Language
-śrīṇā,1,V.B.,A. Earlier Language
-śrīṇā,2,V.B.,A. Earlier Language
-sinā,,V.B.,A. Earlier Language
-subhnā,,B.,A. Earlier Language
-skabhnā,,V.B.,A. Earlier Language
-spṛṇā,,B.,A. Earlier Language
-hṛṇā,,V.B.,A. Earlier Language
-hrunā,,V.,A. Earlier Language
-aśnā,2,,B. Earlier and Later Language
-krīṇā,,,B. Earlier and Later Language
-gṛṇā,1,,B. Earlier and Later Language
-grathnā,,B. +,B. Earlier and Later Language
-gṛhṇā,,,B. Earlier and Later Language
-jānā,,,B. Earlier and Later Language
-punā,,,B. Earlier and Later Language
-prīṇā,,,B. Earlier and Later Language
-badhnā,,,B. Earlier and Later Language
-mathnā,,,B. Earlier and Later Language
-muṣṇā,,,B. Earlier and Later Language
-mṛdnā,,S. +,B. Earlier and Later Language
-lunā,,B. +,B. Earlier and Later Language
-vṛṇā,2,,B. Earlier and Later Language
-śṛṇā,,,B. Earlier and Later Language
-stabhnā,,,B. Earlier and Later Language
-stṛṇā,,,B. Earlier and Later Language
-aśnī,1,E.,C. Later Language
-kuṣṇā,,C.,C. Later Language
-kliśnā,,,C. Later Language
-dhū̆nī,,C.,C. Later Language
-puṣṇā,,,C. Later Language
+root,stem,weak_only,meaning_number,attestation_texts,language_period
+i,inī,True,,V.,A. Earlier Language
+is,isṇā,False,,,A. Earlier Language
+ubh,ubhnā,False,,V.,A. Earlier Language
+uṣ,uṣṇā,False,,V.,A. Earlier Language
+kṣi,kṣiṇā,False,,V.B.,A. Earlier Language
+gṛ,gṛṇā,False,2,V.S.,A. Earlier Language
+gṛbh,gṛbhṇā,False,,V.B.,A. Earlier Language
+ju,junā,False,,V.,A. Earlier Language
+ji,jinā,False,,,A. Earlier Language
+dṛ,dṛṇī,True,,B.,A. Earlier Language
+drū,drūṇā,False,,V.B.,A. Earlier Language
+pṛ,pṛṇā,False,,,A. Earlier Language
+pruṣ,pruṣṇā,False,,B.,A. Earlier Language
+bhrī,bhrīṇā,False,,V.,A. Earlier Language
+mī̆,mī̆nā,False,,V.B.,A. Earlier Language
+mṛ,mṛṇā,False,,V.,A. Earlier Language
+ram,ramṇā,False,,V.B.,A. Earlier Language
+ri,riṇā,False,,,A. Earlier Language
+vṛ,vṛṇī,True,1,V.,A. Earlier Language
+vlī̆,vlī̆nā,False,,B.,A. Earlier Language
+śam,śamnī,True,,B.,A. Earlier Language
+ścam,ścamnī,True,,V.,A. Earlier Language
+śrath,śrathnā,False,,V.,A. Earlier Language
+śrī,śrīṇā,False,1,V.B.,A. Earlier Language
+śrī,śrīṇā,False,2,V.B.,A. Earlier Language
+si,sinā,False,,V.B.,A. Earlier Language
+subh,subhnā,False,,B.,A. Earlier Language
+skabh,skabhnā,False,,V.B.,A. Earlier Language
+spṛ,spṛṇā,False,,B.,A. Earlier Language
+hṛ,hṛṇā,False,,V.B.,A. Earlier Language
+hru,hrunā,False,,V.,A. Earlier Language
+aś,aśnā,False,2,,B. Earlier and Later Language
+krī,krīṇā,False,,,B. Earlier and Later Language
+gṛ,gṛṇā,False,1,,B. Earlier and Later Language
+grath,grathnā,False,,B. +,B. Earlier and Later Language
+gṛh,gṛhṇā,False,,,B. Earlier and Later Language
+jā,jānā,False,,,B. Earlier and Later Language
+pu,punā,False,,,B. Earlier and Later Language
+prī,prīṇā,False,,,B. Earlier and Later Language
+badh,badhnā,False,,,B. Earlier and Later Language
+math,mathnā,False,,,B. Earlier and Later Language
+muṣ,muṣṇā,False,,,B. Earlier and Later Language
+mṛd,mṛdnā,False,,S. +,B. Earlier and Later Language
+lu,lunā,False,,B. +,B. Earlier and Later Language
+vṛ,vṛṇā,False,2,,B. Earlier and Later Language
+śṛ,śṛṇā,False,,,B. Earlier and Later Language
+stabh,stabhnā,False,,,B. Earlier and Later Language
+stṛ,stṛṇā,False,,,B. Earlier and Later Language
+aś,aśnī,True,1,E.,C. Later Language
+kuṣ,kuṣṇā,False,,C.,C. Later Language
+kliś,kliśnā,False,,,C. Later Language
+dhū̆,dhū̆nī,True,,C.,C. Later Language
+puṣ,puṣṇā,False,,,C. Later Language
