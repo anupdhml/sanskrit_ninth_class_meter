@@ -1,9 +1,9 @@
-line_no,stem_type,root,variant_no,stem,weak_only,attestation_texts,language_period,lubotsky_page_no,notes
-1.63.2d,strong,is,,isṇā,False,,Earlier,1:,iSnAsi
-1.180.4b,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll)
-1.67.1b,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll)
-4.25.3a,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll)
-9.16.3c,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi
-9.67.27d,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi
-1.133.1a,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi
-10.13.3d,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi
+line_no,stem_type,root,variant_no,stem,weak_only,attestation_texts,language_period,lubotsky_page_no,notes,text,meter_name,meter_scansion
+1.63.2d,strong,is,,isṇā,False,,Earlier,1:,iSnAsi,TODO,TODO,TODO
+1.180.4b,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),TODO,TODO,TODO
+1.67.1b,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),TODO,TODO,TODO
+4.25.3a,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),TODO,TODO,TODO
+9.16.3c,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi,TODO,TODO,TODO
+9.67.27d,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi,TODO,TODO,TODO
+1.133.1a,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi,TODO,TODO,TODO
+10.13.3d,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi,TODO,TODO,TODO
