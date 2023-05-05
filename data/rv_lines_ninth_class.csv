@@ -1,9 +1,9 @@
 line_no,stem_type,root,variant_no,stem,weak_only,attestation_texts,language_period,lubotsky_page_no,notes,text,meter_scansion,meter_name
-1.63.2d,strong,iṣ,,iṣṇā,False,,Earlier,1:,iSnAsi,TODO,TODO,TODO
-1.180.4b,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),TODO,TODO,TODO
-1.67.1b,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),TODO,TODO,TODO
-4.25.3a,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),TODO,TODO,TODO
-9.16.3c,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi,TODO,TODO,TODO
-9.67.27d,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi,TODO,TODO,TODO
-1.133.1a,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi,TODO,TODO,TODO
-10.13.3d,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi,TODO,TODO,TODO
+1.63.2d,strong,iṣ,,iṣṇā,False,,Earlier,1:,iSnAsi,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+1.180.4b,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+1.67.1b,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+4.25.3a,weak,vṛ,1,vṛṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+9.16.3c,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+9.67.27d,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+1.133.1a,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+10.13.3d,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
