@@ -4,3 +4,5 @@ data/*.pdf
 data/*.html
 data/rv_padapatha_lubotsky.json
 data/rv_samhitapatha_vnh.json
+
+downloads/*

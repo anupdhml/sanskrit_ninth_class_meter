@@ -1,9 +1,9 @@
 line_no,stem_type,root,variant_no,stem,weak_only,attestation_texts,language_period,lubotsky_page_no,notes,book,hymn,stanza,pada,text,meter_scansion,meter_name
-1.63.2d,strong,iṣ,,iṣṇā,False,,Earlier,1:,iSnAsi,01,063,02,d,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
-1.180.4b,weak,vr̥,1,vr̥ṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),01,180,04,b,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
-1.67.1b,weak,vr̥,1,vr̥ṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),01,067,01,b,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
-4.25.3a,weak,vr̥,1,vr̥ṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),04,025,03,a,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
-9.16.3c,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi,09,016,03,c,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
-9.67.27d,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi,09,067,27,d,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
-1.133.1a,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi,01,133,01,a,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
-10.13.3d,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi,10,013,03,d,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+1.63.2d,strong,iṣ,,iṣṇā,False,,Earlier,1:,iSnAsi,01,01.063,01.063.02,01.063.02.d,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+1.180.4b,weak,vr̥,1,vr̥ṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),01,01.180,01.180.04,01.180.04.b,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+1.67.1b,weak,vr̥,1,vr̥ṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),01,01.067,01.067.01,01.067.01.b,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+4.25.3a,weak,vr̥,1,vr̥ṇī,True,V.,Earlier,2:1338-1339,avRNItam vRnIte vRnIte(accented - last syll),04,04.025,04.025.03,04.025.03.a,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+9.16.3c,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi,09,09.016,09.016.03,09.016.03.c,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+9.67.27d,weak,pu,,punī,False,,Earlier & Later,1:900-,punIhi puNAmi,09,09.067,09.067.27,09.067.27.d,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+1.133.1a,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi,01,01.133,01.133.01,01.133.01.a,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
+10.13.3d,strong,pu,,punā,False,,Earlier & Later,1:900-,punIhi puNAmi,10,10.013,10.013.03,10.013.03.d,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER
