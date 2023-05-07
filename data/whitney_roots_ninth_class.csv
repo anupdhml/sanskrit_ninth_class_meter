@@ -1,10 +1,10 @@
 root,variant_no,strong_stem,weak_stem,weak_only,attestation_texts,language_period
 i,,inā,inī,True,V.,Earlier
-iṣ,,iṣṇā,iṣṇī,False,,Earlier
+iṣ 1,,iṣṇā,iṣṇī,False,,Earlier
 ubh,,ubhnā,ubhnī,False,V.,Earlier
 uṣ,,uṣṇā,uṣṇī,False,V.,Earlier
 kṣi,,kṣiṇā,kṣiṇī,False,V.B.,Earlier
-gr̥,2,gr̥ṇā,gr̥ṇī,False,V.S.,Earlier
+gr̥ 2,2,gr̥ṇā,gr̥ṇī,False,V.S.,Earlier
 gr̥bh,,gr̥bhṇā,gr̥bhṇī,False,V.B.,Earlier
 jū,,junā,junī,False,V.,Earlier
 jī,,jinā,jinī,False,,Earlier
@@ -17,22 +17,22 @@ mī̆,,mī̆nā,mī̆nī,False,V.B.,Earlier
 mr̥,,mr̥ṇā,mr̥ṇī,False,V.,Earlier
 ram,,ramṇā,ramṇī,False,V.B.,Earlier
 ri,,riṇā,riṇī,False,,Earlier
-vr̥,1,vr̥ṇā,vr̥ṇī,True,V.,Earlier
+vr̥ 1,1,vr̥ṇā,vr̥ṇī,True,V.,Earlier
 vlī̆,,vlī̆nā,vlī̆nī,False,B.,Earlier
 śam,,śamnā,śamnī,True,B.,Earlier
 ścam,,ścamnā,ścamnī,True,V.,Earlier
 śrath,,śrathnā,śrathnī,False,V.,Earlier
-śrī,1,śrīṇā,śrīṇī,False,V.B.,Earlier
-śrī,2,śrīṇā,śrīṇī,False,V.B.,Earlier
+śrī 1,1,śrīṇā,śrīṇī,False,V.B.,Earlier
+śrī 2,2,śrīṇā,śrīṇī,False,V.B.,Earlier
 si,,sinā,sinī,False,V.B.,Earlier
 subh,,subhnā,subhnī,False,B.,Earlier
 skabh,,skabhnā,skabhnī,False,V.B.,Earlier
 spr̥,,spr̥ṇā,spr̥ṇī,False,B.,Earlier
 hr̥,,hr̥ṇā,hr̥ṇī,False,V.B.,Earlier
 hru,,hrunā,hrunī,False,V.,Earlier
-aś,2,aśnā,aśnī,False,,Earlier & Later
+aś 2,2,aśnā,aśnī,False,,Earlier & Later
 krī,,krīṇā,krīṇī,False,,Earlier & Later
-gr̥,1,gr̥ṇā,gr̥ṇī,False,,Earlier & Later
+gr̥ 1,1,gr̥ṇā,gr̥ṇī,False,,Earlier & Later
 grath,,grathnā,grathnī,False,B. +,Earlier & Later
 gr̥h,,gr̥hṇā,gr̥hṇī,False,,Earlier & Later
 jā,,jānā,jānī,False,,Earlier & Later
@@ -43,11 +43,11 @@ math,,mathnā,mathnī,False,,Earlier & Later
 muṣ,,muṣṇā,muṣṇī,False,,Earlier & Later
 mr̥d,,mr̥dnā,mr̥dnī,False,S. +,Earlier & Later
 lu,,lunā,lunī,False,B. +,Earlier & Later
-vr̥,2,vr̥ṇā,vr̥ṇī,False,,Earlier & Later
+vr̥ ~ vr̥̄,2,vr̥ṇā,vr̥ṇī,False,,Earlier & Later
 śr̥,,śr̥ṇā,śr̥ṇī,False,,Earlier & Later
 stabh,,stabhnā,stabhnī,False,,Earlier & Later
 str̥,,str̥ṇā,str̥ṇī,False,,Earlier & Later
-aś,1,aśnā,aśnī,True,E.,Later
+aś 1,1,aśnā,aśnī,True,E.,Later
 kuṣ,,kuṣṇā,kuṣṇī,False,C.,Later
 kliś,,kliśnā,kliśnī,False,,Later
 dhū̆,,dhū̆nā,dhū̆nī,True,C.,Later
