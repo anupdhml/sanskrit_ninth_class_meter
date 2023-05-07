@@ -1,7 +1,14 @@
 line_no,stem,stem_type,root,variant_no,weak_only,attestation_texts,language_period,book,hymn,stanza,pada_id,pada_label,word,word_position_no,word_position,text_padapatha,text_samhitapatha,meter_scansion,meter_name
 01.063.02.d,iṣṇā,strong,iṣ 1,,False,,Earlier,01,01.063,01.063.02,d,M,iṣṇā́si,2,intermediate,púraḥ iṣṇā́si= puruhūta pūrvī́ḥ,púra iṣṇā́si puruhūta pūrvī́ḥ,SS LLS SSLS LL,Triṣṭubh
+01.063.04.b,ubhnā,strong,ubh,,False,V.,Earlier,01,01.063,01.063.04,b,Mh,ubhnā́ḥ,5,,vr̥trám yát vajrin= vr̥ṣakarman ubhnā́ḥ,vr̥tráṁ yád vajrin vr̥ṣakarman ubhnā́ḥ,LL L LL SSLS LL,Triṣṭubh
+09.079.02.b,junī,weak,jū,,False,V.,Earlier,09,09.079,09.079.02,b,M,junīmási,5,,dhánā vā yébhiḥ= árvataḥ} junīmási,dhánā vā yébhir árvato junīmási,SL L LS LSL SLSS,Jagatī
+01.027.07.b,junā,strong,jū,,False,V.,Earlier,01,01.027,01.027.07,b,M,junā́ḥ,4,,ávāḥ vā́jeṣu yám junā́ḥ,ávā vā́jeṣu yáṁ junā́ḥ,SL LLS L SL,Gāyatrī
+02.012.02.b,ramṇā,strong,ram,,False,V.B.,Earlier,02,02.012,02.012.02,b,M,áramṇāt,4,,yáḥ párvatān= prákupitān} áramṇāt,yáḥ párvatān prákupitām̐ áramṇāt,L LSL SSSL SLL,Triṣṭubh
+04.024.10.b,krīṇā,strong,krī,,False,,Earlier & Later,04,04.024,04.024.10,b,PE2,krīṇāti,2,verse final,índram krīṇāti dhenúbhiḥ,índraṁ krīṇāti dhenúbhiḥ,LL LLS LSL,Aṇuṣṭubh
 09.067.24.b,punī,weak,pū,,False,,Earlier & Later,09,09.067,09.067.24,b,MO,punīhi,3,verse final,ágne-_ téna punīhi naḥ,ágne téna punīhi naḥ,LL LS SLS L,Gāyatrī
 09.067.24.c,punī,weak,pū,,False,,Earlier & Later,09,09.067,09.067.24,c,MO,punīhi,2,verse final,brahmasavaíḥ punīhi naḥ,brahmasavaíḥ punīhi naḥ,LSSL SLS L,Gāyatrī
 01.133.01.a,punā,strong,pū,,False,,Earlier & Later,01,01.133,01.133.01,a,P,punāmi,2,intermediate,ubhé+_ punāmi= ródasī+_} r̥téna,ubhé punāmi ródasī r̥téna,SL SLS LSL SLS,Triṣṭubh
+07.007.03.b,prīṇī,weak,prī,,False,,Earlier & Later,07,07.007,07.007.03,b,M,prīṇīté,1,intermediate,prīṇīté?_ agníḥ= īḷitáḥ} ná+_ hótā,prīṇīté agnír īḷitó ná hótā,LLL LS LSL S LL,Triṣṭubh
+08.023.16.b,prīṇā,strong,prī,,False,,Earlier & Later,08,08.023,08.023.16,b,M,aprīṇāt,2,verse final,ukṣaṇyúḥ aprīṇāt ŕ̥ṣiḥ,ukṣaṇyúr apriṇād@ ŕ̥ṣiḥ,LLS LSL SL,
 01.139.01.b,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.139,01.139.01,b,M,vr̥ṇīmahe,6,,ā́ nú tát śárdhaḥ= divyám} vr̥ṇīmahe-_,ā́ nú tác chárdho diviyáṁ vr̥ṇīmaha,L S L LL SSL SLSS,
 01.139.01.c,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.139,01.139.01,c,M,vr̥ṇīmahe,2,,indravāyū́+_ vr̥ṇīmahe-_,indravāyū́ vr̥ṇīmahe,LSLL SLSL,
