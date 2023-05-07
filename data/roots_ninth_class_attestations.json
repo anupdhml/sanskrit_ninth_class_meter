@@ -1,1 +1,384 @@
-{"i": {"strong": {}, "weak": {}}, "i\u1e63 1": {"strong": {"01.063.02": [{"word": "i\u1e63\u1e47\u0101\u0301si", "gloss": {"voice": "ACT", "number": "SG", "mood": "IND", "person": "2", "position": "intermediate", "tense": "PRS"}}]}, "weak": {}}, "ubh": {"strong": {"01.063.04": [{"word": "ubhn\u0101\u0301\u1e25", "gloss": {"voice": "ACT", "number": "SG", "mood": "INJ", "person": "3", "tense": "PRS"}}]}, "weak": {}}, "u\u1e63": {"strong": {}, "weak": {}}, "k\u1e63i": {"strong": {}, "weak": {}}, "gr\u0325 2": {"strong": {}, "weak": {}}, "gr\u0325bh": {"strong": {}, "weak": {}}, "j\u016b": {"strong": {"01.027.07": [{"word": "jun\u0101\u0301\u1e25", "gloss": {"voice": "ACT", "number": "SG", "mood": "SBJV", "person": "2", "tense": "PRS"}}]}, "weak": {"09.079.02": [{"word": "jun\u012bm\u00e1si", "gloss": {"voice": "ACT", "number": "PL", "mood": "IND", "person": "1", "tense": "PRS"}}]}}, "j\u012b": {"strong": {}, "weak": {}}, "dr\u0325": {"strong": {}, "weak": {}}, "dr\u016b": {"strong": {}, "weak": {}}, "pr\u0325": {"strong": {}, "weak": {}}, "pru\u1e63": {"strong": {}, "weak": {}}, "bhr\u012b": {"strong": {}, "weak": {}}, "m\u012b\u0306": {"strong": {}, "weak": {}}, "mr\u0325": {"strong": {}, "weak": {}}, "ram": {"strong": {"02.012.02": [{"word": "\u00e1ram\u1e47\u0101t", "gloss": {"voice": "ACT", "number": "SG", "mood": "IND", "person": "3", "tense": "PRS"}}]}, "weak": {}}, "ri": {"strong": {}, "weak": {}}, "vr\u0325 1": {"strong": {}, "weak": {}}, "vl\u012b\u0306": {"strong": {}, "weak": {}}, "\u015bam": {"strong": {}, "weak": {}}, "\u015bcam": {"strong": {}, "weak": {}}, "\u015brath": {"strong": {}, "weak": {}}, "\u015br\u012b 1": {"strong": {}, "weak": {}}, "\u015br\u012b 2": {"strong": {}, "weak": {}}, "si": {"strong": {}, "weak": {}}, "subh": {"strong": {}, "weak": {}}, "skabh": {"strong": {}, "weak": {}}, "spr\u0325": {"strong": {}, "weak": {}}, "hr\u0325": {"strong": {}, "weak": {}}, "hru": {"strong": {}, "weak": {}}, "a\u015b 2": {"strong": {}, "weak": {}}, "kr\u012b": {"strong": {"04.024.10": [{"word": "kr\u012b\u1e47\u0101ti", "gloss": {"voice": "ACT", "number": "SG", "mood": "IND", "person": "3", "position": "verse final", "tense": "PRS"}}]}, "weak": {}}, "gr\u0325 1": {"strong": {}, "weak": {}}, "grath": {"strong": {}, "weak": {}}, "gr\u0325h": {"strong": {}, "weak": {}}, "j\u0101": {"strong": {}, "weak": {}}, "p\u016b": {"strong": {"01.133.01": [{"word": "pun\u0101mi", "gloss": {"voice": "ACT", "number": "SG", "mood": "IND", "person": "1", "position": "intermediate", "tense": "PRS"}}]}, "weak": {"09.067.24": [{"word": "pun\u012bhi", "gloss": {"voice": "ACT", "number": "SG", "mood": "IMP", "person": "2", "position": "verse final", "tense": "PRS"}}, {"word": "pun\u012bhi", "gloss": {"voice": "ACT", "number": "SG", "mood": "IMP", "person": "2", "position": "verse final", "tense": "PRS"}}]}}, "pr\u012b": {"strong": {"08.023.16": [{"word": "apr\u012b\u1e47\u0101t", "gloss": {"voice": "ACT", "number": "SG", "mood": "IND", "person": "3", "position": "verse final", "tense": "IPRF"}}]}, "weak": {"07.007.03": [{"word": "pr\u012b\u1e47\u012bt\u00e9", "gloss": {"voice": "MED", "number": "SG", "mood": "IND", "person": "3", "position": "intermediate", "tense": "PRS"}}]}}, "badh": {"strong": {}, "weak": {}}, "math": {"strong": {}, "weak": {}}, "mu\u1e63": {"strong": {}, "weak": {}}, "mr\u0325d": {"strong": {}, "weak": {}}, "lu": {"strong": {}, "weak": {}}, "vr\u0325 ~ vr\u0325\u0304": {"strong": {}, "weak": {"01.139.01": [{"word": "vr\u0325\u1e47\u012bmahe", "gloss": {"voice": "MED", "number": "PL", "mood": "IND", "person": "1", "tense": "PRS"}}, {"word": "vr\u0325\u1e47\u012bmahe", "gloss": {"voice": "MED", "number": "PL", "mood": "IND", "person": "1", "tense": "PRS"}}]}}, "\u015br\u0325": {"strong": {}, "weak": {}}, "stabh": {"strong": {}, "weak": {}}, "str\u0325": {"strong": {}, "weak": {}}, "a\u015b 1": {"strong": {}, "weak": {}}, "ku\u1e63": {"strong": {}, "weak": {}}, "kli\u015b": {"strong": {}, "weak": {}}, "dhu\u0304\u0306": {"strong": {}, "weak": {}}, "pu\u1e63": {"strong": {}, "weak": {}}}
+{
+  "i": {
+    "strong": {},
+    "weak": {}
+  },
+  "iṣ 1": {
+    "strong": {
+      "01.063.02": [
+        {
+          "word": "iṣṇā́si",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ]
+    },
+    "weak": {}
+  },
+  "ubh": {
+    "strong": {
+      "01.063.04": [
+        {
+          "word": "ubhnā́ḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ]
+    },
+    "weak": {}
+  },
+  "uṣ": {
+    "strong": {},
+    "weak": {}
+  },
+  "kṣi": {
+    "strong": {},
+    "weak": {}
+  },
+  "gr̥ 2": {
+    "strong": {},
+    "weak": {}
+  },
+  "gr̥bh": {
+    "strong": {},
+    "weak": {}
+  },
+  "jū": {
+    "strong": {
+      "01.027.07": [
+        {
+          "word": "junā́ḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "SBJV",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ]
+    },
+    "weak": {
+      "09.079.02": [
+        {
+          "word": "junīmási",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ]
+    }
+  },
+  "jī": {
+    "strong": {},
+    "weak": {}
+  },
+  "dr̥": {
+    "strong": {},
+    "weak": {}
+  },
+  "drū": {
+    "strong": {},
+    "weak": {}
+  },
+  "pr̥": {
+    "strong": {},
+    "weak": {}
+  },
+  "pruṣ": {
+    "strong": {},
+    "weak": {}
+  },
+  "bhrī": {
+    "strong": {},
+    "weak": {}
+  },
+  "mī̆": {
+    "strong": {},
+    "weak": {}
+  },
+  "mr̥": {
+    "strong": {},
+    "weak": {}
+  },
+  "ram": {
+    "strong": {
+      "02.012.02": [
+        {
+          "word": "áramṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ]
+    },
+    "weak": {}
+  },
+  "ri": {
+    "strong": {},
+    "weak": {}
+  },
+  "vr̥ 1": {
+    "strong": {},
+    "weak": {}
+  },
+  "vlī̆": {
+    "strong": {},
+    "weak": {}
+  },
+  "śam": {
+    "strong": {},
+    "weak": {}
+  },
+  "ścam": {
+    "strong": {},
+    "weak": {}
+  },
+  "śrath": {
+    "strong": {},
+    "weak": {}
+  },
+  "śrī 1": {
+    "strong": {},
+    "weak": {}
+  },
+  "śrī 2": {
+    "strong": {},
+    "weak": {}
+  },
+  "si": {
+    "strong": {},
+    "weak": {}
+  },
+  "subh": {
+    "strong": {},
+    "weak": {}
+  },
+  "skabh": {
+    "strong": {},
+    "weak": {}
+  },
+  "spr̥": {
+    "strong": {},
+    "weak": {}
+  },
+  "hr̥": {
+    "strong": {},
+    "weak": {}
+  },
+  "hru": {
+    "strong": {},
+    "weak": {}
+  },
+  "aś 2": {
+    "strong": {},
+    "weak": {}
+  },
+  "krī": {
+    "strong": {
+      "04.024.10": [
+        {
+          "word": "krīṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ]
+    },
+    "weak": {}
+  },
+  "gr̥ 1": {
+    "strong": {},
+    "weak": {}
+  },
+  "grath": {
+    "strong": {},
+    "weak": {}
+  },
+  "gr̥h": {
+    "strong": {},
+    "weak": {}
+  },
+  "jā": {
+    "strong": {},
+    "weak": {}
+  },
+  "pū": {
+    "strong": {
+      "01.133.01": [
+        {
+          "word": "punāmi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ]
+    },
+    "weak": {
+      "09.067.24": [
+        {
+          "word": "punīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        },
+        {
+          "word": "punīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ]
+    }
+  },
+  "prī": {
+    "strong": {
+      "08.023.16": [
+        {
+          "word": "aprīṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ]
+    },
+    "weak": {
+      "07.007.03": [
+        {
+          "word": "prīṇīté",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ]
+    }
+  },
+  "badh": {
+    "strong": {},
+    "weak": {}
+  },
+  "math": {
+    "strong": {},
+    "weak": {}
+  },
+  "muṣ": {
+    "strong": {},
+    "weak": {}
+  },
+  "mr̥d": {
+    "strong": {},
+    "weak": {}
+  },
+  "lu": {
+    "strong": {},
+    "weak": {}
+  },
+  "vr̥ ~ vr̥̄": {
+    "strong": {},
+    "weak": {
+      "01.139.01": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        },
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ]
+    }
+  },
+  "śr̥": {
+    "strong": {},
+    "weak": {}
+  },
+  "stabh": {
+    "strong": {},
+    "weak": {}
+  },
+  "str̥": {
+    "strong": {},
+    "weak": {}
+  },
+  "aś 1": {
+    "strong": {},
+    "weak": {}
+  },
+  "kuṣ": {
+    "strong": {},
+    "weak": {}
+  },
+  "kliś": {
+    "strong": {},
+    "weak": {}
+  },
+  "dhū̆": {
+    "strong": {},
+    "weak": {}
+  },
+  "puṣ": {
+    "strong": {},
+    "weak": {}
+  }
+}
