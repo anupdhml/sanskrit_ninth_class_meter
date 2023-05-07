@@ -1,34 +1,7 @@
-line_no,stem,stem_type,root,variant_no,weak_only,attestation_texts,language_period,book,hymn,stanza,text_padapatha,text_samhitapatha,meter_scansion,meter_name,pada_id,pada_label,word,word_position_no,word_position
-01.063.02.d,iṣṇā,strong,iṣ 1,,False,,Earlier,01,01.063,01.063.02,púraḥ iṣṇā́si= puruhūta pūrvī́ḥ,púra iṣṇā́si puruhūta pūrvī́ḥ,SS LLS SSLS LL,Triṣṭubh,d,M,iṣṇā́si,2,intermediate
-09.067.24.b,punī,weak,pū,,False,,Earlier & Later,09,09.067,09.067.24,ágne-_ téna punīhi naḥ,ágne téna punīhi naḥ,LL LS SLS L,Gāyatrī,b,MO,punīhi,3,verse final
-09.067.24.c,punī,weak,pū,,False,,Earlier & Later,09,09.067,09.067.24,brahmasavaíḥ punīhi naḥ,brahmasavaíḥ punīhi naḥ,LSSL SLS L,Gāyatrī,c,MO,punīhi,2,verse final
-09.067.27.d,punī,weak,pū,,False,,Earlier & Later,09,09.067,09.067.27,jā́tavedaḥ punīhí mā,*jā́tavedaḥ punīhí mā,LSLL SLS L,Aṇuṣṭubh,d,MO,punīhí,2,verse final
-09.067.27.c,punī,weak,pū,,False,,Earlier & Later,09,09.067,09.067.27,víśve?_ devāḥ punītá mā,*víśve devāḥ punītá mā,LL LL SLS L,Aṇuṣṭubh,c,MO,punītá,3,verse final
-01.015.02.b,punī,weak,pū,,False,,Earlier & Later,01,01.015,01.015.02,potrā́t yajñám punītana,potrā́d yajñám punītana,LL LL SLSS,Gāyatrī,b,MO,punītana,3,
-07.085.01.a,punī,weak,pū,,False,,Earlier & Later,07,07.085,07.085.01,punīṣé?_ vām= arakṣásam} manīṣā́m,punīṣé vām arakṣásam manīṣā́ṁ,SLL L SLSL SLL,Triṣṭubh,a,M,punīṣé,1,intermediate
-08.012.11.b,punī,weak,pū,,False,,Earlier & Later,08,08.012,08.012.11,krátum punīte?_ ānuṣák,krátum punīta ānuṣák,SL SLS LSL,,b,M,punīte,2,verse final
-08.013.01.b,punī,weak,pū,,False,,Earlier & Later,08,08.013,08.013.01,krátum punīte?_ ukthya\m,krátum punīta ukthíyam,SL SLS LSL,,b,M,punīte,2,verse final
-09.004.04.a,punī,weak,pū,,False,,Earlier & Later,09,09.004,09.004.04,pávītāraḥ punītána,pávītāraḥ punītána,SLLL SLSS,Gāyatrī,a,MO,punītána,2,
-09.011.05.b,punī,weak,pū,,False,,Earlier & Later,09,09.011,09.011.05,sutám sómam punītana,sutáṁ sómam punītana,SL LL SLSS,Gāyatrī,b,MO,punītana,3,
-09.016.03.c,punī,weak,pū,,False,,Earlier & Later,09,09.016,09.016.03,punīhí índrāya pā́tave-_,punīhī́ndrāya pā́tave,SLLLS LSL,Gāyatrī,c,MO,punīhí,1,intermediate
-09.051.01.c,punī,weak,pū,,False,,Earlier & Later,09,09.051,09.051.01,punīhí índrāya pā́tave-_,punīhī́ndrāya pā́tave,SLLLS LSL,Gāyatrī,c,MO,punīhí,1,intermediate
-01.133.01.a,punā,strong,pū,,False,,Earlier & Later,01,01.133,01.133.01,ubhé+_ punāmi= ródasī+_} r̥téna,ubhé punāmi ródasī r̥téna,SL SLS LSL SLS,Triṣṭubh,a,P,punāmi,2,intermediate
-01.160.03.b,punā,strong,pū,,False,,Earlier & Later,01,01.160,01.160.03,punā́ti dhī́raḥ= bhúvanāni māyáyā,punā́ti dhī́ro bhúvanāni māyáyā,SLS LL SSLS LSL,Jagatī,b,M,punā́ti,1,intermediate
-09.001.06.a,punā,strong,pū,,False,,Earlier & Later,09,09.001,09.001.06,punā́ti te-_ parisrútam,punā́ti te parisrútaṁ,SLS L SLSL,Gāyatrī,a,MO,punā́ti,1,intermediate
-09.067.22.c,punā,strong,pū,,False,,Earlier & Later,09,09.067,09.067.22,yáḥ potā́ sá punātu naḥ,yáḥ potā́ sá punātu naḥ,L LL S SLS L,Gāyatrī,c,MO,punātu,4,verse final
-09.104.03.a,punā,strong,pū,,False,,Earlier & Later,09,09.104,09.104.03,punā́tā+ dakṣasā́dhanam,punā́tā dakṣasā́dhanaṁ,SLL LSLSL,,a,M,punā́ta,1,verse final
-10.013.03.d,punā,strong,pū,,False,,Earlier & Later,10,10.013,10.013.03,r̥tásya nā́bhau= ádhi sám} punāmi,r̥tásya nā́bhāv ádhi sám punāmi,SLS LL SS L SLS,Triṣṭubh,d,P,punāmi,5,
-01.139.01.b,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.139,01.139.01,ā́ nú tát śárdhaḥ= divyám} vr̥ṇīmahe-_,ā́ nú tác chárdho diviyáṁ vr̥ṇīmaha,L S L LL SSL SLSS,,b,M,vr̥ṇīmahe,6,
-01.139.01.c,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.139,01.139.01,indravāyū́+_ vr̥ṇīmahe-_,indravāyū́ vr̥ṇīmahe,LSLL SLSL,,c,M,vr̥ṇīmahe,2,
-09.066.18.c,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,09,09.066,09.066.18,vr̥ṇīmáhe-_ sakhyā́ya,vr̥ṇīmáhe sakhiyā́ya,SLSL SSLS,Aṇuṣṭubh,c,MT,vr̥ṇīmáhe,1,verse final
-09.066.18.d,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,09,09.066,09.066.18,vr̥ṇīmáhe-_ yújyāya,vr̥ṇīmáhe yújiyāya,SLSL SSLS,Aṇuṣṭubh,d,MT,vr̥ṇīmáhe,1,verse final
-10.013.04.a,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,10,10.013,10.013.04,devébhyaḥ= kám avr̥ṇīta mr̥tyúm,devébhiyaḥ kám avr̥ṇīta mr̥tyúm,LLSL S SSLS LL,,a,P,avr̥ṇīta,3,verse final
-10.013.04.b,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,10,10.013,10.013.04,prajā́yai kám= amŕ̥tam ná avr̥ṇīta,prajā́yai kám amŕ̥taṁ nā́vr̥ṇīta,SLL S SSL LSLS,,b,P,avr̥ṇīta,5,
-10.036.11.a,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,10,10.036,10.036.11,mahát adyá= mahatā́m ā́} vr̥ṇīmahe-_,mahád adyá mahatā́m ā́ vr̥ṇīmahe,SS LS SSL L SLSL,Jagatī,a,M,vr̥ṇīmahe,5,
-10.036.11.d,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,10,10.036,10.036.11,tát devā́nām= ávaḥ adyā́+} vr̥ṇīmahe-_,tád devā́nām ávo adyā́ vr̥ṇīmahe,L LLL SL LL SLSL,Jagatī,d,M,vr̥ṇīmahe,5,
-01.012.01.a,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.012,01.012.01,agním dūtám vr̥ṇīmahe-_,agníṁ dūtáṁ vr̥ṇīmahe,LL LL SLSL,Gāyatrī,a,MO,vr̥ṇīmahe,3,
-01.032.03.a,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.032,01.032.03,vr̥ṣāyámāṇaḥ= avr̥ṇīta sómam,vr̥ṣāyámāṇo avr̥ṇīta sómaṁ,SLSLL SSLS LL,Triṣṭubh,a,M,avr̥ṇīta,2,verse final
-01.036.03.a,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.036,01.036.03,prá tvā dūtám vr̥ṇīmahe-_,prá tvā dūtáṁ vr̥ṇīmahe,L L LL SLSL,,a,M,vr̥ṇīmahe,4,
-01.039.07.b,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.039,01.039.07,rúdrāḥ ávaḥ vr̥ṇīmahe-_,rúdrā ávo vr̥ṇīmahe,LL SL SLSL,,b,M,vr̥ṇīmahe,3,
-01.042.05.b,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.042,01.042.05,pū́ṣan ávaḥ vr̥ṇīmahe-_,pū́ṣann ávo vr̥ṇīmahe,LL SL SLSL,,b,MO,vr̥ṇīmahe,3,
-01.044.03.a,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.044,01.044.03,adyā́+ dūtám vr̥ṇīmahe-_,adyā́ dūtáṁ vr̥ṇīmahe,LL LL SLSL,,a,M,vr̥ṇīmahe,3,
+line_no,stem,stem_type,root,variant_no,weak_only,attestation_texts,language_period,book,hymn,stanza,pada_id,pada_label,word,word_position_no,word_position,text_padapatha,text_samhitapatha,meter_scansion,meter_name
+01.063.02.d,iṣṇā,strong,iṣ 1,,False,,Earlier,01,01.063,01.063.02,d,M,iṣṇā́si,2,intermediate,púraḥ iṣṇā́si= puruhūta pūrvī́ḥ,púra iṣṇā́si puruhūta pūrvī́ḥ,SS LLS SSLS LL,Triṣṭubh
+09.067.24.b,punī,weak,pū,,False,,Earlier & Later,09,09.067,09.067.24,b,MO,punīhi,3,verse final,ágne-_ téna punīhi naḥ,ágne téna punīhi naḥ,LL LS SLS L,Gāyatrī
+09.067.24.c,punī,weak,pū,,False,,Earlier & Later,09,09.067,09.067.24,c,MO,punīhi,2,verse final,brahmasavaíḥ punīhi naḥ,brahmasavaíḥ punīhi naḥ,LSSL SLS L,Gāyatrī
+01.133.01.a,punā,strong,pū,,False,,Earlier & Later,01,01.133,01.133.01,a,P,punāmi,2,intermediate,ubhé+_ punāmi= ródasī+_} r̥téna,ubhé punāmi ródasī r̥téna,SL SLS LSL SLS,Triṣṭubh
+01.139.01.b,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.139,01.139.01,b,M,vr̥ṇīmahe,6,,ā́ nú tát śárdhaḥ= divyám} vr̥ṇīmahe-_,ā́ nú tác chárdho diviyáṁ vr̥ṇīmaha,L S L LL SSL SLSS,
+01.139.01.c,vr̥ṇī,weak,vr̥ ~ vr̥̄,2,False,,Earlier & Later,01,01.139,01.139.01,c,M,vr̥ṇīmahe,2,,indravāyū́+_ vr̥ṇīmahe-_,indravāyū́ vr̥ṇīmahe,LSLL SLSL,
