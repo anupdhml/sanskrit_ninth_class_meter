@@ -46,13 +46,41 @@
     "strong": {},
     "weak": {}
   },
-  "gr̥ 2": {
+  "gr̥": {
     "strong": {},
     "weak": {}
   },
-  "gr̥bh": {
-    "strong": {},
-    "weak": {}
+  "gr̥bhⁱ": {
+    "strong": {
+      "01.055.02": [
+        {
+          "word": "gr̥bhṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ]
+    },
+    "weak": {
+      "09.046.04": [
+        {
+          "word": "gr̥bhṇīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ]
+    }
   },
   "jū": {
     "strong": {
@@ -137,7 +165,7 @@
     "strong": {},
     "weak": {}
   },
-  "vr̥ 1": {
+  "vr̥": {
     "strong": {},
     "weak": {}
   },
@@ -153,17 +181,55 @@
     "strong": {},
     "weak": {}
   },
-  "śrath": {
-    "strong": {},
-    "weak": {}
+  "śrathⁱ": {
+    "strong": {
+      "10.171.03": [
+        {
+          "word": "śrathnāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ]
+    },
+    "weak": {
+      "09.069.03": [
+        {
+          "word": "śrathnīté",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ]
+    }
   },
-  "śrī 1": {
+  "śrī": {
     "strong": {},
-    "weak": {}
-  },
-  "śrī 2": {
-    "strong": {},
-    "weak": {}
+    "weak": {
+      "05.006.09": [
+        {
+          "word": "śrīṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ]
+    }
   },
   "si": {
     "strong": {},
@@ -189,9 +255,36 @@
     "strong": {},
     "weak": {}
   },
-  "aś 2": {
-    "strong": {},
-    "weak": {}
+  "aśⁱ": {
+    "strong": {
+      "09.067.31": [
+        {
+          "word": "aśnāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ]
+    },
+    "weak": {
+      "07.073.02": [
+        {
+          "word": "aśnītám",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "OPT",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ]
+    }
   },
   "krī": {
     "strong": {
@@ -211,16 +304,25 @@
     },
     "weak": {}
   },
-  "gr̥ 1": {
-    "strong": {},
-    "weak": {}
-  },
   "grath": {
     "strong": {},
     "weak": {}
   },
-  "gr̥h": {
-    "strong": {},
+  "gr̥hⁱ": {
+    "strong": {
+      "04.057.07": [
+        {
+          "word": "gr̥hṇātu",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ]
+    },
     "weak": {}
   },
   "jā": {
@@ -306,13 +408,55 @@
     "strong": {},
     "weak": {}
   },
-  "math": {
-    "strong": {},
+  "mathⁱ": {
+    "strong": {
+      "01.093.06": [
+        {
+          "word": "ámathnāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ]
+    },
     "weak": {}
   },
-  "muṣ": {
-    "strong": {},
-    "weak": {}
+  "muṣⁱ": {
+    "strong": {
+      "01.131.04": [
+        {
+          "word": "amuṣṇāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ]
+    },
+    "weak": {
+      "01.093.04": [
+        {
+          "word": "ámuṣṇītam",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ]
+    }
   },
   "mr̥d": {
     "strong": {},
@@ -322,7 +466,7 @@
     "strong": {},
     "weak": {}
   },
-  "vr̥ ~ vr̥̄": {
+  "vr̥ vr̥̄": {
     "strong": {},
     "weak": {
       "01.139.01": [
@@ -358,10 +502,6 @@
     "weak": {}
   },
   "str̥": {
-    "strong": {},
-    "weak": {}
-  },
-  "aś 1": {
     "strong": {},
     "weak": {}
   },

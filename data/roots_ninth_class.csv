@@ -1,54 +1,54 @@
-root,variant_no,strong_stem,weak_stem,weak_only,attestation_texts,language_period,rig_veda_strong_attestations,rig_veda_weak_attestations
-i,,inā,inī,True,V.,Earlier,,
-iṣ 1,,iṣṇā,iṣṇī,False,,Earlier,01.063.02,
-ubh,,ubhnā,ubhnī,False,V.,Earlier,01.063.04,
-uṣ,,uṣṇā,uṣṇī,False,V.,Earlier,,
-kṣi,,kṣiṇā,kṣiṇī,False,V.B.,Earlier,,
-gr̥ 2,2,gr̥ṇā,gr̥ṇī,False,V.S.,Earlier,,
-gr̥bh,,gr̥bhṇā,gr̥bhṇī,False,V.B.,Earlier,,
-jū,,junā,junī,False,V.,Earlier,01.027.07,09.079.02
-jī,,jinā,jinī,False,,Earlier,,
-dr̥,,dr̥ṇā,dr̥ṇī,True,B.,Earlier,,
-drū,,drūṇā,drūṇī,False,V.B.,Earlier,,
-pr̥,,pr̥ṇā,pr̥ṇī,False,,Earlier,,
-pruṣ,,pruṣṇā,pruṣṇī,False,B.,Earlier,,
-bhrī,,bhrīṇā,bhrīṇī,False,V.,Earlier,,
-mī̆,,mī̆nā,mī̆nī,False,V.B.,Earlier,,
-mr̥,,mr̥ṇā,mr̥ṇī,False,V.,Earlier,,
-ram,,ramṇā,ramṇī,False,V.B.,Earlier,02.012.02,
-ri,,riṇā,riṇī,False,,Earlier,,
-vr̥ 1,1,vr̥ṇā,vr̥ṇī,True,V.,Earlier,,
-vlī̆,,vlī̆nā,vlī̆nī,False,B.,Earlier,,
-śam,,śamnā,śamnī,True,B.,Earlier,,
-ścam,,ścamnā,ścamnī,True,V.,Earlier,,
-śrath,,śrathnā,śrathnī,False,V.,Earlier,,
-śrī 1,1,śrīṇā,śrīṇī,False,V.B.,Earlier,,
-śrī 2,2,śrīṇā,śrīṇī,False,V.B.,Earlier,,
-si,,sinā,sinī,False,V.B.,Earlier,,
-subh,,subhnā,subhnī,False,B.,Earlier,,
-skabh,,skabhnā,skabhnī,False,V.B.,Earlier,,
-spr̥,,spr̥ṇā,spr̥ṇī,False,B.,Earlier,,
-hr̥,,hr̥ṇā,hr̥ṇī,False,V.B.,Earlier,,
-hru,,hrunā,hrunī,False,V.,Earlier,,
-aś 2,2,aśnā,aśnī,False,,Earlier & Later,,
-krī,,krīṇā,krīṇī,False,,Earlier & Later,04.024.10,
-gr̥ 1,1,gr̥ṇā,gr̥ṇī,False,,Earlier & Later,,
-grath,,grathnā,grathnī,False,B. +,Earlier & Later,,
-gr̥h,,gr̥hṇā,gr̥hṇī,False,,Earlier & Later,,
-jā,,jānā,jānī,False,,Earlier & Later,,
-pū,,punā,punī,False,,Earlier & Later,01.133.01,09.067.24
-prī,,prīṇā,prīṇī,False,,Earlier & Later,08.023.16,07.007.03
-badh,,badhnā,badhnī,False,,Earlier & Later,,
-math,,mathnā,mathnī,False,,Earlier & Later,,
-muṣ,,muṣṇā,muṣṇī,False,,Earlier & Later,,
-mr̥d,,mr̥dnā,mr̥dnī,False,S. +,Earlier & Later,,
-lu,,lunā,lunī,False,B. +,Earlier & Later,,
-vr̥ ~ vr̥̄,2,vr̥ṇā,vr̥ṇī,False,,Earlier & Later,,01.139.01
-śr̥,,śr̥ṇā,śr̥ṇī,False,,Earlier & Later,,
-stabh,,stabhnā,stabhnī,False,,Earlier & Later,,
-str̥,,str̥ṇā,str̥ṇī,False,,Earlier & Later,,
-aś 1,1,aśnā,aśnī,True,E.,Later,,
-kuṣ,,kuṣṇā,kuṣṇī,False,C.,Later,,
-kliś,,kliśnā,kliśnī,False,,Later,,
-dhū̆,,dhū̆nā,dhū̆nī,True,C.,Later,,
-puṣ,,puṣṇā,puṣṇī,False,,Later,,
+root,variant_no,strong_stem,weak_stem,weak_only,attestation_texts,language_period,strong_attestations,strong_attestations_total,weak_attestations,weak_attestations_total
+i,,inā,inī,True,V.,Earlier,,0,,0
+iṣ 1,,iṣṇā,iṣṇī,False,,Earlier,01.063.02,1,,0
+ubh,,ubhnā,ubhnī,False,V.,Earlier,01.063.04,2,,0
+uṣ,,uṣṇā,uṣṇī,False,V.,Earlier,,0,,0
+kṣi,,kṣiṇā,kṣiṇī,False,V.B.,Earlier,,0,,0
+gr̥,2,gr̥ṇā,gr̥ṇī,False,V.S.,Earlier,,0,,0
+gr̥bhⁱ,,gr̥bhṇā,gr̥bhṇī,False,V.B.,Earlier,01.055.02,10,09.046.04,6
+jū,,junā,junī,False,V.,Earlier,01.027.07,4,09.079.02,1
+jī,,jinā,jinī,False,,Earlier,,0,,0
+dr̥,,dr̥ṇā,dr̥ṇī,True,B.,Earlier,,0,,0
+drū,,drūṇā,drūṇī,False,V.B.,Earlier,,0,,0
+pr̥,,pr̥ṇā,pr̥ṇī,False,,Earlier,,0,,0
+pruṣ,,pruṣṇā,pruṣṇī,False,B.,Earlier,,0,,0
+bhrī,,bhrīṇā,bhrīṇī,False,V.,Earlier,,0,,0
+mī̆,,mī̆nā,mī̆nī,False,V.B.,Earlier,,0,,0
+mr̥,,mr̥ṇā,mr̥ṇī,False,V.,Earlier,,0,,0
+ram,,ramṇā,ramṇī,False,V.B.,Earlier,02.012.02,4,,0
+ri,,riṇā,riṇī,False,,Earlier,,0,,0
+vr̥,1,vr̥ṇā,vr̥ṇī,True,V.,Earlier,,0,,0
+vlī̆,,vlī̆nā,vlī̆nī,False,B.,Earlier,,0,,0
+śam,,śamnā,śamnī,True,B.,Earlier,,0,,0
+ścam,,ścamnā,ścamnī,True,V.,Earlier,,0,,0
+śrathⁱ,,śrathnā,śrathnī,False,V.,Earlier,10.171.03,1,09.069.03,1
+śrī,1,śrīṇā,śrīṇī,False,V.B.,Earlier,,0,05.006.09,5
+śrī,2,śrīṇā,śrīṇī,False,V.B.,Earlier,,0,05.006.09,5
+si,,sinā,sinī,False,V.B.,Earlier,,0,,0
+subh,,subhnā,subhnī,False,B.,Earlier,,0,,0
+skabh,,skabhnā,skabhnī,False,V.B.,Earlier,,0,,0
+spr̥,,spr̥ṇā,spr̥ṇī,False,B.,Earlier,,0,,0
+hr̥,,hr̥ṇā,hr̥ṇī,False,V.B.,Earlier,,0,,0
+hru,,hrunā,hrunī,False,V.,Earlier,,0,,0
+aśⁱ,2,aśnā,aśnī,False,,Earlier & Later,09.067.31,3,07.073.02,1
+krī,,krīṇā,krīṇī,False,,Earlier & Later,04.024.10,1,,0
+gr̥,1,gr̥ṇā,gr̥ṇī,False,,Earlier & Later,,0,,0
+grath,,grathnā,grathnī,False,B. +,Earlier & Later,,0,,0
+gr̥hⁱ,,gr̥hṇā,gr̥hṇī,False,,Earlier & Later,04.057.07,1,,0
+jā,,jānā,jānī,False,,Earlier & Later,,0,,0
+pū,,punā,punī,False,,Earlier & Later,01.133.01,6,09.067.24,15
+prī,,prīṇā,prīṇī,False,,Earlier & Later,08.023.16,1,07.007.03,2
+badh,,badhnā,badhnī,False,,Earlier & Later,,0,,0
+mathⁱ,,mathnā,mathnī,False,,Earlier & Later,01.093.06,1,,0
+muṣⁱ,,muṣṇā,muṣṇī,False,,Earlier & Later,01.131.04,3,01.093.04,1
+mr̥d,,mr̥dnā,mr̥dnī,False,S. +,Earlier & Later,,0,,0
+lu,,lunā,lunī,False,B. +,Earlier & Later,,0,,0
+vr̥ vr̥̄,2,vr̥ṇā,vr̥ṇī,False,,Earlier & Later,,0,01.139.01,85
+śr̥,,śr̥ṇā,śr̥ṇī,False,,Earlier & Later,,0,,0
+stabh,,stabhnā,stabhnī,False,,Earlier & Later,,0,,0
+str̥,,str̥ṇā,str̥ṇī,False,,Earlier & Later,,0,,0
+aśⁱ,1,aśnā,aśnī,True,E.,Later,09.067.31,3,07.073.02,1
+kuṣ,,kuṣṇā,kuṣṇī,False,C.,Later,,0,,0
+kliś,,kliśnā,kliśnī,False,,Later,,0,,0
+dhū̆,,dhū̆nā,dhū̆nī,True,C.,Later,,0,,0
+puṣ,,puṣṇā,puṣṇī,False,,Later,,0,,0
