@@ -1,28 +1,55 @@
 line_no,stem,stem_type,root,variant_no,weak_only,attestation_texts,language_period,book,hymn,stanza,pada_id,pada_label,word,word_position_no,word_position,text_padapatha,text_samhitapatha,meter_scansion,meter_name
 01.063.02.d,iṣṇā,strong,iṣ 1,,False,,Earlier,01,01.063,01.063.02,d,M,iṣṇā́si,2,intermediate,púraḥ iṣṇā́si= puruhūta pūrvī́ḥ,púra iṣṇā́si puruhūta pūrvī́ḥ,SS LLS SSLS LL,Triṣṭubh
 01.063.04.b,ubhnā,strong,ubh,,False,V.,Earlier,01,01.063,01.063.04,b,Mh,ubhnā́ḥ,5,,vr̥trám yát vajrin= vr̥ṣakarman ubhnā́ḥ,vr̥tráṁ yád vajrin vr̥ṣakarman ubhnā́ḥ,LL L LL SSLS LL,Triṣṭubh
+04.018.12.d,kṣiṇā,strong,kṣī,,False,V.B.,Earlier,04,04.018,04.018.12,d,P,ákṣiṇāḥ,3,intermediate,yát prá ákṣiṇāḥ= pitáram pādagŕ̥hya,yát prā́kṣiṇāḥ pitáram pādagŕ̥hya,L LSL SSL LSLS,Triṣṭubh
+01.010.04.b,gr̥ṇī,weak,gr̥̄ 1,2,False,V.S.,Earlier,01,01.010,01.010.04,b,M,gr̥ṇīhi,2,intermediate,abhí gr̥ṇīhi ā́ ruva,abhí gr̥ṇīhi ā́ ruva,SS SLS L SS,Aṇuṣṭubh
+01.048.04.d,gr̥ṇā,strong,gr̥̄ 1,2,False,V.S.,Earlier,01,01.048,01.048.04,d,M,gr̥ṇāti,2,verse final,nā́ma gr̥ṇāti nr̥ṇā́m,nā́ma gr̥ṇāti nr̥r̥ṇáam+,LS SLS SSSL,
 09.046.04.b,gr̥bhṇī,weak,gr̥bhⁱ,,False,V.B.,Earlier,09,09.046,09.046.04,b,MO,gr̥bhṇīta,2,verse final,śukrā́ gr̥bhṇīta manthínā,śukrā́ gr̥bhṇīta manthínā,LL LLS LSL,Gāyatrī
 01.055.02.b,gr̥bhṇā,strong,gr̥bhⁱ,,False,V.B.,Earlier,01,01.055,01.055.02,b,M,gr̥bhṇāti,2,intermediate,práti gr̥bhṇāti= víśritāḥ} várīmabhiḥ,práti gr̥bhṇāti víśritā várīmabhiḥ,SS LLS LSL SLSL,Jagatī
 09.079.02.b,junī,weak,jū,,False,V.,Earlier,09,09.079,09.079.02,b,M,junīmási,5,,dhánā vā yébhiḥ= árvataḥ} junīmási,dhánā vā yébhir árvato junīmási,SL L LS LSL SLSS,Jagatī
 01.027.07.b,junā,strong,jū,,False,V.,Earlier,01,01.027,01.027.07,b,M,junā́ḥ,4,,ávāḥ vā́jeṣu yám junā́ḥ,ávā vā́jeṣu yáṁ junā́ḥ,SL LLS L SL,Gāyatrī
+05.034.05.c,jinā,strong,jyā,,False,,Earlier,05,05.034,05.034.05,c,M,jinā́ti,1,intermediate,jinā́ti vā ít= amuyā́ hánti vā dhúniḥ,jinā́ti véd amuyā́ hánti vā dhúnir,SLS L SSL LS L SL,Jagatī
+01.023.21.a,pr̥ṇī,weak,pr̥̄ 1,,False,,Earlier,01,01.023,01.023.21,a,P,pr̥ṇītá,2,verse final,ā́paḥ pr̥ṇītá bheṣajám,ā́paḥ pr̥ṇītá bheṣajáṁ,LL SLS LSL,Gāyatrī
+01.125.05.b,pr̥ṇā,strong,pr̥̄ 1,,False,,Earlier,01,01.125,01.125.05,b,M,pr̥ṇā́ti,2,intermediate,yáḥ pr̥ṇā́ti= sá ha devéṣu gacchati,yáḥ pr̥ṇā́ti sá ha devéṣu gachati,L SLS S S LLS LSS,Jagatī
+01.025.01.c,minī mīnī,weak,mī 1,,False,V.B.,Earlier,01,01.025,01.025.01,c,M,minīmási,1,verse final,minīmási dyávi-dyavi,minīmási dyávi-dyavi,SLSL SLSS,Gāyatrī
+01.032.04.b,minā mīnā,strong,mī 1,,False,V.B.,Earlier,01,01.032,01.032.04,b,M,ámināḥ,3,intermediate,ā́t māyínām= ámināḥ prá utá māyā́ḥ,ā́n māyínām ámināḥ prótá māyā́ḥ,L LSL SSL LS LL,Triṣṭubh
+04.004.05.d,mr̥ṇī,weak,mr̥̄ 1,,False,V.,Earlier,04,04.004,04.004.05,d,M,mr̥ṇīhi,4,verse final,jāmím ájāmim= prá mr̥ṇīhi śátrūn,jāmím ájāmim prá mr̥ṇīhi śátrūn,LS SLL S SLS LL,Triṣṭubh
 02.012.02.b,ramṇā,strong,ram,,False,V.B.,Earlier,02,02.012,02.012.02,b,M,áramṇāt,4,,yáḥ párvatān= prákupitān} áramṇāt,yáḥ párvatān prákupitām̐ áramṇāt,L LSL SSSL SLL,Triṣṭubh
+01.117.04.c,riṇī,weak,rī,,False,,Earlier,01,01.117,01.117.04,c,M,riṇīthaḥ,3,intermediate,sám tám riṇīthaḥ= víprutam} dáṁsobhiḥ,sáṁ táṁ riṇītho víprutaṁ dáṁsobhir,L L SLL LSL LLL,Triṣṭubh
+01.056.06.c,riṇā,strong,rī,,False,,Earlier,01,01.056,01.056.06,c,M,ariṇāḥ,4,verse final,tvám sutásya= máde-_ ariṇāḥ apáḥ,tuváṁ sutásya máde ariṇā apó,SL SLS SL SSL SL,Jagatī
 09.069.03.b,śrathnī,weak,śrathⁱ,,False,V.,Earlier,09,09.069,09.069.03,b,M,śrathnīté,1,intermediate,śrathnīté?_ naptī́ḥ= áditeḥ} r̥tám yaté-_,śrathnīté naptī́r áditer r̥táṁ yaté,LLL LL SSL SL SL,Jagatī
 10.171.03.c,śrathnā,strong,śrathⁱ,,False,V.,Earlier,10,10.171,10.171.03,c,M,śrathnāḥ,2,verse final,múhuḥ śrathnāḥ manasyáve?_,múhuḥ śrathnā manasyáve,SL LL SLSL,Gāyatrī
 05.006.09.b,śrīṇī,weak,śrī,1,False,V.B.,Earlier,05,05.006,05.006.09,b,M,śrīṇīṣe,2,verse final,dárvī+_ śrīṇīṣe?_ āsáni,dárvī śrīṇīṣa āsáni,LL LLS LSS,
 05.006.09.b,śrīṇī,weak,śrī,2,False,V.B.,Earlier,05,05.006,05.006.09,b,M,śrīṇīṣe,2,verse final,dárvī+_ śrīṇīṣe?_ āsáni,dárvī śrīṇīṣa āsáni,LL LLS LSS,
+07.084.02.b,sinī,weak,sā si,,False,V.B.,Earlier,07,07.084,07.084.02,b,M,sinītháḥ,4,,yaú setŕ̥bhiḥ= arajjúbhiḥ} sinītháḥ,yaú setŕ̥bhir arajjúbhiḥ sinītháḥ,L LSS SLSL SLL,Triṣṭubh
+01.125.02.d,sinā,strong,sā si,,False,V.B.,Earlier,01,01.125,01.125.02,d,M,utsinā́ti,4,,mukṣī́jayā iva= pádim utsinā́ti,mukṣī́jayeva pádim utsinā́ti,LLSLS SS LSLS,Triṣṭubh
+10.006.03.d,skabhnā,strong,skambhⁱ,,False,V.B.,Earlier,10,10.006,10.006.03,d,M5,skabhnā́ti,2,verse final,áriṣṭarathaḥ skabhnā́ti śūṣaíḥ,áriṣṭaratha skabhnā́ti śūṣaíḥ,SLSSL LLS LL,
+02.033.15.b,hr̥ṇī,weak,hr̥̄,,False,V.B.,Earlier,02,02.033,02.033.15,b,M,hr̥ṇīṣé,4,intermediate,yáthā deva= ná hr̥ṇīṣé?_} ná háṁsi,yáthā deva ná hr̥ṇīṣé ná háṁsi,SL LS S SLL S LS,Triṣṭubh
 07.073.02.c,aśnī,weak,aśⁱ,2,False,,Earlier & Later,07,07.073,07.073.02,c,M,aśnītám,1,intermediate,aśnītám mádhvaḥ= aśvinau} upāké-_,aśnītám mádhvo aśvinā upāká,LLL LL LSL SLS,Triṣṭubh
 09.067.31.c,aśnā,strong,aśⁱ,2,False,,Earlier & Later,09,09.067,09.067.31,c,PE2,aśnāti,4,,sárvam sá pūtám aśnāti,*sárvaṁ sá pūtám aśnāti,LL S LS LLS,Aṇuṣṭubh
 04.024.10.b,krīṇā,strong,krī,,False,,Earlier & Later,04,04.024,04.024.10,b,PE2,krīṇāti,2,verse final,índram krīṇāti dhenúbhiḥ,índraṁ krīṇāti dhenúbhiḥ,LL LLS LSL,Aṇuṣṭubh
+01.010.04.b,gr̥ṇī,weak,gr̥̄ 1,1,False,,Earlier & Later,01,01.010,01.010.04,b,M,gr̥ṇīhi,2,intermediate,abhí gr̥ṇīhi ā́ ruva,abhí gr̥ṇīhi ā́ ruva,SS SLS L SS,Aṇuṣṭubh
+01.048.04.d,gr̥ṇā,strong,gr̥̄ 1,1,False,,Earlier & Later,01,01.048,01.048.04,d,M,gr̥ṇāti,2,verse final,nā́ma gr̥ṇāti nr̥ṇā́m,nā́ma gr̥ṇāti nr̥r̥ṇáam+,LS SLS SSSL,
 04.057.07.a,gr̥hṇā,strong,gr̥hⁱ,,False,,Earlier & Later,04,04.057,04.057.07,a,PE2,gr̥hṇātu,4,,índraḥ sī́tām ní gr̥hṇātu,índraḥ sī́tāṁ ní gr̥hṇātu,LL LL S LLS,Aṇuṣṭubh
+01.051.08.a,jānī,weak,jñā,,False,,Earlier & Later,01,01.051,01.051.08,a,M,jānīhi,2,intermediate,ví jānīhi= ā́ryān yé?_} ca dásyavaḥ,ví jānīhi ā́riyān yé ca dásyavo,S LLS LSL L S LSL,Jagatī
+01.163.06.a,jānā,strong,jñā,,False,,Earlier & Later,01,01.163,01.163.06,a,P,ajānām,5,,ātmā́nam te-_= mánasā ārā́t} ajānām,ātmā́naṁ te mánasārā́d ajānām,LLL L SSLL SLL,Triṣṭubh
 09.067.24.b,punī,weak,pū,,False,,Earlier & Later,09,09.067,09.067.24,b,MO,punīhi,3,verse final,ágne-_ téna punīhi naḥ,ágne téna punīhi naḥ,LL LS SLS L,Gāyatrī
 09.067.24.c,punī,weak,pū,,False,,Earlier & Later,09,09.067,09.067.24,c,MO,punīhi,2,verse final,brahmasavaíḥ punīhi naḥ,brahmasavaíḥ punīhi naḥ,LSSL SLS L,Gāyatrī
 01.133.01.a,punā,strong,pū,,False,,Earlier & Later,01,01.133,01.133.01,a,P,punāmi,2,intermediate,ubhé+_ punāmi= ródasī+_} r̥téna,ubhé punāmi ródasī r̥téna,SL SLS LSL SLS,Triṣṭubh
 07.007.03.b,prīṇī,weak,prī,,False,,Earlier & Later,07,07.007,07.007.03,b,M,prīṇīté,1,intermediate,prīṇīté?_ agníḥ= īḷitáḥ} ná+_ hótā,prīṇīté agnír īḷitó ná hótā,LLL LS LSL S LL,Triṣṭubh
 08.023.16.b,prīṇā,strong,prī,,False,,Earlier & Later,08,08.023,08.023.16,b,M,aprīṇāt,2,verse final,ukṣaṇyúḥ aprīṇāt ŕ̥ṣiḥ,ukṣaṇyúr apriṇād@ ŕ̥ṣiḥ,LLS LSL SL,
+10.085.24.b,badhnā,strong,bandh,,False,,Earlier & Later,10,10.085,10.085.24,b,P,ábadhnāt,3,intermediate,yéna tvā ábadhnāt= savitā́} suśévaḥ,yéna tvā́badhnāt savitā́ suśévaḥ,LL LLL SSL SLL,Triṣṭubh
 01.093.06.b,mathnā,strong,mathⁱ,,False,,Earlier & Later,01,01.093,01.093.06,b,D,ámathnāt,1,intermediate,ámathnāt anyám= pári śyenáḥ ádreḥ,ámathnād anyám pári śyenó ádreḥ,SLL LL SL LL LL,Triṣṭubh
 01.093.04.b,muṣṇī,weak,muṣⁱ,,False,,Earlier & Later,01,01.093,01.093.04,b,D,ámuṣṇītam,2,intermediate,yát ámuṣṇītam= avasám} paṇím gā́ḥ,yád ámuṣṇītam avasám paṇíṁ gā́ḥ,S SLLS SSL SL L,Triṣṭubh
 01.131.04.f,muṣṇā,strong,muṣⁱ,,False,,Earlier & Later,01,01.131,01.131.04,f,M,amuṣṇāḥ,2,intermediate,mahī́m amuṣṇāḥ= pr̥thivī́m} imā́ḥ apáḥ,mahī́m amuṣṇāḥ pr̥thivī́m imā́ apó,SL SLL SSL SL SL,
 01.139.01.b,vr̥ṇī,weak,vr̥ vr̥̄,2,False,,Earlier & Later,01,01.139,01.139.01,b,M,vr̥ṇīmahe,6,,ā́ nú tát śárdhaḥ= divyám} vr̥ṇīmahe-_,ā́ nú tác chárdho diviyáṁ vr̥ṇīmaha,L S L LL SSL SLSS,
 01.139.01.c,vr̥ṇī,weak,vr̥ vr̥̄,2,False,,Earlier & Later,01,01.139,01.139.01,c,M,vr̥ṇīmahe,2,,indravāyū́+_ vr̥ṇīmahe-_,indravāyū́ vr̥ṇīmahe,LSLL SLSL,
+10.087.14.a,śr̥ṇī,weak,śr̥̄ 1,,False,,Earlier & Later,10,10.087,10.087.14,a,PH,śr̥ṇīhi,2,intermediate,párā śr̥ṇīhi= tápasā} yātudhā́nān,párā śr̥ṇīhi tápasā yātudhā́nān,SL SLS SSL LSLL,
+10.087.14.b,śr̥ṇī,weak,śr̥̄ 1,,False,,Earlier & Later,10,10.087,10.087.14,b,PH,śr̥ṇīhi,5,,párā agne-_ rákṣaḥ= hárasā} śr̥ṇīhi,párāgne rákṣo hárasā śr̥ṇīhi,SLL LL SSL SLS,
+10.087.14.c,śr̥ṇī,weak,śr̥̄ 1,,False,,Earlier & Later,10,10.087,10.087.14,c,PH,śr̥ṇīhi,4,,párā arcíṣā= mū́radevān} śr̥ṇīhi,párārcíṣā mū́radevāñ chr̥ṇīhi,SLSL LSLL SLS,
+10.089.06.d,śr̥ṇā,strong,śr̥̄ 1,,False,,Earlier & Later,10,10.089,10.089.06,d,M,śr̥ṇā́ti,1,intermediate,śr̥ṇā́ti vīḷú= rujáti} sthirā́ṇi,śr̥ṇā́ti vīḷú rujáti sthirā́ṇi,SLS LS SSL SLS,Triṣṭubh
+02.012.02.d,stabhnā,strong,stambhⁱ,,False,,Earlier & Later,02,02.012,02.012.02,d,M,ástabhnāt,3,intermediate,yáḥ dyā́m ástabhnāt= sá janāsaḥ índraḥ,yó dyā́m ástabhnāt sá janāsa índraḥ,L L LLL S SLS LL,Triṣṭubh
+01.013.05.a,str̥ṇī,weak,str̥̄,,False,,Earlier & Later,01,01.013,01.013.05,a,MO,str̥ṇītá,1,intermediate,str̥ṇītá barhíḥ ānuṣák,str̥ṇītá barhír ānuṣág,SLS LS LSL,Gāyatrī
+08.041.08.e,str̥ṇā,strong,str̥̄,,False,,Earlier & Later,08,08.041,08.041.08,e,M,ástr̥ṇāt,1,intermediate,ástr̥ṇāt nā́kam ā́ aruhat,ástr̥ṇān nā́kam ā́ruhan,LSL LS LSL,
 07.073.02.c,aśnī,weak,aśⁱ,1,True,E.,Later,07,07.073,07.073.02,c,M,aśnītám,1,intermediate,aśnītám mádhvaḥ= aśvinau} upāké-_,aśnītám mádhvo aśvinā upāká,LLL LL LSL SLS,Triṣṭubh
 09.067.31.c,aśnā,strong,aśⁱ,1,True,E.,Later,09,09.067,09.067.31,c,PE2,aśnāti,4,,sárvam sá pūtám aśnāti,*sárvaṁ sá pūtám aśnāti,LL S LS LLS,Aṇuṣṭubh

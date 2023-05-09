@@ -1,8 +1,8 @@
 root,variant_no,strong_stem,weak_stem,weak_only,attestation_texts,language_period,strong_attestations,strong_attestations_total,weak_attestations,weak_attestations_total
-mī 1,,inā,inī,True,V.,Earlier,01.032.04,31,01.025.01,7
+i,,inā,inī,True,V.,Earlier,,0,,0
 iṣ 1,,iṣṇā,iṣṇī,False,,Earlier,01.063.02,1,,0
 ubh,,ubhnā,ubhnī,False,V.,Earlier,01.063.04,2,,0
-muṣⁱ,,uṣṇā,uṣṇī,False,V.,Earlier,01.131.04,3,01.093.04,1
+uṣ,,uṣṇā,uṣṇī,False,V.,Earlier,,0,,0
 kṣī,,kṣiṇā,kṣiṇī,False,V.B.,Earlier,04.018.12,3,,0
 gr̥̄ 1,2,gr̥ṇā,gr̥ṇī,False,V.S.,Earlier,01.048.04,10,01.010.04,40
 gr̥bhⁱ,,gr̥bhṇā,gr̥bhṇī,False,V.B.,Earlier,01.055.02,10,09.046.04,6
@@ -13,12 +13,12 @@ drū,,drūṇā,drūṇī,False,V.B.,Earlier,,0,,0
 pr̥̄ 1,,pr̥ṇā,pr̥ṇī,False,,Earlier,01.125.05,12,01.023.21,6
 pruṣ,,pruṣṇā,pruṣṇī,False,B.,Earlier,,0,,0
 bhrī,,bhrīṇā,bhrīṇī,False,V.,Earlier,,0,,0
-mī̆,,mī̆nā,mī̆nī,False,V.B.,Earlier,,0,,0
+mī 1,,minā mīnā,minī mīnī,False,V.B.,Earlier,01.032.04,23,01.025.01,2
 mr̥̄ 1,,mr̥ṇā,mr̥ṇī,False,V.,Earlier,,0,04.004.05,1
 ram,,ramṇā,ramṇī,False,V.B.,Earlier,02.012.02,4,,0
 rī,,riṇā,riṇī,False,,Earlier,01.056.06,20,01.117.04,9
-vr̥ vr̥̄,1,vr̥ṇā,vr̥ṇī,True,V.,Earlier,,0,01.139.01,85
-vlī̆,,vlī̆nā,vlī̆nī,False,B.,Earlier,,0,,0
+vr̥,1,vr̥ṇā,vr̥ṇī,True,V.,Earlier,,0,,0
+vli vlī,,vlinā vlīnā,vlinī vlīnī,False,B.,Earlier,,0,,0
 śam,,śamnā,śamnī,True,B.,Earlier,,0,,0
 ścam,,ścamnā,ścamnī,True,V.,Earlier,,0,,0
 śrathⁱ,,śrathnā,śrathnī,False,V.,Earlier,10.171.03,1,09.069.03,1
@@ -50,5 +50,5 @@ str̥̄,,str̥ṇā,str̥ṇī,False,,Earlier & Later,08.041.08,2,01.013.05,7
 aśⁱ,1,aśnā,aśnī,True,E.,Later,09.067.31,3,07.073.02,1
 kuṣ,,kuṣṇā,kuṣṇī,False,C.,Later,,0,,0
 kliś,,kliśnā,kliśnī,False,,Later,,0,,0
-dhū̆,,dhū̆nā,dhū̆nī,True,C.,Later,,0,,0
+dhu dhū,,dhunā dhūnā,dhunī dhūnī,True,C.,Later,,0,,0
 puṣ,,puṣṇā,puṣṇī,False,,Later,,0,,0
