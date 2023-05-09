@@ -34,6 +34,19 @@
             "tense": "PRS"
           }
         }
+      ],
+      "04.019.04": [
+        {
+          "word": "aubhnāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
       ]
     },
     "weak": {}
@@ -54,6 +67,31 @@
             "person": "2",
             "position": "intermediate",
             "tense": "IPRF"
+          }
+        }
+      ],
+      "10.027.04": [
+        {
+          "word": "kṣiṇām",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.027.13": [
+        {
+          "word": "kṣiṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
           }
         }
       ]
@@ -78,6 +116,120 @@
             "tense": "PRS"
           }
         }
+      ],
+      "01.163.02": [
+        {
+          "word": "agr̥bhṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "03.030.05": [
+        {
+          "word": "saṁgr̥bhṇā́ḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "SBJV",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.031.07": [
+        {
+          "word": "agr̥bhṇāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "07.101.03": [
+        {
+          "word": "gr̥bhṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.103.04": [
+        {
+          "word": "gr̥bhṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.078.01": [
+        {
+          "word": "gr̥bhṇā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.083.04": [
+        {
+          "word": "gr̥bhṇā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.085.36": [
+        {
+          "word": "gr̥bhṇā́mi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.145.04": [
+        {
+          "word": "gr̥bhṇā́mi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
       ]
     },
     "weak": {
@@ -90,6 +242,71 @@
             "mood": "IND",
             "person": "2",
             "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.106.03": [
+        {
+          "word": "gr̥bhṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.062.01": [
+        {
+          "word": "gr̥bhṇīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.062.02": [
+        {
+          "word": "gr̥bhṇīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.062.03": [
+        {
+          "word": "gr̥bhṇīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.062.04": [
+        {
+          "word": "gr̥bhṇīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
             "tense": "PRS"
           }
         }
@@ -106,6 +323,42 @@
             "number": "SG",
             "mood": "SBJV",
             "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.071.06": [
+        {
+          "word": "junā́si",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.186.05": [
+        {
+          "word": "junā́ma",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "SBJV",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.086.07": [
+        {
+          "word": "junāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
             "tense": "PRS"
           }
         }
@@ -140,6 +393,32 @@
             "tense": "PRS"
           }
         }
+      ],
+      "09.055.04": [
+        {
+          "word": "jinā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.027.04": [
+        {
+          "word": "jinā́mi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
       ]
     },
     "weak": {}
@@ -166,6 +445,147 @@
             "tense": "PRS"
           }
         }
+      ],
+      "02.030.07": [
+        {
+          "word": "pr̥ṇā́t",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "SBJV",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "03.006.02": [
+        {
+          "word": "apr̥ṇāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "04.018.05": [
+        {
+          "word": "apr̥ṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "06.047.15": [
+        {
+          "word": "pr̥ṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "SBJV",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.013.02": [
+        {
+          "word": "apr̥ṇāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "08.064.04": [
+        {
+          "word": "pr̥ṇāsi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.002.04": [
+        {
+          "word": "pr̥ṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "SBJV",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.028.02": [
+        {
+          "word": "pr̥ṇā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.045.06": [
+        {
+          "word": "apr̥ṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "10.055.03": [
+        {
+          "word": "apr̥ṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "10.095.05": [
+        {
+          "word": "pr̥ṇāsi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
       ]
     },
     "weak": {
@@ -178,6 +598,69 @@
             "mood": "IMP",
             "person": "2",
             "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.005.05": [
+        {
+          "word": "pr̥ṇītana",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.065.04": [
+        {
+          "word": "pr̥ṇītám",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.009.07": [
+        {
+          "word": "pr̥ṇītá",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.117.05": [
+        {
+          "word": "pr̥ṇīyā́t",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "OPT",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.117.09": [
+        {
+          "word": "pr̥ṇītaḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "IND",
+            "person": "3",
             "tense": "PRS"
           }
         }
@@ -206,6 +689,285 @@
             "tense": "PRS"
           }
         }
+      ],
+      "01.071.10": [
+        {
+          "word": "mināti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.123.09": [
+        {
+          "word": "mināti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.124.03": [
+        {
+          "word": "mināti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.179.01": [
+        {
+          "word": "minā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "02.012.05": [
+        {
+          "word": "mināti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "03.030.12": [
+        {
+          "word": "mināti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "03.034.03": [
+        {
+          "word": "amināt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "03.049.02": [
+        {
+          "word": "amināt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.007.04": [
+        {
+          "word": "minā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.080.04": [
+        {
+          "word": "mināti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "06.030.02": [
+        {
+          "word": "mināti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.036.04": [
+        {
+          "word": "minā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.063.03": [
+        {
+          "word": "praminā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.084.04": [
+        {
+          "word": "minā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.048.09": [
+        {
+          "word": "praminā́ma",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "SBJV",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.088.03": [
+        {
+          "word": "mināti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.086.16": [
+        {
+          "word": "mināti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.097.30": [
+        {
+          "word": "mināti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.002.04": [
+        {
+          "word": "praminā́ma",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "SBJV",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.025.03": [
+        {
+          "word": "mināmi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.048.11": [
+        {
+          "word": "mināmi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.111.04": [
+        {
+          "word": "amināt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
       ]
     },
     "weak": {
@@ -218,6 +980,18 @@
             "mood": "IND",
             "person": "1",
             "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.134.07": [
+        {
+          "word": "minīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
             "tense": "PRS"
           }
         }
@@ -255,6 +1029,42 @@
             "tense": "PRS"
           }
         }
+      ],
+      "02.015.05": [
+        {
+          "word": "aramṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.032.01": [
+        {
+          "word": "aramṇāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.149.01": [
+        {
+          "word": "aramṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
       ]
     },
     "weak": {}
@@ -273,6 +1083,251 @@
             "tense": "IPRF"
           }
         }
+      ],
+      "01.061.13": [
+        {
+          "word": "niriṇā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.127.04": [
+        {
+          "word": "riṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.148.04": [
+        {
+          "word": "riṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.166.06": [
+        {
+          "word": "riṇā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.179.04": [
+        {
+          "word": "riṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "02.012.03": [
+        {
+          "word": "áriṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "02.015.06": [
+        {
+          "word": "ariṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "02.022.04": [
+        {
+          "word": "áriṇāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "03.003.11": [
+        {
+          "word": "áriṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "04.019.03": [
+        {
+          "word": "riṇāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "04.019.05": [
+        {
+          "word": "ariṇāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "04.028.01": [
+        {
+          "word": "áriṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "04.030.06": [
+        {
+          "word": "áriṇāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "04.042.07": [
+        {
+          "word": "ariṇāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "05.031.11": [
+        {
+          "word": "riṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.041.10": [
+        {
+          "word": "riṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.067.12": [
+        {
+          "word": "áriṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "10.116.03": [
+        {
+          "word": "niriṇā́si",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.120.01": [
+        {
+          "word": "riṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
       ]
     },
     "weak": {
@@ -284,6 +1339,108 @@
             "number": "DU",
             "mood": "IND",
             "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.117.11": [
+        {
+          "word": "ariṇītam",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "IND",
+            "person": "2",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "01.117.19": [
+        {
+          "word": "riṇīthaḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "IND",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.124.07": [
+        {
+          "word": "riṇīte",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.161.07": [
+        {
+          "word": "ariṇīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "03.060.02": [
+        {
+          "word": "áriṇīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "04.036.04": [
+        {
+          "word": "ariṇīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "05.080.06": [
+        {
+          "word": "riṇīte",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.071.02": [
+        {
+          "word": "riṇīte",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "3",
             "position": "intermediate",
             "tense": "PRS"
           }
@@ -352,6 +1509,56 @@
             "person": "2",
             "position": "verse final",
             "tense": "PRS"
+          }
+        }
+      ],
+      "08.002.11": [
+        {
+          "word": "śrīṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.011.06": [
+        {
+          "word": "śrīṇītana",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.046.04": [
+        {
+          "word": "śrīṇīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.061.03": [
+        {
+          "word": "áśrīṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
           }
         }
       ]
@@ -432,6 +1639,43 @@
             "tense": "PRS"
           }
         }
+      ],
+      "07.086.03": [
+        {
+          "word": "hr̥ṇīte",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.104.14": [
+        {
+          "word": "hr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.002.19": [
+        {
+          "word": "hr̥ṇīthāḥ",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
       ]
     }
   },
@@ -475,6 +1719,117 @@
             "tense": "PRS"
           }
         }
+      ],
+      "01.054.07": [
+        {
+          "word": "abhigr̥ṇā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.147.02": [
+        {
+          "word": "gr̥ṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.027.03": [
+        {
+          "word": "gr̥ṇā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.041.19": [
+        {
+          "word": "gr̥ṇātu",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.026.05": [
+        {
+          "word": "gr̥ṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.038.04": [
+        {
+          "word": "gr̥ṇā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.100.05": [
+        {
+          "word": "gr̥ṇāmi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.015.09": [
+        {
+          "word": "gr̥ṇāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.139.05": [
+        {
+          "word": "gr̥ṇātu",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
       ]
     },
     "weak": {
@@ -487,6 +1842,489 @@
             "mood": "IMP",
             "person": "2",
             "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.015.03": [
+        {
+          "word": "gr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.042.10": [
+        {
+          "word": "gr̥ṇīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.048.14": [
+        {
+          "word": "gr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.053.02": [
+        {
+          "word": "gr̥ṇīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.064.12": [
+        {
+          "word": "gr̥ṇīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.079.12": [
+        {
+          "word": "gr̥ṇīte",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.146.01": [
+        {
+          "word": "gr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.155.04": [
+        {
+          "word": "gr̥ṇīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.186.03": [
+        {
+          "word": "gr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "02.009.04": [
+        {
+          "word": "gr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "02.020.04": [
+        {
+          "word": "gr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "02.033.08": [
+        {
+          "word": "gr̥ṇīmási",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "02.033.12": [
+        {
+          "word": "gr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "02.034.14": [
+        {
+          "word": "gr̥ṇīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "03.006.10": [
+        {
+          "word": "gr̥ṇītáḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "03.053.03": [
+        {
+          "word": "gr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "04.025.07": [
+        {
+          "word": "gr̥ṇīte",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.034.09": [
+        {
+          "word": "gr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.041.10": [
+        {
+          "word": "gr̥ṇīté",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.053.16": [
+        {
+          "word": "gr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "06.035.05": [
+        {
+          "word": "gr̥ṇīṣé",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "06.044.04": [
+        {
+          "word": "gr̥ṇīṣé",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "06.068.03": [
+        {
+          "word": "gr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.006.04": [
+        {
+          "word": "gr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.034.16": [
+        {
+          "word": "gr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.066.07": [
+        {
+          "word": "gr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.097.03": [
+        {
+          "word": "gr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.003.13": [
+        {
+          "word": "gr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.015.04": [
+        {
+          "word": "gr̥ṇīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.065.05": [
+        {
+          "word": "gr̥ṇīṣé",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.071.15": [
+        {
+          "word": "gr̥ṇīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.102.12": [
+        {
+          "word": "gr̥ṇīhí",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.084.01": [
+        {
+          "word": "gr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.015.06": [
+        {
+          "word": "gr̥ṇīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.023.05": [
+        {
+          "word": "gr̥ṇīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.047.08": [
+        {
+          "word": "gr̥ṇītām",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "IMP",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.084.05": [
+        {
+          "word": "gr̥ṇīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.092.14": [
+        {
+          "word": "gr̥ṇīmasi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.122.01": [
+        {
+          "word": "gr̥ṇīṣe",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
             "tense": "PRS"
           }
         }
@@ -527,6 +2365,97 @@
             "tense": "IPRF"
           }
         }
+      ],
+      "01.164.16": [
+        {
+          "word": "vijānā́t",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "SBJV",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.164.37": [
+        {
+          "word": "jānāmi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "04.004.06": [
+        {
+          "word": "jānāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.061.07": [
+        {
+          "word": "jānā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "06.009.02": [
+        {
+          "word": "jānāmi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "06.009.03": [
+        {
+          "word": "jānāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.139.06": [
+        {
+          "word": "jānāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
       ]
     },
     "weak": {
@@ -538,6 +2467,58 @@
             "number": "SG",
             "mood": "IMP",
             "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.094.08": [
+        {
+          "word": "jānīta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.054.01": [
+        {
+          "word": "jānīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.018.15": [
+        {
+          "word": "jānītha",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.034.04": [
+        {
+          "word": "jānīmaḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
             "position": "intermediate",
             "tense": "PRS"
           }
@@ -556,6 +2537,70 @@
             "mood": "IND",
             "person": "1",
             "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.160.03": [
+        {
+          "word": "punā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.001.06": [
+        {
+          "word": "punā́ti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.067.22": [
+        {
+          "word": "punātu",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.104.03": [
+        {
+          "word": "punā́ta",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.013.03": [
+        {
+          "word": "punāmi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
             "tense": "PRS"
           }
         }
@@ -582,6 +2627,194 @@
             "mood": "IMP",
             "person": "2",
             "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.067.27": [
+        {
+          "word": "punīhí",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        },
+        {
+          "word": "punītá",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.015.02": [
+        {
+          "word": "punītana",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.085.01": [
+        {
+          "word": "punīṣé",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.012.11": [
+        {
+          "word": "punīte",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "SBJV",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.013.01": [
+        {
+          "word": "punīte",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "SBJV",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.004.04": [
+        {
+          "word": "punītána",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.011.05": [
+        {
+          "word": "punītana",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.016.03": [
+        {
+          "word": "punīhí",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.051.01": [
+        {
+          "word": "punīhí",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.062.29": [
+        {
+          "word": "punītana",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.067.23": [
+        {
+          "word": "punīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.067.25": [
+        {
+          "word": "punīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.067.26": [
+        {
+          "word": "punīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.030.05": [
+        {
+          "word": "punītāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
             "tense": "PRS"
           }
         }
@@ -613,6 +2846,19 @@
             "number": "SG",
             "mood": "IND",
             "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.101.07": [
+        {
+          "word": "prīṇītá",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
             "position": "intermediate",
             "tense": "PRS"
           }
@@ -670,6 +2916,31 @@
             "tense": "IPRF"
           }
         }
+      ],
+      "06.044.22": [
+        {
+          "word": "amuṣṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "10.067.06": [
+        {
+          "word": "amuṣṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "IPRF"
+          }
+        }
       ]
     },
     "weak": {
@@ -720,6 +2991,1070 @@
             "tense": "PRS"
           }
         }
+      ],
+      "09.066.18": [
+        {
+          "word": "vr̥ṇīmáhe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        },
+        {
+          "word": "vr̥ṇīmáhe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.013.04": [
+        {
+          "word": "avr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        },
+        {
+          "word": "avr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "10.036.11": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        },
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.012.01": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.032.03": [
+        {
+          "word": "avr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "01.036.03": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.039.07": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.042.05": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.044.03": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.067.01": [
+        {
+          "word": "vr̥ṇīté",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.114.04": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.114.09": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "01.117.13": [
+        {
+          "word": "avr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "01.119.05": [
+        {
+          "word": "avr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "01.180.04": [
+        {
+          "word": "avr̥ṇītam",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "02.026.02": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "02.033.13": [
+        {
+          "word": "ávr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "02.041.19": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "03.002.04": [
+        {
+          "word": "vr̥ṇīmáhe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "03.029.16": [
+        {
+          "word": "ávr̥ṇīmahi",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "03.036.08": [
+        {
+          "word": "avr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "03.039.07": [
+        {
+          "word": "vr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "04.025.03": [
+        {
+          "word": "vr̥ṇīte",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "04.031.11": [
+        {
+          "word": "vr̥ṇīṣva",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "04.041.07": [
+        {
+          "word": "vr̥ṇīmáhe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "04.043.02": [
+        {
+          "word": "ávr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "04.053.01": [
+        {
+          "word": "vr̥ṇīmáhe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.020.03": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.026.04": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.028.06": [
+        {
+          "word": "vr̥ṇīdhvám",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.050.01": [
+        {
+          "word": "vr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.082.01": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.082.07": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "06.015.09": [
+        {
+          "word": "āvr̥ṇīmáhe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.019.09": [
+        {
+          "word": "vr̥ṇīṣva",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.033.02": [
+        {
+          "word": "avr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "07.069.04": [
+        {
+          "word": "avr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "07.097.02": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.004.15": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.006.44": [
+        {
+          "word": "vr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "INJ",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.014.06": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.018.16": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.025.13": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.026.21": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.027.22": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.031.10": [
+        {
+          "word": "vr̥ṇīmáhe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.044.20": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.060.01": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.067.04": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.083.01": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.083.04": [
+        {
+          "word": "āvr̥ṇīmáhe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.090.02": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.061.04": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.065.09": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.065.28": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "09.070.06": [
+        {
+          "word": "avr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "09.097.41": [
+        {
+          "word": "ávr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "10.021.01": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.035.01": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.035.02": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.036.02": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.036.03": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.036.04": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.036.05": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.036.06": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.036.07": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.036.08": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.036.09": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.036.10": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.036.12": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.085.14": [
+        {
+          "word": "avr̥ṇīta",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "10.100.01": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.100.02": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.100.03": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.100.04": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.100.05": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.100.06": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.100.07": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.100.08": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.100.09": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.100.10": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.100.11": [
+        {
+          "word": "vr̥ṇīmahe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.126.02": [
+        {
+          "word": "vr̥ṇīmáhe",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "IND",
+            "person": "1",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.127.08": [
+        {
+          "word": "vr̥ṇīṣvá",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
       ]
     }
   },
@@ -735,6 +4070,31 @@
             "person": "3",
             "position": "intermediate",
             "tense": "PRS"
+          }
+        }
+      ],
+      "10.089.08": [
+        {
+          "word": "śr̥ṇāsi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.138.04": [
+        {
+          "word": "aśr̥ṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "IPRF"
           }
         }
       ]
@@ -772,6 +4132,79 @@
             "tense": "PRS"
           }
         }
+      ],
+      "10.087.10": [
+        {
+          "word": "śr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        },
+        {
+          "word": "śr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "03.030.17": [
+        {
+          "word": "śr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.104.01": [
+        {
+          "word": "śr̥ṇītam",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.087.05": [
+        {
+          "word": "śr̥ṇīhi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.087.25": [
+        {
+          "word": "śr̥ṇīhí",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
       ]
     }
   },
@@ -789,6 +4222,188 @@
             "tense": "IPRF"
           }
         }
+      ],
+      "02.013.10": [
+        {
+          "word": "astabhnāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "02.017.05": [
+        {
+          "word": "ástabhnāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "03.030.09": [
+        {
+          "word": "ástabhnāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "03.053.09": [
+        {
+          "word": "ástabhnāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "06.008.03": [
+        {
+          "word": "astabhnāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "06.047.05": [
+        {
+          "word": "astabhnāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "07.099.02": [
+        {
+          "word": "astabhnāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "07.099.03": [
+        {
+          "word": "astabhnāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "08.042.01": [
+        {
+          "word": "ástabhnāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "08.089.05": [
+        {
+          "word": "astabhnāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "10.018.13": [
+        {
+          "word": "stabhnāmi",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.055.01": [
+        {
+          "word": "astabhnāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "10.113.04": [
+        {
+          "word": "ástabhnāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "10.153.03": [
+        {
+          "word": "astabhnāḥ",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "2",
+            "position": "verse final",
+            "tense": "IPRF"
+          }
+        }
       ]
     },
     "weak": {}
@@ -796,6 +4411,19 @@
   "str̥̄": {
     "strong": {
       "08.041.08": [
+        {
+          "word": "ástr̥ṇāt",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "IPRF"
+          }
+        }
+      ],
+      "08.063.07": [
         {
           "word": "ástr̥ṇāt",
           "gloss": {
@@ -822,6 +4450,83 @@
             "tense": "PRS"
           }
         }
+      ],
+      "03.004.04": [
+        {
+          "word": "str̥ṇīmáhi",
+          "gloss": {
+            "voice": "MED",
+            "number": "PL",
+            "mood": "OPT",
+            "person": "1",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "05.026.08": [
+        {
+          "word": "str̥ṇītá",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "06.067.02": [
+        {
+          "word": "str̥ṇīte",
+          "gloss": {
+            "voice": "MED",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.017.01": [
+        {
+          "word": "str̥ṇītām",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IMP",
+            "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "07.043.02": [
+        {
+          "word": "str̥ṇītá",
+          "gloss": {
+            "voice": "ACT",
+            "number": "PL",
+            "mood": "IMP",
+            "person": "2",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "08.073.03": [
+        {
+          "word": "str̥ṇītam",
+          "gloss": {
+            "voice": "ACT",
+            "number": "DU",
+            "mood": "IMP",
+            "person": "2",
+            "position": "verse final",
+            "tense": "PRS"
+          }
+        }
       ]
     }
   },
@@ -835,6 +4540,32 @@
             "number": "SG",
             "mood": "IND",
             "person": "3",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.085.03": [
+        {
+          "word": "aśnāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "intermediate",
+            "tense": "PRS"
+          }
+        }
+      ],
+      "10.085.04": [
+        {
+          "word": "aśnāti",
+          "gloss": {
+            "voice": "ACT",
+            "number": "SG",
+            "mood": "IND",
+            "person": "3",
+            "position": "verse final",
             "tense": "PRS"
           }
         }
