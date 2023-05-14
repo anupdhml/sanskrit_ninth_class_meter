@@ -39,9 +39,8 @@ TEST_PADAS = [
         "text": "śatácakraṁ yo\ 'hyo\ vartaníḥ",
         "stanza_meter": "",
         "analysis": {
-            # FIXME should be yoh, yo?
-            "parts": ["śa", "tá", "cak", "raṁ", " ", "yo", " ", "hyo", " ", "var", "ta", "níḥ"],
-            "scansion": "LLHH H H HLH",
+            "parts": ["śa", "tá", "cak", "raṁ", " ", "yo h", "yo", " ", "var", "ta", "níḥ"],
+            "scansion": "LLHH H_H HLH",
         }
     },
     # 10.166.02b
@@ -58,8 +57,8 @@ TEST_PADAS = [
         "text": "hótāra  pratnadhā́tama",
         "stanza_meter": "Gāyatrī",
         "analysis": {
-            "parts": ["hó", "tā", "rap", " ", "rat", "na", "dhā́", "ta", "ma"],
-            "scansion": "HHH H|LHLL",
+            "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma"],
+            "scansion": "HHH_H|LHLL",
         }
     },
     # {
@@ -166,7 +165,7 @@ def get_pada_parts(text):
 
         c_next = next(chars_iterator, '')
         c_next_peeked = chars_iterator.peek('') # peeking the one after above
-        if is_word_boundary(c_next_peeked):
+        if is_word_boundary(c_next) or is_word_boundary(c_next_peeked):
             # don't count word boundary char, just append it to the previous
             c_next += next(chars_iterator, '')
             c_next_peeked = chars_iterator.peek('')
@@ -182,7 +181,7 @@ def get_pada_parts(text):
             ):
 
             # account for space being present
-            if c_next[-1] == WORD_BOUNDARY:
+            if c_next and c_next[-1] == WORD_BOUNDARY:
                 parts.append(current_part + c_next[:-1])
                 parts.append(WORD_BOUNDARY)
             else:
@@ -192,9 +191,9 @@ def get_pada_parts(text):
         else:
             parts.append(current_part)
             # FIXME need to handle this elsewhere too?
-            if c_next == WORD_BOUNDARY:
+            if c_next and c_next[0] == WORD_BOUNDARY:
                 parts.append(WORD_BOUNDARY)
-                current_part = '' # reset
+                current_part = c_next[1:]
             else:
                 current_part = c_next # save for next iteration
 
