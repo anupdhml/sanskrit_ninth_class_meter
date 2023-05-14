@@ -54,11 +54,11 @@ TEST_PADAS = [
     },
     # faked
     {
-        "text": "hótāra  pratnadhā́tama",
+        "text": "hótāra  pratnadhā́tama ava",
         "stanza_meter": "Gāyatrī",
         "analysis": {
-            "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma"],
-            "scansion": "HHH_H|LHLL",
+            "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma", " ", "a", "va"],
+            "scansion": "HHH_H|LHLL LL",
         }
     },
     # {
@@ -136,6 +136,7 @@ def get_sanskrit_chars(text):
 
     text_iterator = peekable(text)
     while (c := next(text_iterator, '')):
+        # FIXME support lengthy chars like ŕ̥
         if is_sanskrit_char(c +  text_iterator.peek('')):
             sanskrit_char = c + next(text_iterator, '')
         elif is_sanskrit_char(c) or is_word_boundary(c):
@@ -145,6 +146,7 @@ def get_sanskrit_chars(text):
 
         chars.append(sanskrit_char)
 
+    #print(chars)
     return chars
 
 
@@ -165,6 +167,15 @@ def get_pada_parts(text):
 
         c_next = next(chars_iterator, '')
         c_next_peeked = chars_iterator.peek('') # peeking the one after above
+
+        # FIXME better way to handle this
+        # also what if c_next is vowel? like in the case of ü
+        if c_next == WORD_BOUNDARY and is_sanskrit_vowel(c_next_peeked):
+            parts.append(current_part)
+            parts.append(WORD_BOUNDARY)
+            current_part = '' # reset
+            continue
+
         if is_word_boundary(c_next) or is_word_boundary(c_next_peeked):
             # don't count word boundary char, just append it to the previous
             c_next += next(chars_iterator, '')
@@ -172,6 +183,8 @@ def get_pada_parts(text):
 
         # useful while debugging
         print(f"current part: '{current_part}' next char: '{c_next}' next peeked char: '{c_next_peeked}'")
+        # current part: 'ṭo' next char: ' á' next peeked char: 'k'
+        #current part: 'ákṣa' next char: 't' next peeked char: 'a'
 
         if is_sanskrit_consonant(c_next.strip(WORD_BOUNDARY)) and (
                 # -CC-: ratn -> 'rat', 'n' (ra as current_part)
@@ -206,6 +219,18 @@ def analyze(pada_text, stanza_meter=""):
     #"Gāyatrī"
 
     parts = get_pada_parts(clean_string(pada_text))
+
+    # some validation
+    for part in parts:
+        if part == WORD_BOUNDARY:
+            continue
+
+        part_vowel_chars = [c for c in get_sanskrit_chars(part) if is_sanskrit_vowel(c)]
+        if len(part_vowel_chars) != 1:
+            # TODO custom exception with nicer params
+            raise Exception(
+                f"Syllable part '{part}' has either zero or more than one vowel. Text: \"{pada_text}\""
+            )
 
     return {
         "parts": parts,
