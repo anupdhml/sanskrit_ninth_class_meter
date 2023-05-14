@@ -4,6 +4,7 @@ import re
 from more_itertools import peekable
 
 TEST_PADAS = [
+    # 1.1.1a
     {
         "text": "agním īḷe puróhitaṁ",
         "stanza_meter": "Gāyatrī",
@@ -13,6 +14,7 @@ TEST_PADAS = [
             "scansion": "HS_HH | LHLH",
         }
     },
+    # 1.1.1b
     {
         "text": "yajñásya devám r̥tvíjam",
         "stanza_meter": "Gāyatrī",
@@ -22,15 +24,42 @@ TEST_PADAS = [
             "scansion": "HHL H|L_HLH",
         }
     },
+    # 1.1.1c
     {
         "text": "hótāraṁ  ratnadhā́tamam",
-        # TODO add a test case for this too
-        #"text": "hótāraṁ  ratnadhā́tama",
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["hó", "tā", "raṁ", " ", "rat", "na", "dhā́", "ta", "mam"],
             # HHH HLHLH
             "scansion": "HHH H|LHLH",
+        }
+    },
+    # 10.144.04c
+    {
+        "text": "śatácakraṁ yo\ 'hyo\ vartaníḥ",
+        "stanza_meter": "",
+        "analysis": {
+            # FIXME should be yoh, yo?
+            "parts": ["śa", "tá", "cak", "raṁ", " ", "yo", " ", "hyo", " ", "var", "ta", "níḥ"],
+            "scansion": "LLHH H H HLH",
+        }
+    },
+    # 10.166.02b
+    {
+        "text": "índra 'vā́riṣṭo@ ákṣataḥ",
+        "stanza_meter": "Aṇuṣṭubh",
+        "analysis": {
+            "parts": ["ín", "dra", " ", "vā́", "riṣ", "ṭo", " ", "ák", "ṣa", "taḥ"],
+            "scansion": "HL HH|H HLH",
+        }
+    },
+    # faked
+    {
+        "text": "hótāra  pratnadhā́tama",
+        "stanza_meter": "Gāyatrī",
+        "analysis": {
+            "parts": ["hó", "tā", "rap", " ", "rat", "na", "dhā́", "ta", "ma"],
+            "scansion": "HHH H|LHLL",
         }
     },
     # {
@@ -79,6 +108,16 @@ CONSONANTS = [
 
 WORD_BOUNDARY = ' '
 
+# FIXME avagraha marker shouldn't be here? should use it to mark preceding vowel as short?
+# also figure out what the other special chars are doing here
+# FIXME any other special chars?
+SPECIAL_CHARACTERS = ['\\', '\'', '@']
+
+def clean_string(string):
+    # remove multiple spaces with single word boundary char
+    string_normalized = re.sub(" +", WORD_BOUNDARY, string)
+    return ''.join(c for c in string_normalized if c not in SPECIAL_CHARACTERS)
+
 def is_sanskrit_vowel(str):
     return str in VOWELS
 
@@ -100,15 +139,17 @@ def get_sanskrit_chars(text):
     while (c := next(text_iterator, '')):
         if is_sanskrit_char(c +  text_iterator.peek('')):
             sanskrit_char = c + next(text_iterator, '')
-            #print(sanskrit_char)
-        else:
+        elif is_sanskrit_char(c) or is_word_boundary(c):
             sanskrit_char = c
+        else:
+            raise Exception(f"Unidentifiable character '{c}' in text: \"{text}\"")
 
         chars.append(sanskrit_char)
 
     return chars
 
 
+# divide pada into syllables and word boundaries
 def get_pada_parts(text):
     parts = []
 
@@ -126,25 +167,19 @@ def get_pada_parts(text):
         c_next = next(chars_iterator, '')
         c_next_peeked = chars_iterator.peek('') # peeking the one after above
         if is_word_boundary(c_next_peeked):
+            # don't count word boundary char, just append it to the previous
             c_next += next(chars_iterator, '')
-            # next(chars_iterator, '')
-            # c_next += '_'
-            # print("found word boundary")
-            # print(c_next)
             c_next_peeked = chars_iterator.peek('')
 
         # useful while debugging
-        #print(f"current part: '{current_part}' next char: '{c_next}' next peeked char: '{c_next_peeked}'")
+        print(f"current part: '{current_part}' next char: '{c_next}' next peeked char: '{c_next_peeked}'")
 
-        if is_sanskrit_consonant(c_next.strip()) and (
+        if is_sanskrit_consonant(c_next.strip(WORD_BOUNDARY)) and (
                 # -CC-: ratn -> 'rat', 'n' (ra as current_part)
-                is_sanskrit_consonant(c_next_peeked.strip()) or
-                # -C : ram -> 'ram', ' ' (ra as current_part)
-                #is_word_boundary(c_next_peeked) or
+                is_sanskrit_consonant(c_next_peeked.strip(WORD_BOUNDARY)) or
                 # C# (pada end position): mam# -> 'mam' (ma as current_part)
-                c_next_peeked == '' # pada end
+                c_next_peeked == ''
             ):
-            #print(current_part, c_next)
 
             # account for space being present
             if c_next[-1] == WORD_BOUNDARY:
@@ -155,11 +190,10 @@ def get_pada_parts(text):
 
             current_part = '' # reset
         else:
-            #print(current_part, c_next)
             parts.append(current_part)
             # FIXME need to handle this elsewhere too?
             if c_next == WORD_BOUNDARY:
-                parts.append(c_next)
+                parts.append(WORD_BOUNDARY)
                 current_part = '' # reset
             else:
                 current_part = c_next # save for next iteration
@@ -172,10 +206,7 @@ def analyze(pada_text, stanza_meter=""):
     #"Aṇuṣṭubh"
     #"Gāyatrī"
 
-    # remove multiple spaces with single word boundary char
-    pada_text_normalized = re.sub(" +", WORD_BOUNDARY, pada_text)
-
-    parts = get_pada_parts(pada_text_normalized)
+    parts = get_pada_parts(clean_string(pada_text))
 
     return {
         "parts": parts,
@@ -185,6 +216,10 @@ def analyze(pada_text, stanza_meter=""):
 
 if __name__ == '__main__':
     for pada in TEST_PADAS:
+        # tests
+        #print(" ".join(VOWELS))
+        #print(" ".join(CONSONANTS))
+
         # input
         print(f'\n{pada["text"]} ({pada["stanza_meter"]})')
 
@@ -197,7 +232,3 @@ if __name__ == '__main__':
         analysis_expected["scansion"] = "" # TODO remove, for initial testing only
         if analysis != analysis_expected:
             print(f'Not as expected: \n{analysis_expected["parts"]} {analysis_expected["scansion"]}\n')
-
-        # tests
-        #print(" ".join(VOWELS))
-        #print(" ".join(CONSONANTS))
