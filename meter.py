@@ -56,8 +56,6 @@ TEST_PADAS = [
             "parts": ["ví", " ", "tig", "mé", "na", " ", "vr̥", "ṣa", "bhé", "ṇā", " ", "pú", "ro", " ", "'bhet"],
             # FIXME "ro" before avagraha should be short here (from "púraḥ abhet")
             # but then it wouldn't follow the meter...
-            # also don't strip off avagraha marker of "'bhet":
-            # should use it to mark preceding vowel as short?
             # L HHL LLHH LH H"
             "scansion": "L HHL, LLH|H LH H",
         }
@@ -215,7 +213,8 @@ def is_sanskrit_vowel(str):
     return str in VOWELS
 
 def is_sanskrit_consonant(str):
-    return str in CONSONANTS
+    # we can mark consonant character with avagraha so strip it off first
+    return str.strip(AVAGRAHA) in CONSONANTS
 
 def is_sanskrit_char(str):
     return is_sanskrit_vowel(str) or is_sanskrit_consonant(str)
@@ -298,9 +297,9 @@ def get_pada_parts(text):
         #     f"next peeked char: '{c_next_next_peeked}'"
         # )
 
-        if is_sanskrit_consonant(c_next.strip(WORD_BOUNDARY + AVAGRAHA)) and (
+        if is_sanskrit_consonant(c_next.strip(WORD_BOUNDARY)) and (
                 # -CC-: ratn -> 'rat', 'n' (ra as current_part)
-                is_sanskrit_consonant(c_next_next_peeked.strip(WORD_BOUNDARY + AVAGRAHA)) or
+                is_sanskrit_consonant(c_next_next_peeked.strip(WORD_BOUNDARY)) or
                 # C# (pada end position): mam# -> 'mam' (ma as current_part)
                 c_next_next_peeked == ''
             ):
