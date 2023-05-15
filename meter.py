@@ -232,12 +232,20 @@ def get_sanskrit_chars(text):
     chars = []
 
     text_iterator = peekable(text)
+    has_avagraha = False
     while (c := next(text_iterator, '')):
+        if is_avagraha(c):
+            has_avagraha = True
+            continue
+
         # support lengthy sanskrit chars like r̥̄ or ī3
         while (c_peeked := text_iterator.peek('')) and is_sanskrit_char(c + c_peeked):
             c += next(text_iterator, '')
 
-        if len(c) > 1 or is_sanskrit_char(c) or is_word_boundary(c) or is_avagraha(c):
+        if len(c) > 1 or is_sanskrit_char(c) or is_word_boundary(c):
+            if has_avagraha:
+                c = AVAGRAHA + c
+                has_avagraha = False # reset
             chars.append(c)
         else:
             raise Exception(f"Unidentifiable character '{c}' in text: \"{text}\"")
@@ -284,15 +292,15 @@ def get_pada_parts(text):
             c_next_next_peeked = chars_iterator.peek('')
 
         # useful while debugging
-        print(
-            f"current part: '{current_part}'",
-            f"next char: '{c_next}'",
-            f"next peeked char: '{c_next_next_peeked}'"
-        )
+        # print(
+        #     f"current part: '{current_part}'",
+        #     f"next char: '{c_next}'",
+        #     f"next peeked char: '{c_next_next_peeked}'"
+        # )
 
-        if is_sanskrit_consonant(c_next.strip(WORD_BOUNDARY)) and (
+        if is_sanskrit_consonant(c_next.strip(WORD_BOUNDARY + AVAGRAHA)) and (
                 # -CC-: ratn -> 'rat', 'n' (ra as current_part)
-                is_sanskrit_consonant(c_next_next_peeked.strip(WORD_BOUNDARY)) or
+                is_sanskrit_consonant(c_next_next_peeked.strip(WORD_BOUNDARY + AVAGRAHA)) or
                 # C# (pada end position): mam# -> 'mam' (ma as current_part)
                 c_next_next_peeked == ''
             ):
