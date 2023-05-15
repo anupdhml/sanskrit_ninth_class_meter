@@ -35,15 +35,15 @@ TEST_PADAS = [
         }
     },
     # 1.35.5b
-    # {
-    #     "text": "ráthaṁ híraṇyapra~ugaṁ váhantaḥ",
-    #     "stanza_meter": "Triṣṭubh",
-    #     "analysis": {
-    #         "parts": ["rá", "thaṁ", " ", "hí", "raṇ", "yap", "ra", "~u", "gaṁ", " ", "vá", "han", "taḥ"],
-    #         # LH LHHLLH LHH
-    #         "scansion": "LH LHH,LL|H LHH",
-    #     }
-    # },
+    {
+        "text": "ráthaṁ híraṇyapra~ugaṁ váhantaḥ",
+        "stanza_meter": "Triṣṭubh",
+        "analysis": {
+            "parts": ["rá", "thaṁ", " ", "hí", "raṇ", "yap", "ra", "~u", "gaṁ", " ", "vá", "han", "taḥ"],
+            # LH LHHLLH LHH
+            "scansion": "LH LHH,LL|H LHH",
+        }
+    },
     # 10.129.5b
     {
         "text": "adháḥ svid āsī́3d upári svid āsī3t",
@@ -85,7 +85,7 @@ TEST_PADAS = [
     #     "text": "tvā́ṁ hy àgne sádam ít samanyávo",
     #     "stanza_meter": "",
     #     "analysis": {
-    #         "parts": [],
+    #         "parts": ["tvā́ṁ hy àgne sádam ít samanyávo"],
     #         "scansion": "",
     #     }
     # },
@@ -184,30 +184,40 @@ def get_pada_parts(text):
 
         current_part += c
 
-        c_next = next(chars_iterator, '')
-        c_next_peeked = chars_iterator.peek('') # peeking the one after above
+        # handles cases when there's a vowel hiatus, like in the case of ~u: híraṇyapra~ugaṁ
+        c_next_peeked = chars_iterator.peek('')
+        if is_sanskrit_vowel(c_next_peeked):
+            parts.append(current_part)
+            current_part = '' # reset
+            continue
 
-        # FIXME better way to handle this
-        # also what if c_next is vowel? like in the case of ~u
-        if c_next == WORD_BOUNDARY and is_sanskrit_vowel(c_next_peeked):
+        c_next = next(chars_iterator, '')
+        c_next_next_peeked = chars_iterator.peek('') # peeking the one after above
+
+        # TODO consolidate this with the above logic for immediate vowel hiatus?
+        if c_next == WORD_BOUNDARY and is_sanskrit_vowel(c_next_next_peeked):
             parts.append(current_part)
             parts.append(WORD_BOUNDARY)
             current_part = '' # reset
             continue
 
-        if is_word_boundary(c_next) or is_word_boundary(c_next_peeked):
+        if is_word_boundary(c_next) or is_word_boundary(c_next_next_peeked):
             # don't count word boundary char, just append it to the previous
             c_next += next(chars_iterator, '')
-            c_next_peeked = chars_iterator.peek('')
+            c_next_next_peeked = chars_iterator.peek('')
 
         # useful while debugging
-        print(f"current part: '{current_part}' next char: '{c_next}' next peeked char: '{c_next_peeked}'")
+        # print(
+        #     f"current part: '{current_part}'",
+        #     f"next char: '{c_next}'",
+        #     f"next peeked char: '{c_next_next_peeked}'"
+        # )
 
         if is_sanskrit_consonant(c_next.strip(WORD_BOUNDARY)) and (
                 # -CC-: ratn -> 'rat', 'n' (ra as current_part)
-                is_sanskrit_consonant(c_next_peeked.strip(WORD_BOUNDARY)) or
+                is_sanskrit_consonant(c_next_next_peeked.strip(WORD_BOUNDARY)) or
                 # C# (pada end position): mam# -> 'mam' (ma as current_part)
-                c_next_peeked == ''
+                c_next_next_peeked == ''
             ):
 
             # account for space being present
