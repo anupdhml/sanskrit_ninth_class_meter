@@ -44,6 +44,16 @@ TEST_PADAS = [
             "scansion": "LH LHH,LL|H LHH",
         }
     },
+    # 1.121.1a
+    {
+        "text": "kád itthā́ nr̥ŕ̥m̐ḥ pā́taraṁ+ devayatā́ṁ",
+        "stanza_meter": "",
+        "analysis": {
+            "parts": ["ká", "d it", "thā́", " ", "nr̥", "ŕ̥m̐", "ḥ pā́", "ta", "raṁ", " ", "de", "va", "ya", "tā́ṁ"],
+            # L HH LH HLH HLLH
+            "scansion": "L_HH LH_HLH HLLH",
+        }
+    },
     # 10.129.5b
     {
         "text": "adháḥ svid āsī́3d upári svid āsī3t",
@@ -54,7 +64,7 @@ TEST_PADAS = [
             "scansion": "LH L_HH,L_L|H_L_HH",
         }
     },
-    # 10.144.04c
+    # 10.144.4c
     {
         "text": "śatácakraṁ yo\ 'hyo\ vartaníḥ",
         "stanza_meter": "",
@@ -63,13 +73,33 @@ TEST_PADAS = [
             "scansion": "LLHH H_H HLH",
         }
     },
-    # 10.166.02b
+    # 10.166.2b
     {
         "text": "índra 'vā́riṣṭo@ ákṣataḥ",
         "stanza_meter": "Aṇuṣṭubh",
         "analysis": {
             "parts": ["ín", "dra", " ", "vā́", "riṣ", "ṭo", " ", "ák", "ṣa", "taḥ"],
             "scansion": "HL HH|H HLH",
+        }
+    },
+    # 4.1.1a
+    {
+        "text": "tuvā́ṁ hí agne sádam ít samanyávo",
+        "stanza_meter": "",
+        "analysis": {
+            "parts": ["tu", "vā́ṁ", " ", "hí", " ", "ag", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
+            # LH L HH LL H LHLH
+            "scansion": "LH L HH LL_H LHLH",
+        }
+    },
+    # 4.1.1a (not metrically restored)
+    {
+        "text": "tvā́ṁ hy àgne sádam ít samanyávo",
+        "stanza_meter": "",
+        "analysis": {
+            "parts": ["tvā́ṁ", " ", "hy àg", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
+            # H HH LL H LHLH
+            "scansion": "H HH LL_H LHLH",
         }
     },
     # faked
@@ -81,14 +111,6 @@ TEST_PADAS = [
             "scansion": "HHH_H|LHLL LH",
         }
     },
-    # {
-    #     "text": "tvā́ṁ hy àgne sádam ít samanyávo",
-    #     "stanza_meter": "",
-    #     "analysis": {
-    #         "parts": ["tvā́ṁ hy àgne sádam ít samanyávo"],
-    #         "scansion": "",
-    #     }
-    # },
 ]
 
 #TEST_PADAS = [ TEST_PADAS[2] ]
@@ -121,7 +143,6 @@ CONSONANTS = [
     'ś', 'ṣ', 's', 'h',
     # extras
     'ḷ', 'ḷh',
-    # FIXME anunasika as vowel?
     'ṁ', 'ḥ', 'm̐',
 ]
 
@@ -129,8 +150,7 @@ WORD_BOUNDARY = ' '
 
 # FIXME avagraha marker shouldn't be here? should use it to mark preceding vowel as short?
 # also figure out what the other special chars are doing here
-# FIXME any other special chars?
-SPECIAL_CHARACTERS = ['\\', '\'', '@']
+SPECIAL_CHARACTERS = ['\\', '\'', '@', '+']
 
 def clean_string(string):
     # remove multiple spaces with single word boundary char
@@ -230,7 +250,6 @@ def get_pada_parts(text):
             current_part = '' # reset
         else:
             parts.append(current_part)
-            # FIXME need to handle this elsewhere too?
             if c_next and c_next[0] == WORD_BOUNDARY:
                 parts.append(WORD_BOUNDARY)
                 current_part = c_next[1:]
