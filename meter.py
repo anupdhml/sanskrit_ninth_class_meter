@@ -26,12 +26,63 @@ TEST_PADAS = [
     },
     # 1.1.1c
     {
-        "text": "hótāraṁ  ratnadhā́tamam",
+        "text": "hótāraṁ  ratnadhā́tamam ",
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["hó", "tā", "raṁ", " ", "rat", "na", "dhā́", "ta", "mam"],
             # HHH HLHLH
             "scansion": "HHH H|LHLH",
+        }
+    },
+    # 1.3.8a
+    # avagraha (o_a, a restored for o_') from -aḥ + a-: 'o' as short and 'a' counting towards the meter
+    {
+        "text": "víśve devā́so aptúraḥ",
+        "stanza_meter": "Gāyatrī",
+        "analysis": {
+            "parts": ["víś", "ve", " ", "de", "vā́", "so", " ", "ap", "tú", "raḥ"],
+            # FIXME "so" before 'a' should be short here (devā́saḥ aptúraḥ,
+            # with a- restored instaed of the expected avagraha 'ptúraḥ)
+            # HH HHH HLH
+            "scansion": "HH HH|H HLH",
+        }
+    },
+    # 1.33.13b
+    # avagraha (o_') from -aḥ + a-: 'o' as short? metrically long makes sense here
+    {
+        "text": "ví tigména vr̥ṣabhéṇā púro 'bhet",
+        "stanza_meter": "Triṣṭubh",
+        "analysis": {
+            "parts": ["ví", " ", "tig", "mé", "na", " ", "vr̥", "ṣa", "bhé", "ṇā", " ", "pú", "ro", " ", "'bhet"],
+            # FIXME "ro" before avagraha should be short here (from "púraḥ abhet")
+            # but then it wouldn't follow the meter...
+            # also don't strip off avagraha marker of "'bhet":
+            # should use it to mark preceding vowel as short?
+            # L HHL LLHH LH H"
+            "scansion": "L HHL, LLH|H LH H",
+        }
+    },
+    # 10.72.4c
+    # avagraha (o_') from -aḥ + a-: 'o' as short
+    {
+        "text": "áditer dákṣo 'jāyata@",
+        "stanza_meter": "Aṇuṣṭubh",
+        "analysis": {
+            "parts": ["á", "di", "ter", " ", "dák", "ṣo", " ", "'jā", "ya", "ta"],
+            # FIXME "ṣo" before avagraha should be short here (from "dákṣaḥ ajāyata")
+            # LLH HH HLL"
+            "scansion": "LLH H|H HLL",
+        }
+    },
+    # 10.161.5d
+    # avagraha (e_') from -e + a-: 'e' as long
+    {
+        "text": "sárvam ā́yuś ca te 'vidam ",
+        "stanza_meter": "Aṇuṣṭubh",
+        "analysis": {
+            "parts": ["sár", "va", "m ā́", "yuś", " ", "ca", " ", "te", " ", "'vi", "dam"],
+            # HL HH L H LH
+            "scansion": "HL_HH | L H LH",
         }
     },
     # 1.35.5b
@@ -69,7 +120,8 @@ TEST_PADAS = [
         "text": "śatácakraṁ yo\ 'hyo\ vartaníḥ",
         "stanza_meter": "",
         "analysis": {
-            "parts": ["śa", "tá", "cak", "raṁ", " ", "yo h", "yo", " ", "var", "ta", "níḥ"],
+            "parts": ["śa", "tá", "cak", "raṁ", " ", "yo 'h", "yo", " ", "var", "ta", "níḥ"],
+            # FIXME o before ' should be short? (avagraha)
             "scansion": "LLHH H_H HLH",
         }
     },
@@ -78,7 +130,8 @@ TEST_PADAS = [
         "text": "índra 'vā́riṣṭo@ ákṣataḥ",
         "stanza_meter": "Aṇuṣṭubh",
         "analysis": {
-            "parts": ["ín", "dra", " ", "vā́", "riṣ", "ṭo", " ", "ák", "ṣa", "taḥ"],
+            "parts": ["ín", "dra", " ", "'vā́", "riṣ", "ṭo", " ", "ák", "ṣa", "taḥ"],
+            # FIXME o before a should be short? (avagraha restored)
             "scansion": "HL HH|H HLH",
         }
     },
@@ -148,13 +201,14 @@ CONSONANTS = [
 
 WORD_BOUNDARY = ' '
 
-# FIXME avagraha marker shouldn't be here? should use it to mark preceding vowel as short?
-# also figure out what the other special chars are doing here
-SPECIAL_CHARACTERS = ['\\', '\'', '@', '+']
+AVAGRAHA = '\''
+
+# TODO figure out what each of these special chars indicate in the vnh text
+SPECIAL_CHARACTERS = ['\\', '@', '+']
 
 def clean_string(string):
     # remove multiple spaces with single word boundary char
-    string_normalized = re.sub(" +", WORD_BOUNDARY, string)
+    string_normalized = re.sub(" +", WORD_BOUNDARY, string.strip())
     return ''.join(c for c in string_normalized if c not in SPECIAL_CHARACTERS)
 
 def is_sanskrit_vowel(str):
@@ -169,6 +223,9 @@ def is_sanskrit_char(str):
 def is_word_boundary(str):
     return str == WORD_BOUNDARY
 
+def is_avagraha(str):
+    return str == AVAGRAHA
+
 ###############################################################################
 
 def get_sanskrit_chars(text):
@@ -180,7 +237,7 @@ def get_sanskrit_chars(text):
         while (c_peeked := text_iterator.peek('')) and is_sanskrit_char(c + c_peeked):
             c += next(text_iterator, '')
 
-        if len(c) > 1 or is_sanskrit_char(c) or is_word_boundary(c):
+        if len(c) > 1 or is_sanskrit_char(c) or is_word_boundary(c) or is_avagraha(c):
             chars.append(c)
         else:
             raise Exception(f"Unidentifiable character '{c}' in text: \"{text}\"")
@@ -227,11 +284,11 @@ def get_pada_parts(text):
             c_next_next_peeked = chars_iterator.peek('')
 
         # useful while debugging
-        # print(
-        #     f"current part: '{current_part}'",
-        #     f"next char: '{c_next}'",
-        #     f"next peeked char: '{c_next_next_peeked}'"
-        # )
+        print(
+            f"current part: '{current_part}'",
+            f"next char: '{c_next}'",
+            f"next peeked char: '{c_next_next_peeked}'"
+        )
 
         if is_sanskrit_consonant(c_next.strip(WORD_BOUNDARY)) and (
                 # -CC-: ratn -> 'rat', 'n' (ra as current_part)
