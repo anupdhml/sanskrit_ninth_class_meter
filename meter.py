@@ -10,8 +10,8 @@ TEST_PADAS = [
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["ag", "ní", "m ī", "ḷe", " ", "pu", "ró", "hi", "taṁ"],
-            # HS HH LHLH
-            "scansion": "HS_HH | LHLH",
+            # HL HH LHLH
+            "scansion": "HL_HH |LHLH",
         }
     },
     # 1.1.1b
@@ -57,7 +57,7 @@ TEST_PADAS = [
             # FIXME "ro" before avagraha should be short here (from "púraḥ abhet")
             # but then it wouldn't follow the meter...
             # L HHL LLHH LH H"
-            "scansion": "L HHL, LLH|H LH H",
+            "scansion": "L HHL ,LLH|H LH H",
         }
     },
     # 10.72.4c
@@ -80,7 +80,7 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["sár", "va", "m ā́", "yuś", " ", "ca", " ", "te", " ", "'vi", "dam"],
             # HL HH L H LH
-            "scansion": "HL_HH | L H LH",
+            "scansion": "HL_HH |L H LH",
         }
     },
     # 1.35.5b
@@ -90,6 +90,7 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["rá", "thaṁ", " ", "hí", "raṇ", "yap", "ra", "~u", "gaṁ", " ", "vá", "han", "taḥ"],
             # LH LHHLLH LHH
+            # FIXME no good way to mark caesura here since it's inside a compound
             "scansion": "LH LHH,LL|H LHH",
         }
     },
@@ -110,6 +111,8 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["a", "dháḥ", " ", "svi", "d ā", "sī́3", "d u", "pá", "ri s", "vi", "d ā", "sī3t"],
             # LH L HH LLH L HH
+            # FIXME no good way to mark caesura here since it crosses word boundary (du)
+            # can check 5th and 6th syllable and see if it has space?
             "scansion": "LH L_HH,L_L|H_L_HH",
         }
     },
@@ -120,6 +123,7 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["śa", "tá", "cak", "raṁ", " ", "yo 'h", "yo", " ", "var", "ta", "níḥ"],
             # FIXME o before ' should be short? (avagraha)
+            # FIXME should mark it _HH?
             "scansion": "LLHH H_H HLH",
         }
     },
@@ -150,7 +154,7 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["tvā́ṁ", " ", "hy àg", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
             # H HH LL H LHLH
-            "scansion": "H HH LL_H LHLH",
+            "scansion": "H _HH LL_H LHLH",
         }
     },
     # faked
@@ -159,7 +163,8 @@ TEST_PADAS = [
         "stanza_meter": "",
         "analysis": {
             "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma", " ", "a", "vr̥̄"],
-            "scansion": "HHH_H|LHLL LH",
+            # FIXME use HH_?
+            "scansion": "HHH_HLHLL LH",
         }
     },
 ]
@@ -168,21 +173,37 @@ TEST_PADAS = [
 
 ###############################################################################
 
-VOWELS = [
-    'a', 'ā',
-    'i', 'ï', '~i', 'ī', 'ī3', # ~i can stand for ï
-    'u', 'ü', '~u', 'ū',       # ~u can stand for ü
-    'r̥', 'r̥̄', 'l̥',
-    'e', 'ai', 'o', 'au',
+VOWELS_SHORT = [
+    'a',
+    'i', 'ï', '~i', # ~i can stand for ï
+    'u', 'ü', '~u', # ~u can stand for ü
+    'r̥',
+    'l̥',
     # accented varieties
-    'á', 'à', 'ā́', 'ā̀',
-    'í', 'ì', 'ī́', 'ī̀', 'ī́3',
-    'ú', 'ù', 'ū́', 'ū̀', 'ū́3',
-    # TODO add accented r̥̄ too?
+    'á', 'à',
+    'í', 'ì',
+    'ú', 'ù',
     'ŕ̥', 'r̥̀',
-    'é', 'è','ó', 'ò',
-    'aí', 'aì', 'aú', 'aù',
+    # accented l̥ is not attested
 ]
+
+VOWELS_LONG = [
+    'ā',
+    'ī', 'ī3',
+    'ū', 'ū3', # the latter is not really attested
+    'r̥̄',
+    'e', 'ai',
+    'o', 'au',
+    # accented varieties
+    'ā́', 'ā̀',
+    'ī́', 'ī̀', 'ī́3',
+    'ū́', 'ū̀', 'ū́3',
+    # TODO add accented r̥̄, not attested?
+    'é', 'è', 'aí', 'aì',
+    'ó', 'ò', 'aú', 'aù',
+]
+
+VOWELS = VOWELS_SHORT + VOWELS_LONG
 
 CONSONANTS = [
     'k', 'kh', 'g', 'gh', 'ṅ',
@@ -200,6 +221,18 @@ CONSONANTS = [
 WORD_BOUNDARY = ' '
 
 AVAGRAHA = '\''
+
+MARKER_SYLLABLE_LIGHT = 'L' # alt: ◡
+MARKER_SYLLABLE_HEAVY = 'H' # alt: —
+MARKER_CADENCE = '|'
+MARKER_CAESURA = ','
+MARKER_WORD_BOUNDARY_IN_SYLLABLE = '_'
+
+METER_GAYATRI = "Gāyatrī"
+METER_ANUSTUBH = "Aṇuṣṭubh"
+METER_TRISTUBH = "Triṣṭubh"
+# FIXME add tests for this too
+METER_JAGATI = "Jagatī"
 
 # TODO figure out what each of these special chars indicate in the vnh text
 SPECIAL_CHARACTERS = ['\\', '@', '+']
@@ -224,6 +257,23 @@ def is_word_boundary(str):
 
 def is_avagraha(str):
     return str == AVAGRAHA
+
+def is_light(syllable):
+    syllable_chars = [c for c in get_sanskrit_chars(syllable.strip())]
+
+    # some validation
+    part_vowel_chars = [c for c in syllable_chars if is_sanskrit_vowel(c)]
+    if len(part_vowel_chars) != 1:
+        # TODO custom exception with nicer params. also should add pada text here
+        raise Exception(
+            f"Syllable part '{syllable}' has either zero or more than one vowel"
+        )
+
+    last_char = syllable_chars[-1]
+    return last_char in VOWELS_SHORT
+
+def is_heavy(syllable):
+    return not is_light(syllable)
 
 ###############################################################################
 
@@ -324,27 +374,46 @@ def get_pada_parts(text):
 
 
 def analyze(pada_text, stanza_meter=""):
-    #"Triṣṭubh"
-    #"Aṇuṣṭubh"
-    #"Gāyatrī"
-
     parts = get_pada_parts(clean_string(pada_text))
 
-    # some validation
+    scansion = ""
+    no_of_syllables = 0
     for part in parts:
         if part == WORD_BOUNDARY:
+            scansion += WORD_BOUNDARY
+
+            # add the caesura marker
+            # FIXME track early and late caesura. also which one wins when both satisfy?
+            # also improve caesura marking when 5th or 6th syllable actually has a space
+            if (stanza_meter in [METER_TRISTUBH, METER_JAGATI]) and no_of_syllables in [4, 5]:
+                scansion += MARKER_CAESURA
+
             continue
 
-        part_vowel_chars = [c for c in get_sanskrit_chars(part) if is_sanskrit_vowel(c)]
-        if len(part_vowel_chars) != 1:
-            # TODO custom exception with nicer params
-            raise Exception(
-                f"Syllable part '{part}' has either zero or more than one vowel. Text: \"{pada_text}\""
-            )
+        # add the cadence marker
+        if (
+            (stanza_meter in [METER_GAYATRI, METER_ANUSTUBH] and no_of_syllables == 4)
+            or (stanza_meter in [METER_TRISTUBH, METER_JAGATI] and no_of_syllables == 7)
+        ):
+            scansion += MARKER_CADENCE
+
+        no_of_syllables += 1
+
+        if WORD_BOUNDARY in part.strip():
+            scansion += MARKER_WORD_BOUNDARY_IN_SYLLABLE
+
+        if is_light(part):
+            # FIXME handle gachati case
+            # FIXME handle o vowel as short before avagraha / a
+            scansion += MARKER_SYLLABLE_LIGHT
+        else:
+            scansion += MARKER_SYLLABLE_HEAVY
 
     return {
         "parts": parts,
-        "scansion": "",
+        "scansion": scansion,
+        # TODO add this info along with actual syllables
+        #"no_of_syllables": no_of_syllables,
     }
 
 
@@ -362,7 +431,7 @@ if __name__ == '__main__':
         print(f'{analysis["parts"]} {analysis["scansion"]}')
 
         # check output against expected
+        # TODO save the test output in a file too?
         analysis_expected = pada["analysis"]
-        analysis_expected["scansion"] = "" # TODO remove, for initial testing only
         if analysis != analysis_expected:
             print(f'Not as expected: \n{analysis_expected["parts"]} {analysis_expected["scansion"]}\n')
