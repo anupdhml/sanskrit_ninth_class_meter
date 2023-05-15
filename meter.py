@@ -34,6 +34,26 @@ TEST_PADAS = [
             "scansion": "HHH H|LHLH",
         }
     },
+    # 1.35.5b
+    # {
+    #     "text": "ráthaṁ híraṇyapra~ugaṁ váhantaḥ",
+    #     "stanza_meter": "Triṣṭubh",
+    #     "analysis": {
+    #         "parts": ["rá", "thaṁ", " ", "hí", "raṇ", "yap", "ra", "~u", "gaṁ", " ", "vá", "han", "taḥ"],
+    #         # LH LHHLLH LHH
+    #         "scansion": "LH LHH,LL|H LHH",
+    #     }
+    # },
+    # 10.129.5b
+    {
+        "text": "adháḥ svid āsī́3d upári svid āsī3t",
+        "stanza_meter": "Triṣṭubh",
+        "analysis": {
+            "parts": ["a", "dháḥ", " ", "svi", "d ā", "sī́3", "d u", "pá", "ri s", "vi", "d ā", "sī3t"],
+            # LH L HH LLH L HH
+            "scansion": "LH L_HH,L_L|H_L_HH",
+        }
+    },
     # 10.144.04c
     {
         "text": "śatácakraṁ yo\ 'hyo\ vartaníḥ",
@@ -54,11 +74,11 @@ TEST_PADAS = [
     },
     # faked
     {
-        "text": "hótāra  pratnadhā́tama ava",
-        "stanza_meter": "Gāyatrī",
+        "text": "hótāra  pratnadhā́tama avr̥̄",
+        "stanza_meter": "",
         "analysis": {
-            "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma", " ", "a", "va"],
-            "scansion": "HHH_H|LHLL LL",
+            "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma", " ", "a", "vr̥̄"],
+            "scansion": "HHH_H|LHLL LH",
         }
     },
     # {
@@ -77,14 +97,14 @@ TEST_PADAS = [
 
 VOWELS = [
     'a', 'ā',
-    'i', 'ï', 'ī', 'ī3',
-    'u', 'ü', 'ū',
+    'i', 'ï', '~i', 'ī', 'ī3', # ~i can stand for ï
+    'u', 'ü', '~u', 'ū',       # ~u can stand for ü
     'r̥', 'r̥̄', 'l̥',
     'e', 'ai', 'o', 'au',
     # accented varieties
     'á', 'à', 'ā́', 'ā̀',
-    'í', 'ì', 'ī́', 'ī̀',
-    'ú', 'ù', 'ū́', 'ū̀',
+    'í', 'ì', 'ī́', 'ī̀', 'ī́3',
+    'ú', 'ù', 'ū́', 'ū̀', 'ū́3',
     # TODO add accented r̥̄ too?
     'ŕ̥', 'r̥̀',
     'é', 'è','ó', 'ò',
@@ -136,15 +156,14 @@ def get_sanskrit_chars(text):
 
     text_iterator = peekable(text)
     while (c := next(text_iterator, '')):
-        # FIXME support lengthy chars like ŕ̥
-        if is_sanskrit_char(c +  text_iterator.peek('')):
-            sanskrit_char = c + next(text_iterator, '')
-        elif is_sanskrit_char(c) or is_word_boundary(c):
-            sanskrit_char = c
+        # support lengthy sanskrit chars like r̥̄ or ī3
+        while (c_peeked := text_iterator.peek('')) and is_sanskrit_char(c + c_peeked):
+            c += next(text_iterator, '')
+
+        if len(c) > 1 or is_sanskrit_char(c) or is_word_boundary(c):
+            chars.append(c)
         else:
             raise Exception(f"Unidentifiable character '{c}' in text: \"{text}\"")
-
-        chars.append(sanskrit_char)
 
     #print(chars)
     return chars
@@ -169,7 +188,7 @@ def get_pada_parts(text):
         c_next_peeked = chars_iterator.peek('') # peeking the one after above
 
         # FIXME better way to handle this
-        # also what if c_next is vowel? like in the case of ü
+        # also what if c_next is vowel? like in the case of ~u
         if c_next == WORD_BOUNDARY and is_sanskrit_vowel(c_next_peeked):
             parts.append(current_part)
             parts.append(WORD_BOUNDARY)
@@ -183,8 +202,6 @@ def get_pada_parts(text):
 
         # useful while debugging
         print(f"current part: '{current_part}' next char: '{c_next}' next peeked char: '{c_next_peeked}'")
-        # current part: 'ṭo' next char: ' á' next peeked char: 'k'
-        #current part: 'ákṣa' next char: 't' next peeked char: 'a'
 
         if is_sanskrit_consonant(c_next.strip(WORD_BOUNDARY)) and (
                 # -CC-: ratn -> 'rat', 'n' (ra as current_part)
