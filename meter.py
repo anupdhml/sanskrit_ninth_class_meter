@@ -12,6 +12,7 @@ TEST_PADAS = [
             "parts": ["ag", "ní", "m ī", "ḷe", " ", "pu", "ró", "hi", "taṁ"],
             # LS LL SLSL
             "scansion": "LS_LL |SLSL",
+            "caesura_position": 0,
         }
     },
     # 1.1.1b
@@ -22,6 +23,7 @@ TEST_PADAS = [
             "parts": ["yaj", "ñás", "ya", " ", "de", "vá", "m r̥t", "ví", "jam"],
             # LLS LS LSL
             "scansion": "LLS L|S_LSL",
+            "caesura_position": 0,
         }
     },
     # 1.1.1c
@@ -32,6 +34,7 @@ TEST_PADAS = [
             "parts": ["hó", "tā", "raṁ", " ", "rat", "na", "dhā́", "ta", "mam"],
             # LLL LSLSL
             "scansion": "LLL L|SLSL",
+            "caesura_position": 0,
         }
     },
     # 1.1.4c
@@ -43,6 +46,7 @@ TEST_PADAS = [
             "parts": ["sá", " ", "íd", " ", "de", "vé", "ṣu", " ", "gac", "cha", "ti"],
             # S L LLS LSS
             "scansion": "S L LL|S LSS",
+            "caesura_position": 0,
         }
     },
     # 1.3.8a
@@ -56,6 +60,7 @@ TEST_PADAS = [
             # with a- restored instaed of the expected avagraha 'ptúraḥ)
             # LL LLL LSL
             "scansion": "LL LL|L LSL",
+            "caesura_position": 0,
         }
     },
     # 1.33.13b
@@ -69,6 +74,7 @@ TEST_PADAS = [
             # but then it wouldn't follow the meter...
             # S LLS SSLL SL L"
             "scansion": "S LLS ,SSL|L SL L",
+            "caesura_position": 4,
         }
     },
     # 10.72.4c
@@ -81,6 +87,7 @@ TEST_PADAS = [
             # FIXME "ṣo" before avagraha should be short here (from "dákṣaḥ ajāyata")
             # SSL LL LSS"
             "scansion": "SSL L|L LSS",
+            "caesura_position": 0,
         }
     },
     # 10.161.5d
@@ -92,6 +99,7 @@ TEST_PADAS = [
             "parts": ["sár", "va", "m ā́", "yuś", " ", "ca", " ", "te", " ", "'vi", "dam"],
             # LS LL S L SL
             "scansion": "LS_LL |S L SL",
+            "caesura_position": 0,
         }
     },
     # 5.5.5c
@@ -103,11 +111,12 @@ TEST_PADAS = [
             "parts": ["práp", "ra", " ", "yaj", "ñám", " ", "pr̥", "ṇī", "ta", "na"],
             # LS LL SLSS
             "scansion": "LS LL |SLSS",
+            "caesura_position": 0,
         }
     },
     # 5.41.10d
     # metrical pauses
-    # also the case where there's a word boundary after both 4th and 5th actual syllables?
+    # FIXME caesura where: case where there's a word boundary after both 4th and 5th actual syllables?
     {
         "text": "śocíṣkeśo ̀ ní riṇāti vánā",
         "stanza_meter": "Triṣṭubh",
@@ -115,6 +124,7 @@ TEST_PADAS = [
             "parts": ["śo", "cíṣ", "ke", "śo", " \u0300", " ", "ní", " ", "ri", "ṇā", "ti", " ", "vá", "nā"],
             # LLLL · S SLS SL
             "scansion": "LLLL · ,S S|LS SL",
+            "caesura_position": 5,
         }
     },
     # 4.19.4c
@@ -125,6 +135,7 @@ TEST_PADAS = [
             "parts": ["dr̥", "r̥", "ḷhā́", "ni", " ", "aubh", "nā", "d u", "śá", "mā", "na", " ", "ó", "jo"],
             # SSLS LL SSLS LL (vedaweb treats ḷh as 2 chars yielding different results here)
             "scansion": "SSLS LL_SSLS LL",
+            "caesura_position": 0,
         }
     },
     # 1.51.8a
@@ -135,6 +146,7 @@ TEST_PADAS = [
             "parts": ["ví", " ", "jā", "nī", "hi", " ", "ā́", "ri", "yān", " ", "yé", " ", "ca", " ", "dás", "ya", "vo"],
             # S LLS LSL L S LSL
             "scansion": "S LLS ,LSL |L S LSL",
+            "caesura_position": 4,
         }
     },
     # 1.35.5b
@@ -146,6 +158,8 @@ TEST_PADAS = [
             # SL SLLSSL SLL
             # FIXME no good way to mark caesura here since it's inside a compound
             "scansion": "SL SLL,SS|L SLL",
+            #"caesura_position": 5,
+            "caesura_position": 0,
         }
     },
     # 1.121.1a
@@ -156,6 +170,7 @@ TEST_PADAS = [
             "parts": ["ká", "d it", "thā́", " ", "nr̥", "ŕ̥m̐", "ḥ pā́", "ta", "raṁ", " ", "de", "va", "ya", "tā́ṁ"],
             # S LL SL LSL LSSL
             "scansion": "S_LL SL_LSL LSSL",
+            "caesura_position": 0,
         }
     },
     # 10.129.5b
@@ -166,8 +181,10 @@ TEST_PADAS = [
             "parts": ["a", "dháḥ", " ", "svi", "d ā", "sī́3", "d u", "pá", "ri s", "vi", "d ā", "sī3t"],
             # SL S LL SSL S LL
             # FIXME no good way to mark caesura here since it crosses word boundary (du)
-            # can check 5th and 6th syllable and see if it has space?
+            # FIXME! can check 5th and 6th syllable and see if it has space?
             "scansion": "SL S_LL,S_S|L_S_LL",
+            #"caesura_position": 5,
+            "caesura_position": 0,
         }
     },
     # 10.144.4c
@@ -179,6 +196,7 @@ TEST_PADAS = [
             # FIXME o before ' should be short? (avagraha)
             # FIXME should mark it _LL?
             "scansion": "SSLL L_L LSL",
+            "caesura_position": 0,
         }
     },
     # 10.166.2b
@@ -189,6 +207,7 @@ TEST_PADAS = [
             "parts": ["ín", "dra", " ", "'vā́", "riṣ", "ṭo", " ", "ák", "ṣa", "taḥ"],
             # FIXME o before a should be short? (avagraha restored)
             "scansion": "LS LL|L LSL",
+            "caesura_position": 0,
         }
     },
     # 4.1.1a
@@ -199,6 +218,7 @@ TEST_PADAS = [
             "parts": ["tu", "vā́ṁ", " ", "hí", " ", "ag", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
             # SL S LL SS L SLSL
             "scansion": "SL S LL SS_L SLSL",
+            "caesura_position": 0,
         }
     },
     # 4.1.1a (not metrically restored)
@@ -209,6 +229,7 @@ TEST_PADAS = [
             "parts": ["tvā́ṁ", " ", "hy àg", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
             # L LL SS L SLSL
             "scansion": "L _LL SS_L SLSL",
+            "caesura_position": 0,
         }
     },
     # faked
@@ -219,6 +240,7 @@ TEST_PADAS = [
             "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma", " ", "a", "vr̥̄"],
             # FIXME use LL_?
             "scansion": "LLL_LSLSS SL",
+            "caesura_position": 0,
         }
     },
 ]
@@ -475,6 +497,7 @@ def analyze(pada_text, stanza_meter=""):
 
     parts = get_pada_parts(pada_text_cleaned)
     scansion = ""
+    caesura_position = 0
     no_of_syllables = 0
     syllables = []
 
@@ -483,10 +506,11 @@ def analyze(pada_text, stanza_meter=""):
             scansion += WORD_BOUNDARY
 
             # add the caesura marker
-            # FIXME track early and late caesura. also which one wins when both satisfy?
-            # also improve caesura marking when 5th or 6th syllable actually has a space
+            # FIXME which one wins when both satisfy: early and late caesura conditions
+            # TODO also improve caesura marking when 5th or 6th syllable actually has a space
             if (stanza_meter in [METER_TRISTUBH, METER_JAGATI]) and no_of_syllables in [4, 5]:
                 scansion += MARKER_CAESURA
+                caesura_position = no_of_syllables
 
             continue
 
@@ -518,10 +542,13 @@ def analyze(pada_text, stanza_meter=""):
     if len(syllables) != len(scansion_syllables):
         raise Exception(f"Length of syllables {syllables} does not match the scansion {scansion_syllables}")
 
+    # FIXME check if the final scansion follows the meter or not
+
     return {
         "parts": parts,
         "scansion": scansion,
         "has_restorations": has_restorations,
+        "caesura_position": caesura_position,
         "no_of_syllables": no_of_syllables,
         # simpler info
         "syllables": syllables,
@@ -540,7 +567,7 @@ if __name__ == '__main__':
 
         # output
         analysis = analyze(pada["text"], pada["stanza_meter"])
-        print(f'{analysis["parts"]} {analysis["scansion"]} ({analysis["no_of_syllables"]})')
+        print(f'{analysis["parts"]} {analysis["scansion"]} ({analysis["no_of_syllables"]}, {analysis["caesura_position"]})')
         #print(f'{analysis["syllables"]} {analysis["scansion_syllables"]} ({analysis["no_of_syllables"]})')
         #print(analysis)
 
@@ -552,5 +579,7 @@ if __name__ == '__main__':
         if (
             analysis["parts"] != analysis_expected["parts"]
             or analysis["scansion_syllables"] != clean_meter_scansion(analysis_expected["scansion"])
+            or analysis["caesura_position"] != analysis_expected["caesura_position"]
         ):
-            print(f'Not as expected: \n{analysis_expected["parts"]} {analysis_expected["scansion"]}\n')
+            # TODO add no of syllables info?
+            print(f'Not as expected: \n{analysis_expected["parts"]} {analysis_expected["scansion"]} (,{analysis_expected["caesura_position"]})\n')
