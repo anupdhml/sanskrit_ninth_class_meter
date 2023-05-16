@@ -94,6 +94,29 @@ TEST_PADAS = [
             "scansion": "LS_LL |S L SL",
         }
     },
+    # 5.5.5c
+    {
+        "text": "prá-pra yajñám pr̥ṇītana",
+        "stanza_meter": "Gāyatrī",
+        "analysis": {
+            # FIXME because of -, syllabfication should be pra, pra yielding SS for the meter?
+            "parts": ["práp", "ra", " ", "yaj", "ñám", " ", "pr̥", "ṇī", "ta", "na"],
+            # LS LL SLSS
+            "scansion": "LS LL |SLSS",
+        }
+    },
+    # 5.41.10d
+    # metrical pauses
+    # also the case where there's a word boundary after both 4th and 5th actual syllables?
+    {
+        "text": "śocíṣkeśo ̀ ní riṇāti vánā",
+        "stanza_meter": "Triṣṭubh",
+        "analysis": {
+            "parts": ["śo", "cíṣ", "ke", "śo", " \u0300", " ", "ní", " ", "ri", "ṇā", "ti", " ", "vá", "nā"],
+            # LLLL · S SLS SL
+            "scansion": "LLLL · ,S S|LS SL",
+        }
+    },
     # 1.51.8a
     {
         "text": "ví jānīhi ā́riyān yé ca dásyavo",
@@ -243,8 +266,13 @@ WORD_BOUNDARY = ' '
 
 AVAGRAHA = '\''
 
+# space followed by gravis, used in vnh text to mark metrical pauses
+PAUSE = ' \u0300'
+
 MARKER_SYLLABLE_SHORT = 'S' # light syllable, alt marker: ◡
 MARKER_SYLLABLE_LONG = 'L' # heavy syllable, alt marker: —
+#MARKER_PAUSE = 'P' # metrical pause, alt marker: ·
+MARKER_PAUSE = '·' # metrical pause, alt marker: P
 MARKER_CADENCE = '|'
 MARKER_CAESURA = ','
 MARKER_WORD_BOUNDARY_IN_SYLLABLE = '_'
@@ -255,18 +283,20 @@ METER_TRISTUBH = "Triṣṭubh"
 METER_JAGATI = "Jagatī"
 
 SPECIAL_CHARACTERS_METER = [
+    # MARKER_PAUSE is intentionally not here since it counts towards the meter syllables
     MARKER_CADENCE, MARKER_CAESURA,
     MARKER_WORD_BOUNDARY_IN_SYLLABLE,
     WORD_BOUNDARY
 ]
 
-# TODO figure out what each of these special chars indicate in the vnh text
-SPECIAL_CHARACTERS = ['\\', '@', '+']
+# special chars used in the Van Nooten & Holland (vnh) text
+# TODO figure out what each of these stand for
+SPECIAL_CHARACTERS_SAMHITAPTHA_VNH = ['\\', '@', '+', '-', '*']
 
 def clean_string(string):
     # remove multiple spaces with single word boundary char
     string_normalized = re.sub(" +", WORD_BOUNDARY, string.strip())
-    return ''.join(c for c in string_normalized if c not in SPECIAL_CHARACTERS)
+    return ''.join(c for c in string_normalized if c not in SPECIAL_CHARACTERS_SAMHITAPTHA_VNH)
 
 def clean_meter_scansion(string):
     return ''.join(c for c in string if c not in SPECIAL_CHARACTERS_METER)
@@ -278,8 +308,12 @@ def is_sanskrit_consonant(str):
     # we can mark consonant character with avagraha so strip it off first
     return str.strip(AVAGRAHA) in CONSONANTS
 
+def is_metrical_pause(str):
+    return str == PAUSE
+
 def is_sanskrit_char(str):
-    return is_sanskrit_vowel(str) or is_sanskrit_consonant(str)
+    # we count metrical pauses as a char since it has a metrical value
+    return is_sanskrit_vowel(str) or is_sanskrit_consonant(str) or is_metrical_pause(str)
 
 def is_word_boundary(str):
     return str == WORD_BOUNDARY
@@ -370,6 +404,14 @@ def get_pada_parts(text):
             current_part = '' # reset
             continue
 
+        # handle metrical pause
+        if c_next == PAUSE and is_word_boundary(c_next_next_peeked):
+            parts.append(current_part)
+            parts.append(PAUSE)
+            parts.append(next(chars_iterator, '')) # adds the word boundary
+            current_part = '' # reset
+            continue
+
         if is_word_boundary(c_next) or is_word_boundary(c_next_next_peeked):
             # don't count word boundary char, just append it to the previous
             c_next += next(chars_iterator, '')
@@ -440,7 +482,10 @@ def analyze(pada_text, stanza_meter=""):
         if WORD_BOUNDARY in part.strip():
             scansion += MARKER_WORD_BOUNDARY_IN_SYLLABLE
 
-        if is_light(part):
+        if part == PAUSE:
+            scansion += WORD_BOUNDARY + MARKER_PAUSE
+        # FIXME rename the functions here
+        elif is_light(part):
             # FIXME handle o vowel as short before avagraha / a
             scansion += MARKER_SYLLABLE_SHORT
         else:
