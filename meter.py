@@ -305,7 +305,7 @@ SPECIAL_CHARACTERS_SAMHITAPTHA_VNH = [
     '@', '+', # marks explicit restorations: https://lrc.la.utexas.edu/books/rigveda/RV00#bolle
     '-',      # marks internal boundary of amredita (iterative) compounds
     '\\',     # marks independent svarita on the preceding vowel
-    '*',      # TODO figure out what this means, eg: https://vedaweb.uni-koeln.de/rigveda/view/id/9.67.27
+    '*',      # FIXME figure out what this means, eg: https://vedaweb.uni-koeln.de/rigveda/view/id/9.67.27
 ]
 
 def clean_vnh_samhitapatha(string):
@@ -511,6 +511,13 @@ def analyze(pada_text, stanza_meter=""):
         else:
             scansion += MARKER_SYLLABLE_LONG
 
+    scansion_syllables = clean_meter_scansion(scansion)
+    # should never happen in our case but put this just for validation
+    # TODO prefer to write these as asserts?
+    #assert len(syllables) == len(scansion_syllables), f"Length of syllables {syllables} does not match that of the scansion '{scansion_syllables}'"
+    if len(syllables) != len(scansion_syllables):
+        raise Exception(f"Length of syllables {syllables} does not match the scansion {scansion_syllables}")
+
     return {
         "parts": parts,
         "scansion": scansion,
@@ -518,7 +525,7 @@ def analyze(pada_text, stanza_meter=""):
         "no_of_syllables": no_of_syllables,
         # simpler info
         "syllables": syllables,
-        "scansion_syllables": clean_meter_scansion(scansion),
+        "scansion_syllables": scansion_syllables,
     }
 
 
