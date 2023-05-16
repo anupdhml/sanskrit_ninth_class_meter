@@ -86,12 +86,22 @@ TEST_PADAS = [
     # 10.161.5d
     # avagraha (e_') from -e + a-: 'e' as long
     {
-        "text": "sárvam ā́yuś ca te 'vidam ",
+        "text": "sárvam ā́yuś ca te 'vidam",
         "stanza_meter": "Aṇuṣṭubh",
         "analysis": {
             "parts": ["sár", "va", "m ā́", "yuś", " ", "ca", " ", "te", " ", "'vi", "dam"],
             # HL HH L H LH
             "scansion": "HL_HH |L H LH",
+        }
+    },
+    # 1.51.8a
+    {
+        "text": "ví jānīhi ā́riyān yé ca dásyavo",
+        "stanza_meter": "Jagatī",
+        "analysis": {
+            "parts": ["ví", " ", "jā", "nī", "hi", " ", "ā́", "ri", "yān", " ", "yé", " ", "ca", " ", "dás", "ya", "vo"],
+            # L HHL HLH H L HLH
+            "scansion": "L HHL ,HLH |H L HLH",
         }
     },
     # 1.35.5b
@@ -242,7 +252,6 @@ MARKER_WORD_BOUNDARY_IN_SYLLABLE = '_'
 METER_GAYATRI = "Gāyatrī"
 METER_ANUSTUBH = "Aṇuṣṭubh"
 METER_TRISTUBH = "Triṣṭubh"
-# FIXME add tests for this too
 METER_JAGATI = "Jagatī"
 
 SPECIAL_CHARACTERS_METER = [
