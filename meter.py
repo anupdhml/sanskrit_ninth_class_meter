@@ -34,6 +34,17 @@ TEST_PADAS = [
             "scansion": "HHH H|LHLH",
         }
     },
+    # 1.1.4c
+    # treating ch as long for meter
+    {
+        "text": "sá íd devéṣu gachati",
+        "stanza_meter": "Gāyatrī",
+        "analysis": {
+            "parts": ["sá", " ", "íd", " ", "de", "vé", "ṣu", " ", "gac", "cha", "ti"],
+            # L H HHL HLL
+            "scansion": "L H HH|L HLL",
+        }
+    },
     # 1.3.8a
     # avagraha (o_a, a restored for o_') from -aḥ + a-: 'o' as short and 'a' counting towards the meter
     {
@@ -301,10 +312,16 @@ def get_sanskrit_chars(text):
             c += next(text_iterator, '')
 
         if len(c) > 1 or is_sanskrit_char(c) or is_word_boundary(c):
+            # treat 'ch' spelling as what it actually is: a cluster
+            # our input text does not use cch variant so this is safe to do
+            if c == "ch":
+                c = "c,ch" # comma used temporarily to separate multiple chars
+            # if previous marking was that of avagraha, include it as part of the char
             if has_avagraha:
                 c = AVAGRAHA + c
                 has_avagraha = False # reset
-            chars.append(c)
+            for sankrit_char in c.split(','):
+                chars.append(sankrit_char)
         else:
             raise Exception(f"Unidentifiable character '{c}' in text: \"{text}\"")
 
@@ -415,7 +432,6 @@ def analyze(pada_text, stanza_meter=""):
             scansion += MARKER_WORD_BOUNDARY_IN_SYLLABLE
 
         if is_light(part):
-            # FIXME handle gachati case
             # FIXME handle o vowel as short before avagraha / a
             scansion += MARKER_SYLLABLE_LIGHT
         else:
