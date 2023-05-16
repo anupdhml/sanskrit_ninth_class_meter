@@ -300,13 +300,16 @@ SPECIAL_CHARACTERS_METER = [
 ]
 
 # special chars used in the Van Nooten & Holland (vnh) text
-# TODO figure out what each of these stand for
-SPECIAL_CHARACTERS_SAMHITAPTHA_VNH = ['\\', '@', '+', '-', '*']
+# https://lrc.la.utexas.edu/books/rigveda/RV00
+SPECIAL_CHARACTERS_SAMHITAPTHA_VNH = [
+    '@', '+', # marks explicit restorations: https://lrc.la.utexas.edu/books/rigveda/RV00#bolle
+    '-',      # marks internal boundary of amredita (iterative) compounds
+    '\\',     # marks independent svarita on the preceding vowel
+    '*',      # TODO figure out what this means, eg: https://vedaweb.uni-koeln.de/rigveda/view/id/9.67.27
+]
 
-def clean_string(string):
-    # remove multiple spaces with single word boundary char
-    string_normalized = re.sub(" +", WORD_BOUNDARY, string.strip())
-    return ''.join(c for c in string_normalized if c not in SPECIAL_CHARACTERS_SAMHITAPTHA_VNH)
+def clean_vnh_samhitapatha(string):
+    return ''.join(c for c in string if c not in SPECIAL_CHARACTERS_SAMHITAPTHA_VNH)
 
 def clean_meter_scansion(string):
     return ''.join(c for c in string if c not in SPECIAL_CHARACTERS_METER)
@@ -461,9 +464,17 @@ def get_pada_parts(text):
 
 
 def analyze(pada_text, stanza_meter=""):
-    parts = get_pada_parts(clean_string(pada_text))
-    scansion = ""
+    # remove multiple spaces with single word boundary char
+    pada_text_normalized = re.sub(" +", WORD_BOUNDARY, pada_text.strip())
+    # clean special characters in the text
+    pada_text_cleaned = clean_vnh_samhitapatha(pada_text_normalized)
 
+    # means there were special characters which indicates restorations:
+    # see https://lrc.la.utexas.edu/books/rigveda/RV00#bolle
+    has_restorations = len(pada_text_cleaned) != len(pada_text_normalized)
+
+    parts = get_pada_parts(pada_text_cleaned)
+    scansion = ""
     no_of_syllables = 0
     syllables = []
 
@@ -503,6 +514,7 @@ def analyze(pada_text, stanza_meter=""):
     return {
         "parts": parts,
         "scansion": scansion,
+        "has_restorations": has_restorations,
         "no_of_syllables": no_of_syllables,
         # simpler info
         "syllables": syllables,
@@ -522,6 +534,7 @@ if __name__ == '__main__':
         # output
         analysis = analyze(pada["text"], pada["stanza_meter"])
         print(f'{analysis["parts"]} {analysis["scansion"]} ({analysis["no_of_syllables"]})')
+        #print(f'{analysis["syllables"]} {analysis["scansion_syllables"]} ({analysis["no_of_syllables"]})')
         #print(analysis)
 
         # check output against expected
