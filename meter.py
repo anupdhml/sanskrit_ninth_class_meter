@@ -117,6 +117,16 @@ TEST_PADAS = [
             "scansion": "LLLL · ,S S|LS SL",
         }
     },
+    # 4.19.4c
+    {
+        "text": "dr̥r̥ḷhā́ni+ aubhnād uśámāna ójo",
+        "stanza_meter": "",
+        "analysis": {
+            "parts": ["dr̥", "r̥", "ḷhā́", "ni", " ", "aubh", "nā", "d u", "śá", "mā", "na", " ", "ó", "jo"],
+            # SSLS LL SSLS LL (vedaweb treats ḷh as 2 chars yielding different results here)
+            "scansion": "SSLS LL_SSLS LL",
+        }
+    },
     # 1.51.8a
     {
         "text": "ví jānīhi ā́riyān yé ca dásyavo",
