@@ -10,8 +10,8 @@ TEST_PADAS = [
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["ag", "ní", "m ī", "ḷe", " ", "pu", "ró", "hi", "taṁ"],
-            # HL HH LHLH
-            "scansion": "HL_HH |LHLH",
+            # LS LL SLSL
+            "scansion": "LS_LL |SLSL",
         }
     },
     # 1.1.1b
@@ -20,8 +20,8 @@ TEST_PADAS = [
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["yaj", "ñás", "ya", " ", "de", "vá", "m r̥t", "ví", "jam"],
-            # HHL HL HLH
-            "scansion": "HHL H|L_HLH",
+            # LLS LS LSL
+            "scansion": "LLS L|S_LSL",
         }
     },
     # 1.1.1c
@@ -30,8 +30,8 @@ TEST_PADAS = [
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["hó", "tā", "raṁ", " ", "rat", "na", "dhā́", "ta", "mam"],
-            # HHH HLHLH
-            "scansion": "HHH H|LHLH",
+            # LLL LSLSL
+            "scansion": "LLL L|SLSL",
         }
     },
     # 1.1.4c
@@ -41,8 +41,8 @@ TEST_PADAS = [
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["sá", " ", "íd", " ", "de", "vé", "ṣu", " ", "gac", "cha", "ti"],
-            # L H HHL HLL
-            "scansion": "L H HH|L HLL",
+            # S L LLS LSS
+            "scansion": "S L LL|S LSS",
         }
     },
     # 1.3.8a
@@ -54,8 +54,8 @@ TEST_PADAS = [
             "parts": ["víś", "ve", " ", "de", "vā́", "so", " ", "ap", "tú", "raḥ"],
             # FIXME "so" before 'a' should be short here (devā́saḥ aptúraḥ,
             # with a- restored instaed of the expected avagraha 'ptúraḥ)
-            # HH HHH HLH
-            "scansion": "HH HH|H HLH",
+            # LL LLL LSL
+            "scansion": "LL LL|L LSL",
         }
     },
     # 1.33.13b
@@ -67,8 +67,8 @@ TEST_PADAS = [
             "parts": ["ví", " ", "tig", "mé", "na", " ", "vr̥", "ṣa", "bhé", "ṇā", " ", "pú", "ro", " ", "'bhet"],
             # FIXME "ro" before avagraha should be short here (from "púraḥ abhet")
             # but then it wouldn't follow the meter...
-            # L HHL LLHH LH H"
-            "scansion": "L HHL ,LLH|H LH H",
+            # S LLS SSLL SL L"
+            "scansion": "S LLS ,SSL|L SL L",
         }
     },
     # 10.72.4c
@@ -79,8 +79,8 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["á", "di", "ter", " ", "dák", "ṣo", " ", "'jā", "ya", "ta"],
             # FIXME "ṣo" before avagraha should be short here (from "dákṣaḥ ajāyata")
-            # LLH HH HLL"
-            "scansion": "LLH H|H HLL",
+            # SSL LL LSS"
+            "scansion": "SSL L|L LSS",
         }
     },
     # 10.161.5d
@@ -90,8 +90,8 @@ TEST_PADAS = [
         "stanza_meter": "Aṇuṣṭubh",
         "analysis": {
             "parts": ["sár", "va", "m ā́", "yuś", " ", "ca", " ", "te", " ", "'vi", "dam"],
-            # HL HH L H LH
-            "scansion": "HL_HH |L H LH",
+            # LS LL S L SL
+            "scansion": "LS_LL |S L SL",
         }
     },
     # 1.51.8a
@@ -100,8 +100,8 @@ TEST_PADAS = [
         "stanza_meter": "Jagatī",
         "analysis": {
             "parts": ["ví", " ", "jā", "nī", "hi", " ", "ā́", "ri", "yān", " ", "yé", " ", "ca", " ", "dás", "ya", "vo"],
-            # L HHL HLH H L HLH
-            "scansion": "L HHL ,HLH |H L HLH",
+            # S LLS LSL L S LSL
+            "scansion": "S LLS ,LSL |L S LSL",
         }
     },
     # 1.35.5b
@@ -110,9 +110,9 @@ TEST_PADAS = [
         "stanza_meter": "Triṣṭubh",
         "analysis": {
             "parts": ["rá", "thaṁ", " ", "hí", "raṇ", "yap", "ra", "~u", "gaṁ", " ", "vá", "han", "taḥ"],
-            # LH LHHLLH LHH
+            # SL SLLSSL SLL
             # FIXME no good way to mark caesura here since it's inside a compound
-            "scansion": "LH LHH,LL|H LHH",
+            "scansion": "SL SLL,SS|L SLL",
         }
     },
     # 1.121.1a
@@ -121,8 +121,8 @@ TEST_PADAS = [
         "stanza_meter": "",
         "analysis": {
             "parts": ["ká", "d it", "thā́", " ", "nr̥", "ŕ̥m̐", "ḥ pā́", "ta", "raṁ", " ", "de", "va", "ya", "tā́ṁ"],
-            # L HH LH HLH HLLH
-            "scansion": "L_HH LH_HLH HLLH",
+            # S LL SL LSL LSSL
+            "scansion": "S_LL SL_LSL LSSL",
         }
     },
     # 10.129.5b
@@ -131,10 +131,10 @@ TEST_PADAS = [
         "stanza_meter": "Triṣṭubh",
         "analysis": {
             "parts": ["a", "dháḥ", " ", "svi", "d ā", "sī́3", "d u", "pá", "ri s", "vi", "d ā", "sī3t"],
-            # LH L HH LLH L HH
+            # SL S LL SSL S LL
             # FIXME no good way to mark caesura here since it crosses word boundary (du)
             # can check 5th and 6th syllable and see if it has space?
-            "scansion": "LH L_HH,L_L|H_L_HH",
+            "scansion": "SL S_LL,S_S|L_S_LL",
         }
     },
     # 10.144.4c
@@ -144,8 +144,8 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["śa", "tá", "cak", "raṁ", " ", "yo 'h", "yo", " ", "var", "ta", "níḥ"],
             # FIXME o before ' should be short? (avagraha)
-            # FIXME should mark it _HH?
-            "scansion": "LLHH H_H HLH",
+            # FIXME should mark it _LL?
+            "scansion": "SSLL L_L LSL",
         }
     },
     # 10.166.2b
@@ -155,7 +155,7 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["ín", "dra", " ", "'vā́", "riṣ", "ṭo", " ", "ák", "ṣa", "taḥ"],
             # FIXME o before a should be short? (avagraha restored)
-            "scansion": "HL HH|H HLH",
+            "scansion": "LS LL|L LSL",
         }
     },
     # 4.1.1a
@@ -164,8 +164,8 @@ TEST_PADAS = [
         "stanza_meter": "",
         "analysis": {
             "parts": ["tu", "vā́ṁ", " ", "hí", " ", "ag", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
-            # LH L HH LL H LHLH
-            "scansion": "LH L HH LL_H LHLH",
+            # SL S LL SS L SLSL
+            "scansion": "SL S LL SS_L SLSL",
         }
     },
     # 4.1.1a (not metrically restored)
@@ -174,8 +174,8 @@ TEST_PADAS = [
         "stanza_meter": "",
         "analysis": {
             "parts": ["tvā́ṁ", " ", "hy àg", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
-            # H HH LL H LHLH
-            "scansion": "H _HH LL_H LHLH",
+            # L LL SS L SLSL
+            "scansion": "L _LL SS_L SLSL",
         }
     },
     # faked
@@ -184,8 +184,8 @@ TEST_PADAS = [
         "stanza_meter": "",
         "analysis": {
             "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma", " ", "a", "vr̥̄"],
-            # FIXME use HH_?
-            "scansion": "HHH_HLHLL LH",
+            # FIXME use LL_?
+            "scansion": "LLL_LSLSS SL",
         }
     },
 ]
@@ -243,8 +243,8 @@ WORD_BOUNDARY = ' '
 
 AVAGRAHA = '\''
 
-MARKER_SYLLABLE_LIGHT = 'L' # alt: ◡
-MARKER_SYLLABLE_HEAVY = 'H' # alt: —
+MARKER_SYLLABLE_SHORT = 'S' # light syllable, alt marker: ◡
+MARKER_SYLLABLE_LONG = 'L' # heavy syllable, alt marker: —
 MARKER_CADENCE = '|'
 MARKER_CAESURA = ','
 MARKER_WORD_BOUNDARY_IN_SYLLABLE = '_'
@@ -442,9 +442,9 @@ def analyze(pada_text, stanza_meter=""):
 
         if is_light(part):
             # FIXME handle o vowel as short before avagraha / a
-            scansion += MARKER_SYLLABLE_LIGHT
+            scansion += MARKER_SYLLABLE_SHORT
         else:
-            scansion += MARKER_SYLLABLE_HEAVY
+            scansion += MARKER_SYLLABLE_LONG
 
     return {
         "parts": parts,
