@@ -321,7 +321,7 @@ def is_word_boundary(str):
 def is_avagraha(str):
     return str == AVAGRAHA
 
-def is_light(syllable):
+def is_metrically_short(syllable):
     syllable_chars = [c for c in get_sanskrit_chars(syllable.strip())]
 
     # some validation
@@ -335,8 +335,8 @@ def is_light(syllable):
     last_char = syllable_chars[-1]
     return last_char in VOWELS_SHORT
 
-def is_heavy(syllable):
-    return not is_light(syllable)
+def is_metrically_long(syllable):
+    return not is_metrically_short(syllable)
 
 ###############################################################################
 
@@ -398,7 +398,7 @@ def get_pada_parts(text):
         c_next_next_peeked = chars_iterator.peek('') # peeking the one after above
 
         # TODO consolidate this with the above logic for immediate vowel hiatus?
-        if c_next == WORD_BOUNDARY and is_sanskrit_vowel(c_next_next_peeked):
+        if is_word_boundary(c_next) and is_sanskrit_vowel(c_next_next_peeked):
             parts.append(current_part)
             parts.append(WORD_BOUNDARY)
             current_part = '' # reset
@@ -432,7 +432,7 @@ def get_pada_parts(text):
             ):
 
             # account for space being present
-            if c_next and c_next[-1] == WORD_BOUNDARY:
+            if c_next and is_word_boundary(c_next[-1]):
                 parts.append(current_part + c_next[:-1])
                 parts.append(WORD_BOUNDARY)
             else:
@@ -441,7 +441,7 @@ def get_pada_parts(text):
             current_part = '' # reset
         else:
             parts.append(current_part)
-            if c_next and c_next[0] == WORD_BOUNDARY:
+            if c_next and is_word_boundary(c_next[0]):
                 parts.append(WORD_BOUNDARY)
                 current_part = c_next[1:]
             else:
@@ -458,7 +458,7 @@ def analyze(pada_text, stanza_meter=""):
     syllables = []
 
     for part in parts:
-        if part == WORD_BOUNDARY:
+        if is_word_boundary(part):
             scansion += WORD_BOUNDARY
 
             # add the caesura marker
@@ -484,8 +484,7 @@ def analyze(pada_text, stanza_meter=""):
 
         if part == PAUSE:
             scansion += WORD_BOUNDARY + MARKER_PAUSE
-        # FIXME rename the functions here
-        elif is_light(part):
+        elif is_metrically_short(part):
             # FIXME handle o vowel as short before avagraha / a
             scansion += MARKER_SYLLABLE_SHORT
         else:
