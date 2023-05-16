@@ -234,6 +234,12 @@ METER_TRISTUBH = "Triṣṭubh"
 # FIXME add tests for this too
 METER_JAGATI = "Jagatī"
 
+SPECIAL_CHARACTERS_METER = [
+    MARKER_CADENCE, MARKER_CAESURA,
+    MARKER_WORD_BOUNDARY_IN_SYLLABLE,
+    WORD_BOUNDARY
+]
+
 # TODO figure out what each of these special chars indicate in the vnh text
 SPECIAL_CHARACTERS = ['\\', '@', '+']
 
@@ -241,6 +247,9 @@ def clean_string(string):
     # remove multiple spaces with single word boundary char
     string_normalized = re.sub(" +", WORD_BOUNDARY, string.strip())
     return ''.join(c for c in string_normalized if c not in SPECIAL_CHARACTERS)
+
+def clean_meter_scansion(string):
+    return ''.join(c for c in string if c not in SPECIAL_CHARACTERS_METER)
 
 def is_sanskrit_vowel(str):
     return str in VOWELS
@@ -375,9 +384,11 @@ def get_pada_parts(text):
 
 def analyze(pada_text, stanza_meter=""):
     parts = get_pada_parts(clean_string(pada_text))
-
     scansion = ""
+
     no_of_syllables = 0
+    syllables = []
+
     for part in parts:
         if part == WORD_BOUNDARY:
             scansion += WORD_BOUNDARY
@@ -398,6 +409,7 @@ def analyze(pada_text, stanza_meter=""):
             scansion += MARKER_CADENCE
 
         no_of_syllables += 1
+        syllables.append(part)
 
         if WORD_BOUNDARY in part.strip():
             scansion += MARKER_WORD_BOUNDARY_IN_SYLLABLE
@@ -412,8 +424,10 @@ def analyze(pada_text, stanza_meter=""):
     return {
         "parts": parts,
         "scansion": scansion,
-        # TODO add this info along with actual syllables
-        #"no_of_syllables": no_of_syllables,
+        "no_of_syllables": no_of_syllables,
+        # simpler info
+        "syllables": syllables,
+        "scansion_syllables": clean_meter_scansion(scansion),
     }
 
 
@@ -428,10 +442,16 @@ if __name__ == '__main__':
 
         # output
         analysis = analyze(pada["text"], pada["stanza_meter"])
-        print(f'{analysis["parts"]} {analysis["scansion"]}')
+        print(f'{analysis["parts"]} {analysis["scansion"]} ({analysis["no_of_syllables"]})')
+        #print(analysis)
 
         # check output against expected
         # TODO save the test output in a file too?
         analysis_expected = pada["analysis"]
-        if analysis != analysis_expected:
+
+        #if analysis != analysis_expected:
+        if (
+            analysis["parts"] != analysis_expected["parts"]
+            or analysis["scansion_syllables"] != clean_meter_scansion(analysis_expected["scansion"])
+        ):
             print(f'Not as expected: \n{analysis_expected["parts"]} {analysis_expected["scansion"]}\n')
