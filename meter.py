@@ -524,12 +524,13 @@ def analyze(pada_text, stanza_meter=""):
                 # FIXME decide win strategy on multiple caesura (first or last)
                 #
                 # in case of eligible caesura on both positions, 5 wins
+                # if going for this, would also need to make sure we don't put in
+                # the caesura marker twice
                 #and no_of_syllables in [4, 5]
                 #
                 # in case of eligible caesura on both positions, 4 wins
                 and (no_of_syllables in [4, 5] and not caesura_position)
             ):
-                # TODO also improve caesura marking when 5th or 6th syllable actually has a space
                 scansion += MARKER_CAESURA
                 caesura_position = no_of_syllables
 
