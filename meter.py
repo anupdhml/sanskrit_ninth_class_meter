@@ -537,10 +537,7 @@ def generate_scansion(pada_text, meter=""):
     # clean special characters in the text
     pada_text_cleaned = clean_vnh_samhitapatha(pada_text_normalized)
 
-    if meter:
-        meter_spec = METER_SPECS[meter]
-    else:
-        meter_spec = {}
+    meter_spec = METER_SPECS.get(meter, {})
 
     # means there were special characters which indicates restorations:
     # see https://lrc.la.utexas.edu/books/rigveda/RV00#bolle
@@ -558,6 +555,7 @@ def generate_scansion(pada_text, meter=""):
     notes = ""
 
     for part in parts:
+        # FIXME! add caesura marker if the syllable has the word boundary too?
         if is_word_boundary(part):
             scansion += WORD_BOUNDARY
 
@@ -615,7 +613,6 @@ def generate_scansion(pada_text, meter=""):
         "caesura_position": caesura_position,
         "has_restorations": has_restorations,
         "notes": notes,
-        #"is_correct": is_correct,
         # simpler info
         "syllables": syllables,
         "scansion_syllables": scansion_syllables,
@@ -624,12 +621,13 @@ def generate_scansion(pada_text, meter=""):
 
 def check_meter_faults(scansion, no_of_syllables, caesura_position, meter):
     if meter not in METER_SPECS:
-        raise Exception("Unsupported meter: {meter}")
+        raise Exception(f"Unsupported meter: {meter}")
 
     faults = {}
 
     meter_spec = METER_SPECS[meter]
 
+    # TODO we can just take last n chars as cadence too
     scansion_cadence_main = clean_meter_scansion(
         scansion.split(MARKER_CADENCE)[1]
     )[:-1] if MARKER_CADENCE in scansion else ""
@@ -639,8 +637,18 @@ def check_meter_faults(scansion, no_of_syllables, caesura_position, meter):
     elif scansion_cadence_main != meter_spec["scansion_cadence_main"]:
         faults["scansion_cadence"] = scansion_cadence_main + MARKER_SYLLABLE_SHORT_OR_LONG
 
-    #if 'caesura_possible_positions' in meter_spec:
-    #if 'short_after_caesura_relative_position' in meter_spec:
+    if caesura_position == 0: # for meters where caesura is unapplicable, this is -1
+        faults["caesura_position"] = caesura_position
+    elif caesura_position > 0 and "short_after_caesura_relative_position" in meter_spec:
+        # TODO if alt_caesura_position is there, explore using it too
+        scansion_post_caesura = clean_meter_scansion(
+            scansion.split(MARKER_CAESURA)[1]
+        )[:meter_spec["short_after_caesura_relative_position"]]
+        if (
+            len(scansion_post_caesura) != meter_spec['short_after_caesura_relative_position']
+            or scansion_post_caesura[-1] != MARKER_SYLLABLE_SHORT
+        ):
+            faults['scansion_post_caesura'] = scansion_post_caesura
 
     return faults
 
@@ -650,17 +658,15 @@ def analyze(pada_text, stanza_meter=""):
     results = generate_scansion(pada_text, stanza_meter)
 
     # if stanza meter is specified, check the correctness of the pada meter too
-    is_correct = -1 # not applicable
+    results["is_correct"] = -1 # not applicable
+    results["faults"] = ""
     if stanza_meter:
-        meter_faults = check_meter_faults(
+        faults = check_meter_faults(
             results["scansion"], results["no_of_syllables"], results["caesura_position"],
             stanza_meter
         )
-        if meter_faults:
-            #print(meter_faults)
-            is_correct = 0 # false
-        else:
-            is_correct = 1 # true
+        results["is_correct"] = 0 if faults else 1
+        results['faults'] = " ".join([f"{k}={v}" for (k, v) in faults.items()])
 
     return results
 
@@ -677,14 +683,18 @@ if __name__ == '__main__':
 
         # output
         analysis = analyze(pada["text"], pada["stanza_meter"])
+        #print(analysis)
         print(f'{analysis["parts"]} {analysis["scansion"]} ({analysis["no_of_syllables"]}, {analysis["caesura_position"]})')
         #print(f'{analysis["syllables"]} {analysis["scansion_syllables"]} ({analysis["no_of_syllables"]})')
-        #print(analysis)
+
+        # check meter correctness
+        # TODO validate this too against the expected
+        if analysis["faults"]:
+            print("Faults:", analysis["faults"])
 
         # check output against expected
         # TODO save the test output in a file too?
         analysis_expected = pada["analysis"]
-
         #if analysis != analysis_expected:
         if (
             analysis["parts"] != analysis_expected["parts"]
