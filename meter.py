@@ -12,7 +12,7 @@ TEST_PADAS = [
             "parts": ["ag", "ní", "m ī", "ḷe", " ", "pu", "ró", "hi", "taṁ"],
             # LS LL SLSL
             "scansion": "LS_LL |SLSL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 1.1.1b
@@ -23,7 +23,7 @@ TEST_PADAS = [
             "parts": ["yaj", "ñás", "ya", " ", "de", "vá", "m r̥t", "ví", "jam"],
             # LLS LS LSL
             "scansion": "LLS L|S_LSL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 1.1.1c
@@ -34,7 +34,7 @@ TEST_PADAS = [
             "parts": ["hó", "tā", "raṁ", " ", "rat", "na", "dhā́", "ta", "mam"],
             # LLL LSLSL
             "scansion": "LLL L|SLSL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 1.1.4c
@@ -46,7 +46,7 @@ TEST_PADAS = [
             "parts": ["sá", " ", "íd", " ", "de", "vé", "ṣu", " ", "gac", "cha", "ti"],
             # S L LLS LSS
             "scansion": "S L LL|S LSS",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 1.3.8a
@@ -60,7 +60,7 @@ TEST_PADAS = [
             # with a- restored instaed of the expected avagraha 'ptúraḥ)
             # LL LLL LSL
             "scansion": "LL LL|L LSL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 1.33.13b
@@ -87,7 +87,7 @@ TEST_PADAS = [
             # FIXME "ṣo" before avagraha should be short here (from "dákṣaḥ ajāyata")
             # SSL LL LSS"
             "scansion": "SSL L|L LSS",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 10.161.5d
@@ -99,7 +99,7 @@ TEST_PADAS = [
             "parts": ["sár", "va", "m ā́", "yuś", " ", "ca", " ", "te", " ", "'vi", "dam"],
             # LS LL S L SL
             "scansion": "LS_LL |S L SL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 5.5.5c
@@ -111,12 +111,11 @@ TEST_PADAS = [
             "parts": ["práp", "ra", " ", "yaj", "ñám", " ", "pr̥", "ṇī", "ta", "na"],
             # LS LL SLSS
             "scansion": "LS LL |SLSS",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 5.41.10d
     # metrical pauses
-    # FIXME caesura where: case where there's a word boundary after both 4th and 5th actual syllables?
     {
         "text": "śocíṣkeśo ̀ ní riṇāti vánā",
         "stanza_meter": "Triṣṭubh",
@@ -135,7 +134,7 @@ TEST_PADAS = [
             "parts": ["dr̥", "r̥", "ḷhā́", "ni", " ", "aubh", "nā", "d u", "śá", "mā", "na", " ", "ó", "jo"],
             # SSLS LL SSLS LL (vedaweb treats ḷh as 2 chars yielding different results here)
             "scansion": "SSLS LL_SSLS LL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 1.51.8a
@@ -170,7 +169,7 @@ TEST_PADAS = [
             "parts": ["ká", "d it", "thā́", " ", "nr̥", "ŕ̥m̐", "ḥ pā́", "ta", "raṁ", " ", "de", "va", "ya", "tā́ṁ"],
             # S LL SL LSL LSSL
             "scansion": "S_LL SL_LSL LSSL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 10.129.5b
@@ -196,7 +195,7 @@ TEST_PADAS = [
             # FIXME o before ' should be short? (avagraha)
             # FIXME should mark it _LL?
             "scansion": "SSLL L_L LSL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 10.166.2b
@@ -207,7 +206,7 @@ TEST_PADAS = [
             "parts": ["ín", "dra", " ", "'vā́", "riṣ", "ṭo", " ", "ák", "ṣa", "taḥ"],
             # FIXME o before a should be short? (avagraha restored)
             "scansion": "LS LL|L LSL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 4.1.1a
@@ -218,7 +217,7 @@ TEST_PADAS = [
             "parts": ["tu", "vā́ṁ", " ", "hí", " ", "ag", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
             # SL S LL SS L SLSL
             "scansion": "SL S LL SS_L SLSL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # 4.1.1a (not metrically restored)
@@ -229,7 +228,7 @@ TEST_PADAS = [
             "parts": ["tvā́ṁ", " ", "hy àg", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
             # L LL SS L SLSL
             "scansion": "L _LL SS_L SLSL",
-            "caesura_position": 0,
+            "caesura_position": -1,
         }
     },
     # faked
@@ -240,7 +239,21 @@ TEST_PADAS = [
             "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma", " ", "a", "vr̥̄"],
             # FIXME use LL_?
             "scansion": "LLL_LSLSS SL",
-            "caesura_position": 0,
+            "caesura_position": -1,
+        }
+    },
+    # faked
+    # multiple caesura positions eligible (first one wins)
+    # FIXME decide win strategy on multiple caesura (first or last)
+    {
+        "text": "śocíṣkeśo va ní riṇāti vánā",
+        "stanza_meter": "Triṣṭubh",
+        "analysis": {
+            "parts": ["śo", "cíṣ", "ke", "śo", " ", "va", " ", "ní", " ", "ri", "ṇā", "ti", " ", "vá", "nā"],
+            # LLLL S S SLS SL
+            "scansion": "LLLL S ,S S|LS SL",
+            # 4 wins over possible 5
+            "caesura_position": 4,
         }
     },
 ]
@@ -505,10 +518,18 @@ def analyze(pada_text, stanza_meter=""):
         if is_word_boundary(part):
             scansion += WORD_BOUNDARY
 
-            # add the caesura marker
-            # FIXME which one wins when both satisfy: early and late caesura conditions
-            # TODO also improve caesura marking when 5th or 6th syllable actually has a space
-            if (stanza_meter in [METER_TRISTUBH, METER_JAGATI]) and no_of_syllables in [4, 5]:
+            # mark the caesura
+            if (
+                stanza_meter in [METER_TRISTUBH, METER_JAGATI]
+                # FIXME decide win strategy on multiple caesura (first or last)
+                #
+                # in case of eligible caesura on both positions, 5 wins
+                #and no_of_syllables in [4, 5]
+                #
+                # in case of eligible caesura on both positions, 4 wins
+                and (no_of_syllables in [4, 5] and not caesura_position)
+            ):
+                # TODO also improve caesura marking when 5th or 6th syllable actually has a space
                 scansion += MARKER_CAESURA
                 caesura_position = no_of_syllables
 
@@ -543,6 +564,14 @@ def analyze(pada_text, stanza_meter=""):
         raise Exception(f"Length of syllables {syllables} does not match the scansion {scansion_syllables}")
 
     # FIXME check if the final scansion follows the meter or not
+    # also track where it's incorrect, as meter_faults?
+    #   no of syllables, cadence,
+    #   caesura with word boundary, second syllable after caesura is short
+    #is_correct = True
+
+    # for these meters, caesura does not make sense so override
+    if stanza_meter not in [METER_TRISTUBH, METER_JAGATI]:
+        caesura_position = -1
 
     return {
         "parts": parts,
@@ -550,6 +579,7 @@ def analyze(pada_text, stanza_meter=""):
         "has_restorations": has_restorations,
         "caesura_position": caesura_position,
         "no_of_syllables": no_of_syllables,
+        #"is_correct": is_correct,
         # simpler info
         "syllables": syllables,
         "scansion_syllables": scansion_syllables,
