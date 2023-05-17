@@ -510,6 +510,7 @@ def analyze(pada_text, stanza_meter=""):
 
     parts = get_pada_parts(pada_text_cleaned)
     scansion = ""
+    all_caesura_positions = []
     caesura_position = 0
     no_of_syllables = 0
     syllables = []
@@ -519,20 +520,15 @@ def analyze(pada_text, stanza_meter=""):
             scansion += WORD_BOUNDARY
 
             # mark the caesura
-            if (
-                stanza_meter in [METER_TRISTUBH, METER_JAGATI]
+            if stanza_meter in [METER_TRISTUBH, METER_JAGATI] and no_of_syllables in [4, 5]:
+                # we want to track both positions when they are possible
+                all_caesura_positions.append(no_of_syllables)
                 # FIXME decide win strategy on multiple caesura (first or last)
-                #
-                # in case of eligible caesura on both positions, 5 wins
-                # if going for this, would also need to make sure we don't put in
-                # the caesura marker twice
-                #and no_of_syllables in [4, 5]
-                #
                 # in case of eligible caesura on both positions, 4 wins
-                and (no_of_syllables in [4, 5] and not caesura_position)
-            ):
-                scansion += MARKER_CAESURA
-                caesura_position = no_of_syllables
+                # without this check, 5 would win (make sure not to put double mark in this case)
+                if not caesura_position:
+                    caesura_position = no_of_syllables
+                    scansion += MARKER_CAESURA
 
             continue
 
@@ -572,14 +568,26 @@ def analyze(pada_text, stanza_meter=""):
 
     # for these meters, caesura does not make sense so override
     if stanza_meter not in [METER_TRISTUBH, METER_JAGATI]:
-        caesura_position = -1
+        caesura_position = -1 # marker to indicate caesura is not eligible here
+        all_caesura_positions = []
+
+    if len(all_caesura_positions) > 1:
+        all_caesura_positions.remove(caesura_position)
+        alt_caesura_position = ",".join([str(n) for n in all_caesura_positions])
+    else:
+        alt_caesura_position = ""
+
+    notes = ""
+    if alt_caesura_position:
+        notes += f"alt_caesura_position:{alt_caesura_position} "
 
     return {
         "parts": parts,
         "scansion": scansion,
-        "has_restorations": has_restorations,
-        "caesura_position": caesura_position,
         "no_of_syllables": no_of_syllables,
+        "caesura_position": caesura_position,
+        "has_restorations": has_restorations,
+        "notes": notes,
         #"is_correct": is_correct,
         # simpler info
         "syllables": syllables,
@@ -587,6 +595,7 @@ def analyze(pada_text, stanza_meter=""):
     }
 
 
+# TODO take in arg here for custom analysis
 if __name__ == '__main__':
     for pada in TEST_PADAS:
         # tests
