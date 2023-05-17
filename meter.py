@@ -179,11 +179,9 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["a", "dháḥ", " ", "svi", "d ā", "sī́3", "d u", "pá", "ri s", "vi", "d ā", "sī3t"],
             # SL S LL SSL S LL
-            # FIXME no good way to mark caesura here since it crosses word boundary (du)
-            # FIXME! can check 5th and 6th syllable and see if it has space?
-            "scansion": "SL S_LL,S_S|L_S_LL",
-            #"caesura_position": 5,
-            "caesura_position": 0,
+            # TODO! _LS should be L_S
+            "scansion": "SL S_LL,_SS|_LS_LL",
+            "caesura_position": 5,
         }
     },
     # 10.144.4c
@@ -193,8 +191,8 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["śa", "tá", "cak", "raṁ", " ", "yo 'h", "yo", " ", "var", "ta", "níḥ"],
             # FIXME o before ' should be short? (avagraha)
-            # FIXME should mark it _LL?
-            "scansion": "SSLL L_L LSL",
+            # TODO! _LL should be L_L?
+            "scansion": "SSLL _LL LSL",
             "caesura_position": -1,
         }
     },
@@ -237,8 +235,8 @@ TEST_PADAS = [
         "stanza_meter": "",
         "analysis": {
             "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma", " ", "a", "vr̥̄"],
-            # FIXME use LL_?
-            "scansion": "LLL_LSLSS SL",
+            # TODO! _LL should be L_L
+            "scansion": "LL_LLSLSS SL",
             "caesura_position": -1,
         }
     },
@@ -251,7 +249,7 @@ TEST_PADAS = [
         "analysis": {
             "parts": ["śo", "cíṣ", "ke", "śo", " ", "va", " ", "ní", " ", "ri", "ṇā", "ti", " ", "vá", "nā"],
             # LLLL S S SLS SL
-            "scansion": "LLLL S ,S S|LS SL",
+            "scansion": "LLLL ,S S S|LS SL",
             # 4 wins over possible 5
             "caesura_position": 4,
         }
@@ -419,6 +417,9 @@ def is_metrically_short(syllable):
 def is_metrically_long(syllable):
     return not is_metrically_short(syllable)
 
+def stringify_dictionary(dict):
+    return " ".join([f"{k}={v}" for (k, v) in dict.items()])
+
 ###############################################################################
 
 def get_sanskrit_chars(text):
@@ -552,10 +553,9 @@ def generate_scansion(pada_text, meter=""):
     caesura_position = 0 if caesura_possible_positions else -1
     no_of_syllables = 0
     syllables = []
-    notes = ""
+    notes = {}
 
     for part in parts:
-        # FIXME! add caesura marker if the syllable has the word boundary too?
         if is_word_boundary(part):
             scansion += WORD_BOUNDARY
 
@@ -579,7 +579,8 @@ def generate_scansion(pada_text, meter=""):
         no_of_syllables += 1
         syllables.append(part)
 
-        if WORD_BOUNDARY in part.strip():
+        # word boundary in the middle of the syllable part
+        if WORD_BOUNDARY in part.strip(WORD_BOUNDARY):
             scansion += MARKER_WORD_BOUNDARY_IN_SYLLABLE
 
         if part == PAUSE:
@@ -597,6 +598,34 @@ def generate_scansion(pada_text, meter=""):
     if len(syllables) != len(scansion_syllables):
         raise Exception(f"Length of syllables {syllables} does not match the scansion {scansion_syllables}")
 
+    # if caesura position has still not been set, be less strict i.e.
+    # if syllables in possible caesura positions have word boundary internally, count it
+    if not caesura_position:
+        all_caesura_positions = [
+            n for n in caesura_possible_positions
+                # word boundary in the middle of the syllable
+                # no need to substract 1 from n here!
+                # since we actually need to check the syllable after the possible position
+                # (the part before the space in the next syllable would be actually before caesura)
+                if WORD_BOUNDARY in syllables[n].strip(WORD_BOUNDARY)
+        ]
+        if all_caesura_positions:
+            # FIXME decide win strategy on multiple caesura (first or last)
+            caesura_position = all_caesura_positions[0] # first one wins
+            notes['caesura_position_inside_syllable'] = True
+            # insert the caesura marker at the appropriate place in the scansion string
+            # TODO do this more cleanly above, by storing each scansion element in a more
+            # structured fashion
+            temp_scansion = ''
+            temp_no_of_syllables = 0
+            for c in scansion:
+                temp_scansion += c
+                if c in [MARKER_SYLLABLE_SHORT, MARKER_SYLLABLE_LONG, MARKER_PAUSE]:
+                    temp_no_of_syllables +=1
+                    if temp_no_of_syllables == caesura_position:
+                        temp_scansion += MARKER_CAESURA
+            scansion = temp_scansion
+
     # include info on other eligible caesura positions
     if len(all_caesura_positions) > 1:
         all_caesura_positions.remove(caesura_position)
@@ -604,7 +633,7 @@ def generate_scansion(pada_text, meter=""):
     else:
         alt_caesura_position = ""
     if alt_caesura_position:
-        notes += f"alt_caesura_position:{alt_caesura_position} "
+        notes['caesura_position_alt'] = alt_caesura_position
 
     return {
         "parts": parts,
@@ -612,7 +641,7 @@ def generate_scansion(pada_text, meter=""):
         "no_of_syllables": no_of_syllables,
         "caesura_position": caesura_position,
         "has_restorations": has_restorations,
-        "notes": notes,
+        "notes": stringify_dictionary(notes),
         # simpler info
         "syllables": syllables,
         "scansion_syllables": scansion_syllables,
@@ -640,7 +669,7 @@ def check_meter_faults(scansion, no_of_syllables, caesura_position, meter):
     if caesura_position == 0: # for meters where caesura is unapplicable, this is -1
         faults["caesura_position"] = caesura_position
     elif caesura_position > 0 and "short_after_caesura_relative_position" in meter_spec:
-        # TODO if alt_caesura_position is there, explore using it too
+        # TODO if alt_caesura_position is there, explore using it too?
         scansion_post_caesura = clean_meter_scansion(
             scansion.split(MARKER_CAESURA)[1]
         )[:meter_spec["short_after_caesura_relative_position"]]
@@ -665,8 +694,9 @@ def analyze(pada_text, stanza_meter=""):
             results["scansion"], results["no_of_syllables"], results["caesura_position"],
             stanza_meter
         )
+        # TODO just use strings for meter_is_correct?
         results["is_correct"] = 0 if faults else 1
-        results['faults'] = " ".join([f"{k}={v}" for (k, v) in faults.items()])
+        results['faults'] = stringify_dictionary(faults)
 
     return results
 
@@ -698,6 +728,8 @@ if __name__ == '__main__':
         #if analysis != analysis_expected:
         if (
             analysis["parts"] != analysis_expected["parts"]
+            # more strict check
+            #or analysis["scansion"] != analysis_expected["scansion"]
             or analysis["scansion_syllables"] != clean_meter_scansion(analysis_expected["scansion"])
             or analysis["caesura_position"] != analysis_expected["caesura_position"]
         ):
