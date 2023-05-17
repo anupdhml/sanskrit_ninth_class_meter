@@ -316,6 +316,7 @@ PAUSE = ' \u0300'
 
 MARKER_SYLLABLE_SHORT = 'S' # light syllable, alt marker: ◡
 MARKER_SYLLABLE_LONG = 'L' # heavy syllable, alt marker: —
+MARKER_SYLLABLE_SHORT_OR_LONG = 'X' # light/heavy syllable
 #MARKER_PAUSE = 'P' # metrical pause, alt marker: ·
 MARKER_PAUSE = '·' # metrical pause, alt marker: P
 MARKER_CADENCE = '|'
@@ -326,6 +327,38 @@ METER_GAYATRI = "Gāyatrī"
 METER_ANUSTUBH = "Aṇuṣṭubh"
 METER_TRISTUBH = "Triṣṭubh"
 METER_JAGATI = "Jagatī"
+
+# cadence pattern for our meters
+PATTERN_IAMBIC = f"{MARKER_SYLLABLE_SHORT}{MARKER_SYLLABLE_LONG}{MARKER_SYLLABLE_SHORT}"
+PATTERN_TROCHAIC = f"{MARKER_SYLLABLE_LONG}{MARKER_SYLLABLE_SHORT}{MARKER_SYLLABLE_LONG}"
+PATTERN_TROCHAIC_IAMBIC = f"{MARKER_SYLLABLE_LONG}{MARKER_SYLLABLE_SHORT}{MARKER_SYLLABLE_LONG}{MARKER_SYLLABLE_SHORT}"
+
+METER_SPECS = {
+    METER_GAYATRI: {
+        "no_of_syllables": 8,
+        "cadence_position": 4,
+        "scansion_cadence_main": PATTERN_IAMBIC, # positions 5,6,7
+    },
+    METER_ANUSTUBH: {
+        "no_of_syllables": 8,
+        "cadence_position": 4,
+        "scansion_cadence_main": PATTERN_IAMBIC, # positions 5,6,7
+    },
+    METER_TRISTUBH: {
+        "no_of_syllables": 11,
+        "cadence_position": 7,
+        "scansion_cadence_main": PATTERN_TROCHAIC, # positions 8,9,10
+        "caesura_possible_positions": [4, 5],
+        "short_after_caesura_relative_position": 2,
+    },
+    METER_JAGATI: {
+        "no_of_syllables": 12,
+        "cadence_position": 7,
+        "scansion_cadence_main": PATTERN_TROCHAIC_IAMBIC, # positions 8,9,10
+        "caesura_possible_positions": [4, 5],
+        "short_after_caesura_relative_position": 2,
+    },
+}
 
 SPECIAL_CHARACTERS_METER = [
     # MARKER_PAUSE is intentionally not here since it counts towards the meter syllables
@@ -498,33 +531,42 @@ def get_pada_parts(text):
     return parts
 
 
-def analyze(pada_text, stanza_meter=""):
+def generate_scansion(pada_text, meter=""):
     # remove multiple spaces with single word boundary char
     pada_text_normalized = re.sub(" +", WORD_BOUNDARY, pada_text.strip())
     # clean special characters in the text
     pada_text_cleaned = clean_vnh_samhitapatha(pada_text_normalized)
 
+    if meter:
+        meter_spec = METER_SPECS[meter]
+    else:
+        meter_spec = {}
+
     # means there were special characters which indicates restorations:
     # see https://lrc.la.utexas.edu/books/rigveda/RV00#bolle
     has_restorations = len(pada_text_cleaned) != len(pada_text_normalized)
 
+    caesura_possible_positions = meter_spec.get('caesura_possible_positions', [])
+
     parts = get_pada_parts(pada_text_cleaned)
     scansion = ""
     all_caesura_positions = []
-    caesura_position = 0
+    # 0 for invalid, -1 when not applicable (eg: for meters like anustubh and gayatri)
+    caesura_position = 0 if caesura_possible_positions else -1
     no_of_syllables = 0
     syllables = []
+    notes = ""
 
     for part in parts:
         if is_word_boundary(part):
             scansion += WORD_BOUNDARY
 
-            # mark the caesura
-            if stanza_meter in [METER_TRISTUBH, METER_JAGATI] and no_of_syllables in [4, 5]:
+            # mark the caesura if applicable
+            if no_of_syllables in caesura_possible_positions:
                 # we want to track both positions when they are possible
                 all_caesura_positions.append(no_of_syllables)
                 # FIXME decide win strategy on multiple caesura (first or last)
-                # in case of eligible caesura on both positions, 4 wins
+                # in case of eligible caesura on both positions, 4 wins for example, for tristubh
                 # without this check, 5 would win (make sure not to put double mark in this case)
                 if not caesura_position:
                     caesura_position = no_of_syllables
@@ -533,10 +575,7 @@ def analyze(pada_text, stanza_meter=""):
             continue
 
         # add the cadence marker
-        if (
-            (stanza_meter in [METER_GAYATRI, METER_ANUSTUBH] and no_of_syllables == 4)
-            or (stanza_meter in [METER_TRISTUBH, METER_JAGATI] and no_of_syllables == 7)
-        ):
+        if no_of_syllables == meter_spec.get('cadence_position', -1):
             scansion += MARKER_CADENCE
 
         no_of_syllables += 1
@@ -560,24 +599,12 @@ def analyze(pada_text, stanza_meter=""):
     if len(syllables) != len(scansion_syllables):
         raise Exception(f"Length of syllables {syllables} does not match the scansion {scansion_syllables}")
 
-    # FIXME check if the final scansion follows the meter or not
-    # also track where it's incorrect, as meter_faults?
-    #   no of syllables, cadence,
-    #   caesura with word boundary, second syllable after caesura is short
-    #is_correct = True
-
-    # for these meters, caesura does not make sense so override
-    if stanza_meter not in [METER_TRISTUBH, METER_JAGATI]:
-        caesura_position = -1 # marker to indicate caesura is not eligible here
-        all_caesura_positions = []
-
+    # include info on other eligible caesura positions
     if len(all_caesura_positions) > 1:
         all_caesura_positions.remove(caesura_position)
         alt_caesura_position = ",".join([str(n) for n in all_caesura_positions])
     else:
         alt_caesura_position = ""
-
-    notes = ""
     if alt_caesura_position:
         notes += f"alt_caesura_position:{alt_caesura_position} "
 
@@ -593,6 +620,49 @@ def analyze(pada_text, stanza_meter=""):
         "syllables": syllables,
         "scansion_syllables": scansion_syllables,
     }
+
+
+def check_meter_faults(scansion, no_of_syllables, caesura_position, meter):
+    if meter not in METER_SPECS:
+        raise Exception("Unsupported meter: {meter}")
+
+    faults = {}
+
+    meter_spec = METER_SPECS[meter]
+
+    scansion_cadence_main = clean_meter_scansion(
+        scansion.split(MARKER_CADENCE)[1]
+    )[:-1] if MARKER_CADENCE in scansion else ""
+
+    if no_of_syllables != meter_spec["no_of_syllables"]:
+        faults["no_of_syllables"] = no_of_syllables
+    elif scansion_cadence_main != meter_spec["scansion_cadence_main"]:
+        faults["scansion_cadence"] = scansion_cadence_main + MARKER_SYLLABLE_SHORT_OR_LONG
+
+    #if 'caesura_possible_positions' in meter_spec:
+    #if 'short_after_caesura_relative_position' in meter_spec:
+
+    return faults
+
+###############################################################################
+
+def analyze(pada_text, stanza_meter=""):
+    results = generate_scansion(pada_text, stanza_meter)
+
+    # if stanza meter is specified, check the correctness of the pada meter too
+    is_correct = -1 # not applicable
+    if stanza_meter:
+        meter_faults = check_meter_faults(
+            results["scansion"], results["no_of_syllables"], results["caesura_position"],
+            stanza_meter
+        )
+        if meter_faults:
+            #print(meter_faults)
+            is_correct = 0 # false
+        else:
+            is_correct = 1 # true
+
+    return results
 
 
 # TODO take in arg here for custom analysis
