@@ -260,6 +260,8 @@ TEST_PADAS = [
 
 ###############################################################################
 
+# Constants related to sanskrit chars used in our text
+
 VOWELS_SHORT = [
     'a',
     'i', 'ï', '~i', # ~i can stand for ï
@@ -306,11 +308,14 @@ CONSONANTS = [
 ]
 
 WORD_BOUNDARY = ' '
-
 AVAGRAHA = '\''
+PAUSE = ' \u0300' # space followed by gravis, used in vnh text to mark metrical pauses
 
-# space followed by gravis, used in vnh text to mark metrical pauses
-PAUSE = ' \u0300'
+SPECIAL_CHARACTERS = [WORD_BOUNDARY, AVAGRAHA, PAUSE]
+
+###############################################################################
+
+# Constants related to meter
 
 MARKER_SYLLABLE_SHORT = 'S' # light syllable, alt marker: ◡
 MARKER_SYLLABLE_LONG = 'L' # heavy syllable, alt marker: —
@@ -372,13 +377,25 @@ SPECIAL_CHARACTERS_SAMHITAPTHA_VNH = [
     '-',      # marks internal boundary of amredita (iterative) compounds
     '\\',     # marks independent svarita on the preceding vowel
     '*',      # FIXME figure out what this means, eg: https://vedaweb.uni-koeln.de/rigveda/view/id/9.67.27
+    '&',      # marks modern editorial revisions: https://lrc.la.utexas.edu/books/rigveda/RV00#dagger
 ]
 
+# TODO figure out meanings of each of these
+SPECIAL_CHARACTERS_PADAPATHA_LUBOTSKY = ['-', '_', '=', '?', '+', '}', '!', '\\', '*']
+
+###############################################################################
+
+def clean_string(string, special_chars):
+    return ''.join(c for c in string if c not in special_chars)
+
 def clean_vnh_samhitapatha(string):
-    return ''.join(c for c in string if c not in SPECIAL_CHARACTERS_SAMHITAPTHA_VNH)
+    return clean_string(string, SPECIAL_CHARACTERS_SAMHITAPTHA_VNH)
+
+def clean_lubotsky_padapatha(string):
+    return clean_string(string, SPECIAL_CHARACTERS_PADAPATHA_LUBOTSKY)
 
 def clean_meter_scansion(string):
-    return ''.join(c for c in string if c not in SPECIAL_CHARACTERS_METER)
+    return clean_string(string, SPECIAL_CHARACTERS_METER)
 
 def is_sanskrit_vowel(str):
     return str in VOWELS
@@ -580,6 +597,8 @@ def generate_scansion(pada_text, meter=""):
         syllables.append(part)
 
         # word boundary in the middle of the syllable part
+        # TODO! change where this marker goes based on whether the part before the
+        # word boundary here is vowel or not?
         if WORD_BOUNDARY in part.strip(WORD_BOUNDARY):
             scansion += MARKER_WORD_BOUNDARY_IN_SYLLABLE
 
