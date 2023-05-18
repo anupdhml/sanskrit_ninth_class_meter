@@ -703,8 +703,9 @@ def generate_scansion(pada_text, meter=""):
 
     # means there were special characters which indicates restorations:
     # see https://lrc.la.utexas.edu/books/rigveda/RV00#bolle
-    # FIXME! just check for presence of special chars in pada_text
-    has_restorations = len(pada_text_cleaned) != len(pada_text_normalized)
+    # alt method:
+    #has_restorations = len(pada_text_cleaned) != len(pada_text_normalized)
+    has_restorations = any([c in pada_text_normalized for c in SPECIAL_CHARACTERS_SAMHITAPTHA_VNH])
 
     caesura_possible_positions = meter_spec.get('caesura_possible_positions', [])
 
