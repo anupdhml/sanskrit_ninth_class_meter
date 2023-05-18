@@ -178,7 +178,7 @@ TEST_PADAS = [
         "text": "śatácakraṁ yo\ 'hyo\ vartaníḥ",
         "stanza_meter": "",
         "analysis": {
-            "parts": ["śa", "tá", "cak", "raṁ", " ", "yo 'h", "yo", " ", "var", "ta", "níḥ"],
+            "parts": ["śa", "tá", "cak", "raṁ", " ", "yo\\ 'h", "yo\\", " ", "var", "ta", "níḥ"],
             # FIXME o before ' should be short? (avagraha)
             # TODO! _LL should be L_L?
             "scansion": "SSLL _LL LSL",
@@ -334,8 +334,8 @@ TEST_PADAS = [
 
 VOWELS_SHORT = [
     'a',
-    'i', 'ï', '~i', # ~i can stand for ï
-    'u', 'ü', '~u', # ~u can stand for ü
+    'i', 'ï',
+    'u', 'ü',
     'r̥',
     'l̥',
     # accented varieties
@@ -344,6 +344,17 @@ VOWELS_SHORT = [
     'ú', 'ù',
     'ŕ̥', 'r̥̀',
     # accented l̥ is not attested
+    #
+    # variants
+    # instead of tracking these as separate characters, can choose to
+    # normalize them, but using these make it more visible
+    # TODO just implement this as part of normalize_sanskrit_chars()
+    #
+    # hiatus indication in ai/au: same as ï, ü
+    '~i', '~u',
+    # independent svarita: same as grave accented varieties above
+    'a\\', 'i\\',
+    'u\\', 'r̥\\', # these not present in vnh
 ]
 
 VOWELS_LONG = [
@@ -360,6 +371,11 @@ VOWELS_LONG = [
     'r̥̄́', # grave version here is not attested
     'é', 'è', 'aí', 'aì',
     'ó', 'ò', 'aú', 'aù',
+    #
+    # variants
+    # independent svarita: same as grave accented varieties above
+    'ā\\', 'e\\', 'ai\\', 'o\\',
+    'ī\\', 'ū\\', 'au\\' # these not present in vnh
 ]
 
 VOWELS = VOWELS_SHORT + VOWELS_LONG
@@ -373,8 +389,8 @@ CONSONANTS = [
     'y', 'r', 'l', 'v',
     'ś', 'ṣ', 's', 'h',
     # extras
-    'ḷ', 'ḷh',
     'ṁ', 'ḥ', 'm̐',
+    'ḷ', 'ḷh',
 ]
 
 WORD_BOUNDARY = ' '
@@ -442,16 +458,17 @@ SPECIAL_CHARACTERS_METER = [
 
 # special chars used in the Van Nooten & Holland (vnh) text
 # https://lrc.la.utexas.edu/books/rigveda/RV00
+# '\' and '~' not included here since they mark variants in VOWELS
 SPECIAL_CHARACTERS_SAMHITAPTHA_VNH = [
     '@', '+', # marks explicit restorations: https://lrc.la.utexas.edu/books/rigveda/RV00#bolle
-    '-',      # marks internal boundary of amredita (iterative) compounds
-    '\\',     # FIXME! should normalize this? marks independent svarita on the preceding vowel
-    '*',      # FIXME figure out what this means, eg: https://vedaweb.uni-koeln.de/rigveda/view/id/9.67.27
     '&',      # marks modern editorial revisions: https://lrc.la.utexas.edu/books/rigveda/RV00#dagger
+    '-',      # marks internal boundary of amredita (iterative) compounds
+    '*',      # FIXME figure out what this means, eg: https://vedaweb.uni-koeln.de/rigveda/view/id/9.67.27
 ]
 
 # TODO figure out meanings of each of these
-SPECIAL_CHARACTERS_PADAPATHA_LUBOTSKY = ['-', '_', '=', '?', '+', '}', '!', '\\', '*']
+# '\' not included here since they mark variants in VOWELS
+SPECIAL_CHARACTERS_PADAPATHA_LUBOTSKY = ['-', '_', '=', '?', '+', '}', '!', '*']
 
 ###############################################################################
 
