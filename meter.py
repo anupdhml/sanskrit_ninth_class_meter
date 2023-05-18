@@ -790,6 +790,7 @@ def generate_scansion(pada_text, meter=""):
         "has_restorations": has_restorations,
         "notes": stringify_dictionary(notes),
         # simpler info
+        "text_normalized": "".join(parts),
         "syllables": syllables,
         "scansion_syllables": scansion_syllables,
     }
