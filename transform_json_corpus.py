@@ -88,7 +88,7 @@ if __name__ == '__main__':
                 # an artifact of how mark chars for our uses
                 sanskrit_chars["others"].append(char)
 
-        print(f"\nList of sanskrit chars used in the text:\n")
+        print(f"\nList of sanskrit chars resolved from the text:\n")
         [print(f"{k}: {v}") for (k, v) in sanskrit_chars.items()]
 
         sanskrit_chars_missing = {
@@ -99,6 +99,6 @@ if __name__ == '__main__':
         }
 
         # need to investigate if these missing are ok to ignore, or they
-        # are written differently in the text
+        # are just written differently in the text
         print(f"\nList of sanskrit chars missing:\n")
         [print(f"{k}: {v}") for (k, v) in sanskrit_chars_missing.items()]

@@ -1,7 +1,7 @@
 import re
 
 # pip install more-itertools
-from more_itertools import peekable
+from more_itertools import peekable, triplewise
 
 TEST_PADAS = [
     # 1.1.1a
@@ -126,17 +126,6 @@ TEST_PADAS = [
             "caesura_position": 5,
         }
     },
-    # 4.19.4c
-    {
-        "text": "dr̥r̥ḷhā́ni+ aubhnād uśámāna ójo",
-        "stanza_meter": "",
-        "analysis": {
-            "parts": ["dr̥", "r̥", "ḷhā́", "ni", " ", "aubh", "nā", "d u", "śá", "mā", "na", " ", "ó", "jo"],
-            # SSLS LL SSLS LL (vedaweb treats ḷh as 2 chars yielding different results here)
-            "scansion": "SSLS LL_SSLS LL",
-            "caesura_position": -1,
-        }
-    },
     # 1.51.8a
     {
         "text": "ví jānīhi ā́riyān yé ca dásyavo",
@@ -166,9 +155,9 @@ TEST_PADAS = [
         "text": "kád itthā́ nr̥ŕ̥m̐ḥ pā́taraṁ+ devayatā́ṁ",
         "stanza_meter": "",
         "analysis": {
-            "parts": ["ká", "d it", "thā́", " ", "nr̥", "ŕ̥m̐", "ḥ pā́", "ta", "raṁ", " ", "de", "va", "ya", "tā́ṁ"],
-            # S LL SL LSL LSSL
-            "scansion": "S_LL SL_LSL LSSL",
+            "parts": ["ká", "d it", "thā́", " ", "nr̥̄́m̐", "ḥ pā́", "ta", "raṁ", " ", "de", "va", "ya", "tā́ṁ"],
+            # S LL L LSL LSSL
+            "scansion": "S_LL L_LSL LSSL",
             "caesura_position": -1,
         }
     },
@@ -226,6 +215,87 @@ TEST_PADAS = [
             "parts": ["tvā́ṁ", " ", "hy àg", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
             # L LL SS L SLSL
             "scansion": "L _LL SS_L SLSL",
+            "caesura_position": -1,
+        }
+    },
+    # 1.48.4
+    # r̥r̥ should be treated as r̥̄
+    {
+        "text": "nā́ma gr̥ṇāti nr̥r̥ṇáam+",
+        "stanza_meter": "",
+        "analysis": {
+            "parts": ["nā́", "ma", " ", "gr̥", "ṇā", "ti", " ", "nr̥̄", "ṇá", "am"],
+            "scansion": "LS SLS LSL",
+            "caesura_position": -1,
+        }
+    },
+    # 1.42.5c (alt representation)
+    # handling of r̥̄́ (has accent)
+    {
+        "text": "yéna pitr̥̄́n ácodayaḥ",
+        "stanza_meter": "",
+        "analysis": {
+            "parts": ["yé", "na", " ", "pi", "tr̥̄́", "n á", "co", "da", "yaḥ"],
+            "scansion": "LS SL_SLSL",
+            "caesura_position": -1,
+        }
+    },
+    # 1.42.5c
+    # r̥ŕ̥ should be treated as r̥̄́ (has accent)
+    {
+        "text": "yéna pitr̥ŕ̥n ácodayaḥ",
+        "stanza_meter": "",
+        "analysis": {
+            "parts": ["yé", "na", " ", "pi", "tr̥̄́", "n á", "co", "da", "yaḥ"],
+            "scansion": "LS SL_SLSL",
+            "caesura_position": -1,
+        }
+    },
+    # 7.28.3b
+    # ŕ̥r̥ should be treated as ŕ̥r̥ (has accent) (i.e. don't combine)
+    # (represented as nr̥̃́n in the texas version):
+    # https://lrc.la.utexas.edu/books/rigveda/RV07#H028
+    # only other similar instance in 10.50.4c
+    {
+        "text":  "sáṁ yán nŕ̥r̥n ná ródasī ninétha",
+        "stanza_meter": "Triṣṭubh",
+        "analysis": {
+            "parts": ["sáṁ", " ", "yán", " ", "nŕ̥", "r̥n", " ", "ná", " ", "ró", "da", "sī",  " ", "ni", "né", "tha"],
+            # multiple caesura positions eligible (first one wins)
+            # FIXME decide win strategy on multiple caesura (first or last)
+            # this is proof for win of late caesura? then only this follows meter
+            #"scansion": "L L SL S ,LS|L SLS",
+            #"caesura_position": 5,
+            "scansion": "L L SL ,S LS|L SLS",
+            "caesura_position": 4,
+        }
+    },
+    # 4.19.4c
+    # ḷh should be treated as a single character (consonant)
+    {
+        "text": "dr̥r̥ḷhā́ni+ aubhnād uśámāna ójo",
+        "stanza_meter": "Triṣṭubh", # not tagged as such normally
+        "analysis": {
+            "parts": ["dr̥̄", "ḷhā́", "ni", " ", "aubh", "nā", "d u", "śá", "mā", "na", " ", "ó", "jo"],
+            # SSLS LL SSLS LL (vedaweb treats ḷh as 2 chars yielding different results here)
+            "scansion": "LLS LL,_SS|LS LL",
+            "caesura_position": 5,
+        }
+    },
+    # 10.157.2b
+    # ḷ here is really the vowel l̥ (syllabic l): this is using IAST
+    # which merges the consonant and the vowel. See:
+    # https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration#Comparison_with_ISO_15919
+    # https://vedaweb.uni-koeln.de/rigveda/view/id/10.157.02
+    {
+        "text": "ādityaír índraḥ sahá cīkḷpāti",
+        "stanza_meter": "",
+        "analysis": {
+            # treating ḷ as consonant would yield the following which is incorrect
+            #"parts": ["ā", "dit", "yaí", "r ín", "draḥ", " ", "sa", "há", " ", "cīk", "ḷpā", "ti"],
+            #"scansion": "LLL_LL SS LLS",
+            "parts": ["ā", "dit", "yaí", "r ín", "draḥ", " ", "sa", "há", " ", "cī", "kl̥", "pā", "ti"],
+            "scansion": "LLL_LL SS LSLS",
             "caesura_position": -1,
         }
     },
@@ -287,7 +357,7 @@ VOWELS_LONG = [
     'ā́', 'ā̀',
     'ī́', 'ī̀', 'ī́3',
     'ū́', 'ū̀', 'ū́3',
-    # TODO add accented r̥̄, not attested?
+    'r̥̄́', # grave version here is not attested
     'é', 'è', 'aí', 'aì',
     'ó', 'ò', 'aú', 'aù',
 ]
@@ -375,7 +445,7 @@ SPECIAL_CHARACTERS_METER = [
 SPECIAL_CHARACTERS_SAMHITAPTHA_VNH = [
     '@', '+', # marks explicit restorations: https://lrc.la.utexas.edu/books/rigveda/RV00#bolle
     '-',      # marks internal boundary of amredita (iterative) compounds
-    '\\',     # marks independent svarita on the preceding vowel
+    '\\',     # FIXME! should normalize this? marks independent svarita on the preceding vowel
     '*',      # FIXME figure out what this means, eg: https://vedaweb.uni-koeln.de/rigveda/view/id/9.67.27
     '&',      # marks modern editorial revisions: https://lrc.la.utexas.edu/books/rigveda/RV00#dagger
 ]
@@ -439,6 +509,42 @@ def stringify_dictionary(dict):
 
 ###############################################################################
 
+# replace some of the conventions of the vnh text to our standards
+# (for correct metrical analysis later)
+# TODO revert these for the final syllables saved?
+def normalize_sanskrit_chars(sanskrit_chars):
+    chars_triplewise_iterator = triplewise(sanskrit_chars)
+
+    chars_normalized = [sanskrit_chars[0]] # first char
+
+    while (triple := next(chars_triplewise_iterator, ())): # all the middle chars
+        c_prev, c, c_next = triple
+        # CḷC: treat ḷ between consonants as a vowel character
+        if c == 'ḷ' and is_sanskrit_consonant(c_prev) and is_sanskrit_consonant(c_next):
+            c = 'l̥'
+        # r̥r̥: long syllabic r
+        elif c == 'r̥' and c_next == 'r̥':
+            c = 'r̥̄'
+            next(chars_triplewise_iterator) # skip next entry
+        # r̥ŕ̥: long syllabic r (accented)
+        # grave version not attested
+        elif c == 'r̥' and c_next == 'ŕ̥':
+            c = 'r̥̄́'
+            next(chars_triplewise_iterator) # skip next entry
+        # ŕ̥r̥: keep as separate chars (useful for the meter)
+        # grave version not attested
+        elif c == 'r̥' and c_prev == 'ŕ̥':
+            pass
+        # TODO include ch > cch logic here too? currently handled in get_sanskrit_chars()
+        chars_normalized.append(c)
+
+    if len(sanskrit_chars) > 1:
+        chars_normalized.append(sanskrit_chars[-1]) # last char
+
+    #print(chars_normalized)
+    return chars_normalized
+
+
 def get_sanskrit_chars(text):
     chars = []
 
@@ -454,6 +560,8 @@ def get_sanskrit_chars(text):
             c += next(text_iterator, '')
 
         if len(c) > 1 or is_sanskrit_char(c) or is_word_boundary(c):
+            # TODO move this to normalize_sanskrit_chars(), but better to keep here
+            # since we handle avagraha too here?
             # treat 'ch' spelling as what it actually is: a cluster
             # our input text does not use cch variant so this is safe to do
             if c == "ch":
@@ -467,8 +575,7 @@ def get_sanskrit_chars(text):
         else:
             raise Exception(f"Unidentifiable character '{c}' in text: \"{text}\"")
 
-    #print(chars)
-    return chars
+    return normalize_sanskrit_chars(chars)
 
 
 # divide pada into syllables and word boundaries
@@ -549,16 +656,37 @@ def get_pada_parts(text):
     return parts
 
 
-def generate_scansion(pada_text, meter=""):
+def normalize_sanskrit_text(text):
     # remove multiple spaces with single word boundary char
-    pada_text_normalized = re.sub(" +", WORD_BOUNDARY, pada_text.strip())
-    # clean special characters in the text
+    text_normalized = re.sub(" +", WORD_BOUNDARY, text.strip())
+
+    # this section commented out since we handle this in get_sanskrit_chars()
+    # kept around in case we need it later
+    #
+    # replace some of the conventions of the vnh text to our standards
+    # (for correct metrical analysis later)
+    #
+    # long syllabic r
+    #text_normalized = text_normalized.replace('r̥r̥', 'r̥̄')
+    #
+    # long syllabic r (accented)
+    # for 'ŕ̥r̥', we want to treat it as separate chars (for the meter)
+    # also, grave version of these is not attested
+    #text_normalized = text_normalized.replace('r̥ŕ̥', 'r̥̄́')
+
+    return text_normalized
+
+
+def generate_scansion(pada_text, meter=""):
+    # normalize and clean special characters in the text
+    pada_text_normalized = normalize_sanskrit_text(pada_text)
     pada_text_cleaned = clean_vnh_samhitapatha(pada_text_normalized)
 
     meter_spec = METER_SPECS.get(meter, {})
 
     # means there were special characters which indicates restorations:
     # see https://lrc.la.utexas.edu/books/rigveda/RV00#bolle
+    # FIXME! just check for presence of special chars in pada_text
     has_restorations = len(pada_text_cleaned) != len(pada_text_normalized)
 
     caesura_possible_positions = meter_spec.get('caesura_possible_positions', [])
