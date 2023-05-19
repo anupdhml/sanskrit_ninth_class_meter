@@ -125,7 +125,7 @@ TEST_PADAS = [
             # LLLL · S SLS SL
             "scansion": "LLLL · ,S S|LS SL",
             "caesura_position": 5,
-            "search_term_positions": [6, 7],
+            "search_term_positions": [7, 8],
             "search_term_found": "riṇā",
         }
     },
@@ -368,6 +368,20 @@ TEST_PADAS = [
             "caesura_position": -1,
             "search_term_positions": [9, 10],
             "search_term_found": "cchr̥ṇī",
+        }
+    },
+    # 1.71.10
+    # testing search term in the beginning
+    {
+        "pada_text": "nábho ná rūpáṁ jarimā́ mināti",
+        "stanza_meter": "Triṣṭubh",
+        "search_term": "nábh",
+        "analysis": {
+            "parts": ['ná', 'bho', ' ', 'ná', ' ', 'rū', 'páṁ', ' ', 'ja', 'ri', 'mā́', ' ', 'mi', 'nā', 'ti'],
+            "scansion": "SL S LL ,SS|L SLS",
+            "caesura_position": 5,
+            "search_term_positions": [1, 2],
+            "search_term_found": "nábh",
         }
     },
 ]
@@ -913,7 +927,7 @@ def find_syllable_positions(search_term, pada_text, pada_syllables):
     term_found = ""
 
     found_terms = []
-    for variant in search_term.split(" "):
+    for variant in search_term.strip().split(" "):
         variant_alt = get_alt_form(variant)
         if variant in pada_text:
             found_terms.append(variant)
@@ -936,7 +950,24 @@ def find_syllable_positions(search_term, pada_text, pada_syllables):
     elif len(found_terms) == 1:
         term_found = found_terms[0]
 
-        # TODO! get the syllable positions for the term
+        # get the syllable positions for the term
+        start_position, end_position = 0, 0
+        tracker = ""
+        for i, syllable in enumerate(pada_syllables):
+            tracker += syllable
+            if term_found in tracker:
+                end_position = i + 1
+                break
+        if end_position:
+            tracker = ""
+            for i, syllable in enumerate(reversed(pada_syllables[:end_position])):
+                tracker = syllable + tracker
+                if term_found in tracker:
+                    start_position = end_position - i
+                    break
+        if start_position and end_position:
+            # adding +1 to the end position for it to be inclusive in the range
+            positions = list(range(start_position, end_position+1))
 
     return {
         "positions": positions,
