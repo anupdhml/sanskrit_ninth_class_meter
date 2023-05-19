@@ -847,9 +847,58 @@ def check_meter_faults(scansion, no_of_syllables, caesura_position, meter):
 
     return faults
 
+
+# populated manually right now based on the sandhi/variant forms we see in our data
+ALTERNATE_FORMS = {
+    # sandhi variants
+    "aśnā": "āśnā",   #-a a- > -ā-
+    "śr̥ṇī": "cchr̥ṇī", #-n ś- > -ñch-
+    # stem variants (root vowel shortened)
+    "prīṇā": "priṇā",
+    "prīṇī": "priṇī",
+    "śrīṇī": "śriṇī",
+}
+def get_alt_form(term):
+    return ALTERNATE_FORMS.get(term, "")
+
+
+def find_syllable_positions(search_term, pada_text, pada_syllables):
+    positions = []
+    term_found = ""
+
+    found_terms = []
+    for variant in search_term.split(" "):
+        variant_alt = get_alt_form(variant)
+        if variant in pada_text:
+            found_terms.append(variant)
+        if variant_alt and variant_alt in pada_text:
+            found_terms.append(variant_alt)
+
+    if len(found_terms) == 0:
+        raise Exception (
+            f"Search term '{search_term}' not found in the pada_text '{pada_text}'"
+        )
+    # we don't need to handle multiple variant matches in a single pada currently
+    # since it doesn't happen for our data, but in case this occurs, this exception
+    # will let us know
+    elif len(found_terms) > 1:
+        raise Exception(
+            f"More than one variant of the search term '{search_term}' found in the pada_text '{pada_text}'"
+        )
+    elif len(found_terms) == 1:
+        term_found = found_terms[0]
+
+        # TODO! get the syllable positions for the term
+
+    return {
+        "positions": positions,
+        "term_found": term_found,
+    }
+
 ###############################################################################
 
-def analyze(pada_text, stanza_meter=""):
+# can specify variant in the search_term with space
+def analyze(pada_text, stanza_meter="", search_term=""):
     results = generate_scansion(pada_text, stanza_meter)
 
     # if stanza meter is specified, check the correctness of the pada meter too
@@ -863,6 +912,14 @@ def analyze(pada_text, stanza_meter=""):
         # TODO just use strings for meter_is_correct?
         results["is_correct"] = 0 if faults else 1
         results['faults'] = stringify_dictionary(faults)
+
+    if search_term:
+        positions = find_syllable_positions(
+            search_term,
+            results["text_normalized"], results["syllables"]
+        )
+        results["search_term_positions"] = positions["positions"]
+        results["search_term_found"] = positions["term_found"]
 
     return results
 
