@@ -968,6 +968,12 @@ def find_syllable_positions(search_term, pada_text, pada_syllables):
         if start_position and end_position:
             # adding +1 to the end position for it to be inclusive in the range
             positions = list(range(start_position, end_position+1))
+        else:
+            # this shouldn't happen really, but just in case
+            raise Exception (
+                f"Search term '{search_term}' was found in the pada_text '{pada_text}'"
+                + " but couldn't determine its syllable positions"
+            )
 
     return {
         "positions": positions,
