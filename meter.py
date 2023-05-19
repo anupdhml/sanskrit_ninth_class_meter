@@ -6,7 +6,7 @@ from more_itertools import peekable, triplewise
 TEST_PADAS = [
     # 1.1.1a
     {
-        "text": "agním īḷe puróhitaṁ",
+        "pada_text": "agním īḷe puróhitaṁ",
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["ag", "ní", "m ī", "ḷe", " ", "pu", "ró", "hi", "taṁ"],
@@ -17,7 +17,7 @@ TEST_PADAS = [
     },
     # 1.1.1b
     {
-        "text": "yajñásya devám r̥tvíjam",
+        "pada_text": "yajñásya devám r̥tvíjam",
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["yaj", "ñás", "ya", " ", "de", "vá", "m r̥t", "ví", "jam"],
@@ -28,7 +28,7 @@ TEST_PADAS = [
     },
     # 1.1.1c
     {
-        "text": "hótāraṁ  ratnadhā́tamam ",
+        "pada_text": "hótāraṁ  ratnadhā́tamam ",
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["hó", "tā", "raṁ", " ", "rat", "na", "dhā́", "ta", "mam"],
@@ -40,7 +40,7 @@ TEST_PADAS = [
     # 1.1.4c
     # treating ch as long for meter
     {
-        "text": "sá íd devéṣu gachati",
+        "pada_text": "sá íd devéṣu gachati",
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["sá", " ", "íd", " ", "de", "vé", "ṣu", " ", "gac", "cha", "ti"],
@@ -52,7 +52,7 @@ TEST_PADAS = [
     # 1.3.8a
     # avagraha (o_a, a restored for o_') from -aḥ + a-: 'o' as short and 'a' counting towards the meter
     {
-        "text": "víśve devā́so aptúraḥ",
+        "pada_text": "víśve devā́so aptúraḥ",
         "stanza_meter": "Gāyatrī",
         "analysis": {
             "parts": ["víś", "ve", " ", "de", "vā́", "so", " ", "ap", "tú", "raḥ"],
@@ -66,7 +66,7 @@ TEST_PADAS = [
     # 1.33.13b
     # avagraha (o_') from -aḥ + a-: 'o' as short? metrically long makes sense here
     {
-        "text": "ví tigména vr̥ṣabhéṇā púro 'bhet",
+        "pada_text": "ví tigména vr̥ṣabhéṇā púro 'bhet",
         "stanza_meter": "Triṣṭubh",
         "analysis": {
             "parts": ["ví", " ", "tig", "mé", "na", " ", "vr̥", "ṣa", "bhé", "ṇā", " ", "pú", "ro", " ", "'bhet"],
@@ -80,7 +80,7 @@ TEST_PADAS = [
     # 10.72.4c
     # avagraha (o_') from -aḥ + a-: 'o' as short
     {
-        "text": "áditer dákṣo 'jāyata@",
+        "pada_text": "áditer dákṣo 'jāyata@",
         "stanza_meter": "Aṇuṣṭubh",
         "analysis": {
             "parts": ["á", "di", "ter", " ", "dák", "ṣo", " ", "'jā", "ya", "ta"],
@@ -93,7 +93,7 @@ TEST_PADAS = [
     # 10.161.5d
     # avagraha (e_') from -e + a-: 'e' as long
     {
-        "text": "sárvam ā́yuś ca te 'vidam",
+        "pada_text": "sárvam ā́yuś ca te 'vidam",
         "stanza_meter": "Aṇuṣṭubh",
         "analysis": {
             "parts": ["sár", "va", "m ā́", "yuś", " ", "ca", " ", "te", " ", "'vi", "dam"],
@@ -104,7 +104,7 @@ TEST_PADAS = [
     },
     # 5.5.5c
     {
-        "text": "prá-pra yajñám pr̥ṇītana",
+        "pada_text": "prá-pra yajñám pr̥ṇītana",
         "stanza_meter": "Gāyatrī",
         "analysis": {
             # FIXME because of -, syllabfication should be pra, pra yielding SS for the meter?
@@ -117,18 +117,21 @@ TEST_PADAS = [
     # 5.41.10d
     # metrical pauses
     {
-        "text": "śocíṣkeśo ̀ ní riṇāti vánā",
+        "pada_text": "śocíṣkeśo ̀ ní riṇāti vánā",
         "stanza_meter": "Triṣṭubh",
+        "search_term": "riṇā",
         "analysis": {
             "parts": ["śo", "cíṣ", "ke", "śo", " \u0300", " ", "ní", " ", "ri", "ṇā", "ti", " ", "vá", "nā"],
             # LLLL · S SLS SL
             "scansion": "LLLL · ,S S|LS SL",
             "caesura_position": 5,
+            "search_term_positions": [6, 7],
+            "search_term_found": "riṇā",
         }
     },
     # 1.51.8a
     {
-        "text": "ví jānīhi ā́riyān yé ca dásyavo",
+        "pada_text": "ví jānīhi ā́riyān yé ca dásyavo",
         "stanza_meter": "Jagatī",
         "analysis": {
             "parts": ["ví", " ", "jā", "nī", "hi", " ", "ā́", "ri", "yān", " ", "yé", " ", "ca", " ", "dás", "ya", "vo"],
@@ -139,20 +142,21 @@ TEST_PADAS = [
     },
     # 1.35.5b
     {
-        "text": "ráthaṁ híraṇyapra~ugaṁ váhantaḥ",
+        "pada_text": "ráthaṁ híraṇyapra~ugaṁ váhantaḥ",
         "stanza_meter": "Triṣṭubh",
         "analysis": {
             "parts": ["rá", "thaṁ", " ", "hí", "raṇ", "yap", "ra", "~u", "gaṁ", " ", "vá", "han", "taḥ"],
             # SL SLLSSL SLL
             # FIXME no good way to mark caesura here since it's inside a compound
-            "scansion": "SL SLL,SS|L SLL",
+            #"scansion": "SL SLL,SS|L SLL",
+            "scansion": "SL SLLSS|L SLL",
             #"caesura_position": 5,
             "caesura_position": 0,
         }
     },
     # 1.121.1a
     {
-        "text": "kád itthā́ nr̥ŕ̥m̐ḥ pā́taraṁ+ devayatā́ṁ",
+        "pada_text": "kád itthā́ nr̥ŕ̥m̐ḥ pā́taraṁ+ devayatā́ṁ",
         "stanza_meter": "",
         "analysis": {
             "parts": ["ká", "d it", "thā́", " ", "nr̥̄́m̐", "ḥ pā́", "ta", "raṁ", " ", "de", "va", "ya", "tā́ṁ"],
@@ -163,7 +167,7 @@ TEST_PADAS = [
     },
     # 10.129.5b
     {
-        "text": "adháḥ svid āsī́3d upári svid āsī3t",
+        "pada_text": "adháḥ svid āsī́3d upári svid āsī3t",
         "stanza_meter": "Triṣṭubh",
         "analysis": {
             "parts": ["a", "dháḥ", " ", "svi", "d ā", "sī́3", "d u", "pá", "ri s", "vi", "d ā", "sī3t"],
@@ -175,7 +179,7 @@ TEST_PADAS = [
     },
     # 10.144.4c
     {
-        "text": "śatácakraṁ yo\ 'hyo\ vartaníḥ",
+        "pada_text": "śatácakraṁ yo\ 'hyo\ vartaníḥ",
         "stanza_meter": "",
         "analysis": {
             "parts": ["śa", "tá", "cak", "raṁ", " ", "yo\\ 'h", "yo\\", " ", "var", "ta", "níḥ"],
@@ -187,7 +191,7 @@ TEST_PADAS = [
     },
     # 10.166.2b
     {
-        "text": "índra 'vā́riṣṭo@ ákṣataḥ",
+        "pada_text": "índra 'vā́riṣṭo@ ákṣataḥ",
         "stanza_meter": "Aṇuṣṭubh",
         "analysis": {
             "parts": ["ín", "dra", " ", "'vā́", "riṣ", "ṭo", " ", "ák", "ṣa", "taḥ"],
@@ -198,7 +202,7 @@ TEST_PADAS = [
     },
     # 4.1.1a
     {
-        "text": "tuvā́ṁ hí agne sádam ít samanyávo",
+        "pada_text": "tuvā́ṁ hí agne sádam ít samanyávo",
         "stanza_meter": "",
         "analysis": {
             "parts": ["tu", "vā́ṁ", " ", "hí", " ", "ag", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
@@ -209,7 +213,7 @@ TEST_PADAS = [
     },
     # 4.1.1a (not metrically restored)
     {
-        "text": "tvā́ṁ hy àgne sádam ít samanyávo",
+        "pada_text": "tvā́ṁ hy àgne sádam ít samanyávo",
         "stanza_meter": "",
         "analysis": {
             "parts": ["tvā́ṁ", " ", "hy àg", "ne", " ", "sá", "da", "m ít", " ", "sa", "man", "yá", "vo"],
@@ -221,7 +225,7 @@ TEST_PADAS = [
     # 1.48.4
     # r̥r̥ should be treated as r̥̄
     {
-        "text": "nā́ma gr̥ṇāti nr̥r̥ṇáam+",
+        "pada_text": "nā́ma gr̥ṇāti nr̥r̥ṇáam+",
         "stanza_meter": "",
         "analysis": {
             "parts": ["nā́", "ma", " ", "gr̥", "ṇā", "ti", " ", "nr̥̄", "ṇá", "am"],
@@ -232,7 +236,7 @@ TEST_PADAS = [
     # 1.42.5c (alt representation)
     # handling of r̥̄́ (has accent)
     {
-        "text": "yéna pitr̥̄́n ácodayaḥ",
+        "pada_text": "yéna pitr̥̄́n ácodayaḥ",
         "stanza_meter": "",
         "analysis": {
             "parts": ["yé", "na", " ", "pi", "tr̥̄́", "n á", "co", "da", "yaḥ"],
@@ -243,7 +247,7 @@ TEST_PADAS = [
     # 1.42.5c
     # r̥ŕ̥ should be treated as r̥̄́ (has accent)
     {
-        "text": "yéna pitr̥ŕ̥n ácodayaḥ",
+        "pada_text": "yéna pitr̥ŕ̥n ácodayaḥ",
         "stanza_meter": "",
         "analysis": {
             "parts": ["yé", "na", " ", "pi", "tr̥̄́", "n á", "co", "da", "yaḥ"],
@@ -257,7 +261,7 @@ TEST_PADAS = [
     # https://lrc.la.utexas.edu/books/rigveda/RV07#H028
     # only other similar instance in 10.50.4c
     {
-        "text":  "sáṁ yán nŕ̥r̥n ná ródasī ninétha",
+        "pada_text":  "sáṁ yán nŕ̥r̥n ná ródasī ninétha",
         "stanza_meter": "Triṣṭubh",
         "analysis": {
             "parts": ["sáṁ", " ", "yán", " ", "nŕ̥", "r̥n", " ", "ná", " ", "ró", "da", "sī",  " ", "ni", "né", "tha"],
@@ -273,7 +277,7 @@ TEST_PADAS = [
     # 4.19.4c
     # ḷh should be treated as a single character (consonant)
     {
-        "text": "dr̥r̥ḷhā́ni+ aubhnād uśámāna ójo",
+        "pada_text": "dr̥r̥ḷhā́ni+ aubhnād uśámāna ójo",
         "stanza_meter": "Triṣṭubh", # not tagged as such normally
         "analysis": {
             "parts": ["dr̥̄", "ḷhā́", "ni", " ", "aubh", "nā", "d u", "śá", "mā", "na", " ", "ó", "jo"],
@@ -288,7 +292,7 @@ TEST_PADAS = [
     # https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration#Comparison_with_ISO_15919
     # https://vedaweb.uni-koeln.de/rigveda/view/id/10.157.02
     {
-        "text": "ādityaír índraḥ sahá cīkḷpāti",
+        "pada_text": "ādityaír índraḥ sahá cīkḷpāti",
         "stanza_meter": "",
         "analysis": {
             # treating ḷ as consonant would yield the following which is incorrect
@@ -301,7 +305,7 @@ TEST_PADAS = [
     },
     # faked
     {
-        "text": "hótāra  pratnadhā́tama avr̥̄",
+        "pada_text": "hótāra  pratnadhā́tama avr̥̄",
         "stanza_meter": "",
         "analysis": {
             "parts": ["hó", "tā", "ra p", "rat", "na", "dhā́", "ta", "ma", " ", "a", "vr̥̄"],
@@ -314,7 +318,7 @@ TEST_PADAS = [
     # multiple caesura positions eligible (first one wins)
     # FIXME decide win strategy on multiple caesura (first or last)
     {
-        "text": "śocíṣkeśo va ní riṇāti vánā",
+        "pada_text": "śocíṣkeśo va ní riṇāti vánā",
         "stanza_meter": "Triṣṭubh",
         "analysis": {
             "parts": ["śo", "cíṣ", "ke", "śo", " ", "va", " ", "ní", " ", "ri", "ṇā", "ti", " ", "vá", "nā"],
@@ -322,6 +326,48 @@ TEST_PADAS = [
             "scansion": "LLLL ,S S S|LS SL",
             # 4 wins over possible 5
             "caesura_position": 4,
+        }
+    },
+    # 1.63.2
+    # testing search term (without accent)
+    {
+        "pada_text": "púra iṣṇā́si puruhūta pūrvī́ḥ",
+        "stanza_meter": "Triṣṭubh",
+        "search_term": "iṣṇā",
+        "analysis": {
+            "parts": ['pú', 'ra', ' ', 'iṣ', 'ṇā́', 'si', ' ', 'pu', 'ru', 'hū', 'ta', ' ', 'pūr', 'vī́ḥ'],
+            "scansion": "SS LLS ,SS|LS LL",
+            "caesura_position": 5,
+            "search_term_positions": [3, 4],
+            "search_term_found": "iṣṇā",
+        }
+    },
+    # 1.71.10
+    # testing search term with stem variants
+    {
+        "pada_text": "nábho ná rūpáṁ jarimā́ mināti",
+        "stanza_meter": "Triṣṭubh",
+        "search_term": "minā mīnā",
+        "analysis": {
+            "parts": ['ná', 'bho', ' ', 'ná', ' ', 'rū', 'páṁ', ' ', 'ja', 'ri', 'mā́', ' ', 'mi', 'nā', 'ti'],
+            "scansion": "SL S LL ,SS|L SLS",
+            "caesura_position": 5,
+            "search_term_positions": [9, 10],
+            "search_term_found": "minā",
+        }
+    },
+    # 10.87.14
+    # testing search term with sandhi variant
+    {
+        "pada_text": "párārcíṣā mū́radevāñ chr̥ṇīhi",
+        "stanza_meter": "",
+        "search_term": "śr̥ṇī",
+        "analysis": {
+            "parts": ['pá', 'rār', 'cí', 'ṣā', ' ', 'mū́', 'ra', 'de', 'vāñ', ' ', 'cchr̥', 'ṇī', 'hi'],
+            "scansion": "SLSL LSLL SLS",
+            "caesura_position": -1,
+            "search_term_positions": [9, 10],
+            "search_term_found": "cchr̥ṇī",
         }
     },
 ]
@@ -875,13 +921,15 @@ def find_syllable_positions(search_term, pada_text, pada_syllables):
             found_terms.append(variant_alt)
 
     if len(found_terms) == 0:
+        # should not occur for our data: if it does, might mean we have not covered
+        # a possible variant of the search term yet
         raise Exception (
             f"Search term '{search_term}' not found in the pada_text '{pada_text}'"
         )
-    # we don't need to handle multiple variant matches in a single pada currently
-    # since it doesn't happen for our data, but in case this occurs, this exception
-    # will let us know
     elif len(found_terms) > 1:
+        # we don't need to handle multiple variant matches in a single pada currently
+        # since it doesn't happen for our data, but in case this occurs, this exception
+        # will let us know
         raise Exception(
             f"More than one variant of the search term '{search_term}' found in the pada_text '{pada_text}'"
         )
@@ -924,37 +972,36 @@ def analyze(pada_text, stanza_meter="", search_term=""):
     return results
 
 
+COLOR_FAIL = '\033[91m'
+COLOR_END = '\033[0m'
+def test_analysis(pada):
+    success = True
+
+    analysis_expected = pada.pop("analysis")
+    analysis = analyze(**pada)
+
+    print(" | ".join(pada.values()))
+
+    for k, v_expected in analysis_expected.items():
+        v_output = analysis[k]
+        message = f"{k}: {v_output}"
+        if v_output != v_expected:
+            message += f"{COLOR_FAIL} ≠ {v_expected}{COLOR_END}"
+            success = False
+        print(message)
+
+    # TODO include syllable count too?
+    if analysis["faults"]:
+        print("Faults:", analysis["faults"])
+
+    print("")
+
+    return success
+
+
 # TODO take in arg here for custom analysis
+# TODO move the tests to its own file
 if __name__ == '__main__':
-    for pada in TEST_PADAS:
-        # tests
-        #print(" ".join(VOWELS))
-        #print(" ".join(CONSONANTS))
+    results = [test_analysis(pada) for pada in TEST_PADAS]
 
-        # input
-        print(f'\n{pada["text"]} ({pada["stanza_meter"]})')
-
-        # output
-        analysis = analyze(pada["text"], pada["stanza_meter"])
-        #print(analysis)
-        print(f'{analysis["parts"]} {analysis["scansion"]} ({analysis["no_of_syllables"]}, {analysis["caesura_position"]})')
-        #print(f'{analysis["syllables"]} {analysis["scansion_syllables"]} ({analysis["no_of_syllables"]})')
-
-        # check meter correctness
-        # TODO validate this too against the expected
-        if analysis["faults"]:
-            print("Faults:", analysis["faults"])
-
-        # check output against expected
-        # TODO save the test output in a file too?
-        analysis_expected = pada["analysis"]
-        #if analysis != analysis_expected:
-        if (
-            analysis["parts"] != analysis_expected["parts"]
-            # more strict check
-            #or analysis["scansion"] != analysis_expected["scansion"]
-            or analysis["scansion_syllables"] != clean_meter_scansion(analysis_expected["scansion"])
-            or analysis["caesura_position"] != analysis_expected["caesura_position"]
-        ):
-            # TODO add no of syllables info?
-            print(f'Not as expected: \n{analysis_expected["parts"]} {analysis_expected["scansion"]} (,{analysis_expected["caesura_position"]})\n')
+    print(f"Ran {len(results)} test cases, {results.count(False)} failure(s)")
