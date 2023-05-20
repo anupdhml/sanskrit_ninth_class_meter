@@ -272,6 +272,8 @@ TEST_PADAS = [
             #"caesura_position": 5,
             "scansion": "L L SL ,S LS|L SLS",
             "caesura_position": 4,
+            # TODO! add this to all other test cases as applicable
+            "fault_positions": [6],
         }
     },
     # 4.19.4c
@@ -382,6 +384,30 @@ TEST_PADAS = [
             "caesura_position": 5,
             "search_term_positions": [1, 2],
             "search_term_found": "nábh",
+        }
+    },
+    # 7.97.2
+    # meter fault in post-caesura position
+    {
+        "pada_text": "ā́ daíviyā vr̥ṇīmahe ávāṁsi",
+        "stanza_meter": "Triṣṭubh",
+        "analysis": {
+            "parts": ["ā́", " ", "daí", "vi", "yā", " ", "vr̥", "ṇī", "ma", "he", " ", "á", "vāṁ", "si"],
+            "scansion": "L LSL ,SLS|L SLS",
+            "caesura_position": 4,
+            "fault_positions": [6],
+        }
+    },
+    # 8.2.11
+    # meter fault in cadence
+    {
+        "pada_text": "índremáṁ sómaṁ śrīṇīhi",
+        "stanza_meter": "Gāyatrī",
+        "analysis": {
+            "parts": ["ín", "dre", "máṁ", " ", "só", "maṁ", " ", "śrī", "ṇī", "hi"],
+            "scansion": "LLL L|L LLS",
+            "caesura_position": -1,
+            "fault_positions": [5, 7],
         }
     },
 ]
@@ -879,6 +905,7 @@ def check_meter_faults(scansion, no_of_syllables, caesura_position, meter):
         raise Exception(f"Unsupported meter: {meter}")
 
     faults = {}
+    positions = []
 
     meter_spec = METER_SPECS[meter]
 
@@ -890,7 +917,19 @@ def check_meter_faults(scansion, no_of_syllables, caesura_position, meter):
     if no_of_syllables != meter_spec["no_of_syllables"]:
         faults["no_of_syllables"] = no_of_syllables
     elif scansion_cadence_main != meter_spec["scansion_cadence_main"]:
+        # this should not really happen since we set cadence marker following the
+        # meter spec and we already checked above that the syllable counts match
+        # but just in case
+        if len(scansion_cadence_main) != len(meter_spec["scansion_cadence_main"]):
+            raise Exception(
+                f"Length of main scansion cadence {scansion_cadence_main} does not match"
+                + f" that of the expected: {meter_spec['scansion_cadence_main']}"
+            )
         faults["scansion_cadence"] = scansion_cadence_main + MARKER_SYLLABLE_SHORT_OR_LONG
+        # track the faulty position(s)
+        for i, c in enumerate(meter_spec["scansion_cadence_main"]):
+            if c != scansion_cadence_main[i]: # safe to do since the lengths match by this point
+                positions.append(no_of_syllables - len(scansion_cadence_main) + i)
 
     if caesura_position == 0: # for meters where caesura is unapplicable, this is -1
         faults["caesura_position"] = caesura_position
@@ -904,8 +943,15 @@ def check_meter_faults(scansion, no_of_syllables, caesura_position, meter):
             or scansion_post_caesura[-1] != MARKER_SYLLABLE_SHORT
         ):
             faults['scansion_post_caesura'] = scansion_post_caesura
+            # track the faulty position
+            positions.append(
+                caesura_position + meter_spec['short_after_caesura_relative_position']
+            )
 
-    return faults
+    return {
+        "faults": faults,
+        "positions": sorted(positions),
+    }
 
 
 # populated manually right now based on the sandhi/variant forms we see in our data
@@ -995,8 +1041,9 @@ def analyze(pada_text, stanza_meter="", search_term=""):
             stanza_meter
         )
         # TODO just use strings for meter_is_correct?
-        results["is_correct"] = 0 if faults else 1
-        results['faults'] = stringify_dictionary(faults)
+        results["is_correct"] = 0 if faults["faults"] else 1
+        results["faults"] = stringify_dictionary(faults["faults"])
+        results["fault_positions"] = faults["positions"]
 
     if search_term:
         positions = find_syllable_positions(
