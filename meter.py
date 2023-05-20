@@ -1041,6 +1041,7 @@ def analyze(pada_text, stanza_meter="", search_term=""):
     # if stanza meter is specified, check the correctness of the pada meter too
     results["is_correct"] = -1 # not applicable
     results["faults"] = ""
+    results["fault_positions"] = []
     if stanza_meter:
         faults = check_meter_faults(
             results["scansion"], results["no_of_syllables"], results["caesura_position"],
@@ -1061,11 +1062,9 @@ def analyze(pada_text, stanza_meter="", search_term=""):
 
         # if we have positions where meter is faulty, check if
         # search term positions have overlap with it
-        if results.get("fault_positions", []):
-            results["search_term_fault_positions"] = [
-                n for n in results["search_term_positions"]
-                if n in results["fault_positions"]
-            ]
+        results["search_term_fault_positions"] = [
+            n for n in results["search_term_positions"] if n in results["fault_positions"]
+        ] if results.get("fault_positions", []) else []
 
     return results
 
