@@ -391,11 +391,14 @@ TEST_PADAS = [
     {
         "pada_text": "ā́ daíviyā vr̥ṇīmahe ávāṁsi",
         "stanza_meter": "Triṣṭubh",
+        "search_term": "vr̥ṇī",
         "analysis": {
             "parts": ["ā́", " ", "daí", "vi", "yā", " ", "vr̥", "ṇī", "ma", "he", " ", "á", "vāṁ", "si"],
             "scansion": "L LSL ,SLS|L SLS",
             "caesura_position": 4,
             "fault_positions": [6],
+            "search_term_positions": [5, 6],
+            "search_term_fault_positions": [6],
         }
     },
     # 8.2.11
@@ -403,11 +406,14 @@ TEST_PADAS = [
     {
         "pada_text": "índremáṁ sómaṁ śrīṇīhi",
         "stanza_meter": "Gāyatrī",
+        "search_term": "śrīṇī",
         "analysis": {
             "parts": ["ín", "dre", "máṁ", " ", "só", "maṁ", " ", "śrī", "ṇī", "hi"],
             "scansion": "LLL L|L LLS",
             "caesura_position": -1,
             "fault_positions": [5, 7],
+            "search_term_positions": [6, 7],
+            "search_term_fault_positions": [7],
         }
     },
 ]
@@ -1052,6 +1058,14 @@ def analyze(pada_text, stanza_meter="", search_term=""):
         )
         results["search_term_positions"] = positions["positions"]
         results["search_term_found"] = positions["term_found"]
+
+        # if we have positions where meter is faulty, check if
+        # search term positions have overlap with it
+        if results.get("fault_positions", []):
+            results["search_term_fault_positions"] = [
+                n for n in results["search_term_positions"]
+                if n in results["fault_positions"]
+            ]
 
     return results
 
