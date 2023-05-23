@@ -518,16 +518,22 @@ METER_SPECS = {
     METER_GAYATRI: {
         "no_of_syllables": 8,
         "cadence_position": 4,
+        "cadence_short_positions": [5, 7],
+        "cadence_long_positions": [6],
         "scansion_cadence_main": PATTERN_IAMBIC, # positions 5,6,7
     },
     METER_ANUSTUBH: {
         "no_of_syllables": 8,
         "cadence_position": 4,
+        "cadence_short_positions": [5, 7],
+        "cadence_long_positions": [6],
         "scansion_cadence_main": PATTERN_IAMBIC, # positions 5,6,7
     },
     METER_TRISTUBH: {
         "no_of_syllables": 11,
         "cadence_position": 7,
+        "cadence_short_positions": [9],
+        "cadence_long_positions": [8, 10],
         "scansion_cadence_main": PATTERN_TROCHAIC, # positions 8,9,10
         "caesura_possible_positions": [4, 5],
         "short_after_caesura_relative_position": 2,
@@ -535,7 +541,9 @@ METER_SPECS = {
     METER_JAGATI: {
         "no_of_syllables": 12,
         "cadence_position": 7,
-        "scansion_cadence_main": PATTERN_TROCHAIC_IAMBIC, # positions 8,9,10
+        "cadence_short_positions": [9, 11],
+        "cadence_long_positions": [8, 10],
+        "scansion_cadence_main": PATTERN_TROCHAIC_IAMBIC, # positions 8,9,10,11
         "caesura_possible_positions": [4, 5],
         "short_after_caesura_relative_position": 2,
     },
@@ -1034,6 +1042,41 @@ def find_syllable_positions(search_term, pada_text, pada_syllables):
 
 ###############################################################################
 
+def get_expected_scansion(position, meter, caesura_position=-1):
+    if meter not in METER_SPECS:
+        return ''
+
+    meter_spec = METER_SPECS[meter]
+
+    if position < 1 or position > meter_spec["no_of_syllables"]:
+        raise Exception(f"Invalid position specified for meter {meter}: {position}")
+
+    # TODO! temporarilly enabled, remove after testing
+    #if meter in [METER_TRISTUBH, METER_JAGATI] and not caesura_position > 0:
+    #    raise Exception(f"Caesura position must be set for meter: {meter}")
+
+    # copying since we will update the short positions. important since python
+    # is pass-by-assignment (without copy, we would be modifying short_positions
+    # on every call to the function, needing to nasty bugs)
+    # TODO! check if we need to use copy() elsewhere too
+    short_positions = meter_spec["cadence_short_positions"].copy()
+    if caesura_position > 0:
+        short_positions.append(
+            caesura_position + meter_spec["short_after_caesura_relative_position"]
+        )
+
+    # copy not really needed here since we don't change it right now
+    # but done for consistency with short_positions
+    long_positions = meter_spec["cadence_long_positions"].copy()
+
+    if position in short_positions:
+        return MARKER_SYLLABLE_SHORT
+    elif position in long_positions:
+        return MARKER_SYLLABLE_LONG
+    else:
+        return MARKER_SYLLABLE_SHORT_OR_LONG
+
+
 # can specify variant in the search_term with space
 def analyze(pada_text, stanza_meter="", search_term=""):
     results = generate_scansion(pada_text, stanza_meter)
@@ -1102,3 +1145,9 @@ if __name__ == '__main__':
     results = [test_analysis(pada) for pada in TEST_PADAS]
 
     print(f"Ran {len(results)} test cases, {results.count(False)} failure(s)")
+
+    # print(
+    #     get_expected_scansion(6, "Triṣṭubh", 4),
+    #     get_expected_scansion(6, "Triṣṭubh", 5),
+    #     get_expected_scansion(7, "Triṣṭubh", 4)
+    # )
