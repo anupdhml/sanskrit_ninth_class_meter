@@ -1051,7 +1051,6 @@ def get_expected_scansion(position, meter, caesura_position=-1):
     if position < 1 or position > meter_spec["no_of_syllables"]:
         raise Exception(f"Invalid position specified for meter {meter}: {position}")
 
-    # TODO! temporarilly enabled, remove after testing
     #if meter in [METER_TRISTUBH, METER_JAGATI] and not caesura_position > 0:
     #    raise Exception(f"Caesura position must be set for meter: {meter}")
 
