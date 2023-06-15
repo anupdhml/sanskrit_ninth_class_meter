@@ -621,6 +621,17 @@ def is_metrically_short(syllable):
 def is_metrically_long(syllable):
     return not is_metrically_short(syllable)
 
+# TODO account for no of padas in the stanza too, for distinguishing
+# between METER_GAYATRI and METER_ANUSTUBH. for our current analysis
+# currently, not necessary since both the meters have 8 syllables
+# def guess_meter(no_of_syllables):
+#     meter_guessed = ""
+#     for meter, meter_spec in METER_SPECS.items():
+#         if no_of_syllables == meter_spec["no_of_syllables"]:
+#             meter_guessed = meter
+#             break
+#     return meter_guessed
+
 def stringify_dictionary(dict):
     return " ".join([f"{k}={v}" for (k, v) in dict.items()])
 
@@ -1085,6 +1096,20 @@ def analyze(pada_text, stanza_meter="", search_term=""):
     results["is_correct"] = -1 # not applicable
     results["faults"] = ""
     results["fault_positions"] = []
+    # disabling the guess of stanza meter, does not alter our core result (count of nA/nI in
+    # expected short syllables) even with a very permissive guess so no point in pursuing
+    # this avenue right now, since we need to be careful with the guess assignment anyways.
+    # if not stanza_meter:
+    #     # try to guess the meter if it's not set
+    #     stanza_meter = guess_meter(results["no_of_syllables"])
+    #     if stanza_meter:
+    #         # redo the scansion based on the new knowledge
+    #         # TODO eliminate this extra call by moving guess_meter inside generate_scansion
+    #         # itself (but need to modify it a bit first to allow for caesura/cadence markers)
+    #         results = generate_scansion(pada_text, stanza_meter)
+    #         results["stanza_meter_guessed"] = stanza_meter
+    #         results["notes"] += f" meter_guessed={stanza_meter}"
+    #         print(results["notes"])
     if stanza_meter:
         faults = check_meter_faults(
             results["scansion"], results["no_of_syllables"], results["caesura_position"],
