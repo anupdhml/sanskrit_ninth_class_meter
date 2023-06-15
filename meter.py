@@ -984,14 +984,50 @@ def check_meter_faults(scansion, no_of_syllables, caesura_position, meter):
 ALTERNATE_FORMS = {
     # sandhi variants
     "aśnā": "āśnā",   #-a a- > -ā-
-    "śr̥ṇī": "cchr̥ṇī", #-n ś- > -ñch-
+    "śr̥ṇī": "cchr̥ṇī", #-n ś- > -ñcch-
+    # sandhi variants (fifth class)
+    "ūrṇu": "orṇu",   #-a ū- > -o-
+    "śr̥ṇu": "cchr̥ṇu", #-n ś- > -ñcch-
+    "śr̥ṇo": "cchr̥ṇo", #-n ś- > -ñcch-
+    #
     # stem variants (root vowel shortened)
     "prīṇā": "priṇā",
     "prīṇī": "priṇī",
     "śrīṇī": "śriṇī",
+    # stem variants (fifth class, n > ṇ)
+    "hinu": "hiṇu",
+    "hino": "hiṇo",
 }
 def get_alt_form(term):
     return ALTERNATE_FORMS.get(term, "")
+
+
+# TODO consoldiate this with the same logic while annotating rv lines
+def is_term_present(term, text):
+    is_present = term in text
+
+    # account for accent variation for fifth class strong and weak stems (-no-/-nu-)
+    # don't need to do similar for ninth because its strong stem (-nā́/-nī́-) is already
+    # composed of 2 chars
+    if not is_present:
+        if term[-1] == "o":
+            term_with_accent = term[:-1] + "ó"
+        elif term[-1] == "u":
+            term_with_accent = term[:-1] + "ú"
+        else:
+            term_with_accent = term
+        is_present = term_with_accent in text
+
+        # one more level
+        # TODO fix the redundancy here
+        if not is_present:
+            if term[0] == "o": # extra
+                term_with_accent = "ó" + term[1:]
+            else:
+                term_with_accent = term
+            is_present = term_with_accent in text
+
+    return is_present
 
 
 def find_syllable_positions(search_term, pada_text, pada_syllables):
@@ -1001,9 +1037,11 @@ def find_syllable_positions(search_term, pada_text, pada_syllables):
     found_terms = []
     for variant in search_term.strip().split(" "):
         variant_alt = get_alt_form(variant)
-        if variant in pada_text:
+        #if variant in pada_text:
+        if is_term_present(variant, pada_text):
             found_terms.append(variant)
-        if variant_alt and variant_alt in pada_text:
+        #if variant_alt and variant_alt in pada_text:
+        if variant_alt and is_term_present(variant_alt, pada_text):
             found_terms.append(variant_alt)
 
     if len(found_terms) == 0:
@@ -1027,14 +1065,16 @@ def find_syllable_positions(search_term, pada_text, pada_syllables):
         tracker = ""
         for i, syllable in enumerate(pada_syllables):
             tracker += syllable
-            if term_found in tracker:
+            #if term_found in tracker:
+            if is_term_present(term_found, tracker):
                 end_position = i + 1
                 break
         if end_position:
             tracker = ""
             for i, syllable in enumerate(reversed(pada_syllables[:end_position])):
                 tracker = syllable + tracker
-                if term_found in tracker:
+                #if term_found in tracker:
+                if is_term_present(term_found, tracker):
                     start_position = end_position - i
                     break
         if start_position and end_position:
