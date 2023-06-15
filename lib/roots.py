@@ -43,14 +43,20 @@ def adjust_root_guess_to_vedaweb(root, variant_no, present_class):
         # gR as gr̥̄ 1 "sing" attested
         # gR 2 "swallow" not (only in AVS)
         elif root == "gr̥" and variant_no == '1': # sing
-            root = "gr̥̄ 1" # other root is gr̥(2, swallow) which won't match
+            root = "gr̥̄ 1" # other root is gr̥ (2, swallow) which won't match
         #elif variant_no:
             # FIXME assign vedaweb equivalent variant numbers here?
         #    root += ' ' + variant_no
 
     elif present_class == FIFTH_CLASS:
-        pass
-
+        if root == "ci" and variant_no == '1': # gather
+            root = "ci 1" # other root is ci (2, observe) which won't match
+        elif root == "mi" and variant_no == '1': # fix
+            root = "mi 1" # other root is mi (2, damage) which won't match
+        elif root == "pr̥" and variant_no == '1': # fill (wont' match either)
+            root = "pr̥ 1" # other root is pr̥ (2, be busy) which won't match
+        elif root == "vr̥" and variant_no == '2': # choose, won't match
+            root = "vr̥ vr̥̄" # other root is vr̥ ūr (just vr̥ in vedaweb) (1, cover) which WILL match
     else:
         raise Exception(f"Unsupported present class: {present_class}")
 

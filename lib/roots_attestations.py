@@ -2,6 +2,9 @@ import json
 import requests
 import time
 
+# from ./roots.py
+from lib.roots import NINTH_CLASS, FIFTH_CLASS
+
 from bs4 import BeautifulSoup
 from pprint import pprint
 
@@ -26,7 +29,7 @@ def parse_vedaweb_search_highlight_text(text):
 
     return word_instances
 
-def search_verb_form_attestations_vedaweb_helper(root, stem=None, results_no=10, results_from=0):
+def search_verb_form_attestations_vedaweb_helper(stem, root=None, results_no=10, results_from=0):
     search_block = {
         "lemma type": "root",
         # make sure we get verbal forms only
@@ -36,26 +39,17 @@ def search_verb_form_attestations_vedaweb_helper(root, stem=None, results_no=10,
         "distance": 0
     }
 
-    # TODO make this compulsory
-    if stem:
-        # handle stems that have spaces to mark variants too!
-        # when multiple terms are present separated via space, vedaweb interprets it as an
-        # "or" search which is convenient for us
-        # TODO break down the search for each variant so that we can track results for each
-        # separately? not needed at this stage though
-        stem_variants = [ '*' + stem_variant + '*' for stem_variant in stem.split(" ")]
-        search_block["term"] = ' '.join(stem_variants)
-        #print(search_block["term"])
+    # handle stems that have spaces to mark variants too!
+    # when multiple terms are present separated via space, vedaweb interprets it as an
+    # "or" search which is convenient for us
+    # TODO break down the search for each variant so that we can track results for each
+    # separately? not needed at this stage though
+    stem_variants = [ '*' + stem_variant + '*' for stem_variant in stem.split(" ")]
+    search_block["term"] = ' '.join(stem_variants)
+    #print(search_block["term"])
 
-    # for these roots, actually pass in the roots to disambiguate its forms from
-    # *mi* and *muṣ*
-    # FIXME find a better place for these overrides
-    if root in [
-        # FIXME auto-figure out by subset (if the stem is a subset already pass root to disambiguate)
-        "i", "uṣ",
-        "vr̥ vr̥̄", "vr̥", "aśⁱ", "aś", "gr̥̄ 1", "gr̥",
-        "śrī", "śrī 2", # FIXME vedaweb does not actually have the second variant at all
-    ]:
+    # if root is specified, pass it in too (useful to disambiguate certain forms from others)
+    if root:
         search_block["lemma"] = root
         #print(search_block["lemma"])
 
@@ -142,8 +136,8 @@ ROOT_VARIANT_SUFFIXES = [
     "*"
 ]
 
-def search_verb_form_attestations_vedaweb(root, stem=None, results_no=10, results_from=0):
-    results = search_verb_form_attestations_vedaweb_helper(root, stem, results_no)
+def search_verb_form_attestations_vedaweb(stem, root=None, results_no=10, results_from=0):
+    results = search_verb_form_attestations_vedaweb_helper(stem, root, results_no)
 
 #     if results["count"] == 0:
 #         for root_variant_suffix in ROOT_VARIANT_SUFFIXES:
@@ -155,7 +149,7 @@ def search_verb_form_attestations_vedaweb(root, stem=None, results_no=10, result
 #             #    f"No results found for root:{root} stem:{stem}.",
 #             #    f"Retrying with root variant: {root_variant}"
 #             #)
-#             results = search_verb_form_attestations_vedaweb_helper(root_variant, stem, results_no)
+#             results = search_verb_form_attestations_vedaweb_helper(stem, root_variant, results_no)
 
 #             # we found a match for a working suffix so stop now
 #             if results["count"] > 0:
@@ -169,7 +163,7 @@ def search_verb_form_attestations_vedaweb(root, stem=None, results_no=10, result
 
     if len(results["lemmas"]) > 1:
         raise Exception(
-            f"Unexpected, multiple roots found while searching for {root}: {results['lemmas']}"
+            f"Unexpected, multiple roots found while searching for {stem}: {results['lemmas']}"
         )
 
     return {
@@ -179,21 +173,39 @@ def search_verb_form_attestations_vedaweb(root, stem=None, results_no=10, result
         "results": all_results
     }
 
+
+def check_for_dup_roots(roots, present_class):
+    temp = set()
+    dup_roots = [root["root"] for root in roots if (
+        root["present_class"] == present_class and
+        (root["root"] in temp or temp.add(root["root"]))
+    )]
+    if len(dup_roots) > 0:
+        # means some other roots also resolved to these during our search
+        # we need to ensure our code handles these too now
+        raise Exception(f"Final list of {present_class} class roots contain duplicates: {dup_roots}")
+
 ###############################################################################
 
 def get_attestations(whitney_roots):
     roots = []
 
-    roots_attested_words_by_stanza = {}
+    roots_attested_words_by_stanza = {
+        NINTH_CLASS: {},
+        FIFTH_CLASS: {},
+    }
 
     for root in whitney_roots:
-        #if root["present_class"] == "ninth":
-        if root["present_class"] == "fifth":
-            continue
+        #if root["present_class"] == NINTH_CLASS:
+        #if root["present_class"] == FIFTH_CLASS":
+        #    continue
 
         #if root["root_guess"] not in ["kr̥"]:
-        #if root["root_guess"] not in ["aś"]:
-        #    continue
+        #if root["root_guess"] not in ["ci", "ci 1"]:
+        #if root["root_guess"] not in ["mi", "mi 1"]:
+        #if root["root_guess"] not in ["pr̥", "pr̥ 1"]:
+        #if root["root_guess"] not in ["vr̥ ūr", "vr̥ vr̥̄", "vr̥"]:
+        #   continue
 
         # TODO remove this test filter
         #if root["root_guess"] not in ["iṣ 1", "pū", "vr̥~ vr̥̄"]:
@@ -211,14 +223,35 @@ def get_attestations(whitney_roots):
         #     continue
 
         # test cases
-        #results = search_verb_form_attestations_vedaweb("iṣ 1", "iṣṇā", 10)
-        #results = search_verb_form_attestations_vedaweb("pū", "pun", 10)
+        #results = search_verb_form_attestations_vedaweb("iṣṇā", "iṣ 1", 10)
+        #results = search_verb_form_attestations_vedaweb("pun", "pū", 10)
 
+        # for certain roots, actually pass in the root to disambiguate its forms from others
+        # FIXME find a better place for these overrides
+        root_for_disambiguating = None
+        if root["present_class"] == NINTH_CLASS and root["root_guess"] in [
+            # FIXME auto-figure out by subset (if the stem is a subset already pass root to disambiguate)
+            "i", "uṣ", # to dismabiguate from *mi* and *muṣ*
+            "vr̥ vr̥̄", "vr̥", "aśⁱ", "aś", "gr̥̄ 1", "gr̥",
+            "śrī", "śrī 2", # FIXME vedaweb does not actually have the second variant at all
+        ]:
+            root_for_disambiguating = root["root_guess"]
+        elif root["present_class"] == FIFTH_CLASS and root["root_guess"] in [
+            "ci 1", "ci", "mi 1", "mi",
+            "vr̥ vr̥̄", # for "vr̥ ūr" we don't pass the root_guess and based on the stem it resolves to vr̥
+            "pr̥ 1", "pr̥", # to dismabiguate from *spr̥* too
+            "i", "u", "r̥",
+        ]:
+            root_for_disambiguating = root["root_guess"]
+
+        # TODO add exception if the no of total matches is greater than 150
+        # for our data, no of attestations per stem does not exceed 150 so it's safe
+        # to not do it right now
         results_strong = search_verb_form_attestations_vedaweb(
-            root["root_guess"], root["strong_stem"], 100
+            root["strong_stem"], root_for_disambiguating, 150
         )
         results_weak = search_verb_form_attestations_vedaweb(
-            root["root_guess"], root["weak_stem"], 100
+            root["weak_stem"], root_for_disambiguating, 150
         )
 
         #pprint(results_strong["09.067.27"])
@@ -262,7 +295,7 @@ def get_attestations(whitney_roots):
         roots.append(root)
 
         # save full results data, for use later
-        roots_attested_words_by_stanza[root["root"]] = {
+        roots_attested_words_by_stanza[root["present_class"]][root["root"]] = {
             "strong": results_strong["results"],
             "weak": results_weak["results"]
         }
@@ -271,21 +304,14 @@ def get_attestations(whitney_roots):
         print(
             # print the variant root form found in vedaweb, if it's there
             #f"{' (' + root['root_variant_vedaweb'] + ')' if root['root_variant_vedaweb'] else ''}",
-            f"{root['root']}: {results_strong['total']} strong, {results_weak['total']} weak attestations"
+            f"[{root['present_class']}] {root['root']}: {results_strong['total']} strong, {results_weak['total']} weak attestations"
         )
 
         # so that we don't hammer the api
         #time.sleep(0.5)
 
+    check_for_dup_roots(roots, NINTH_CLASS)
+    check_for_dup_roots(roots, FIFTH_CLASS)
     #pprint(roots)
-
-    temp = set()
-    dup_roots = [root["root"] for root in roots if root["root"] in temp or temp.add(root["root"])]
-    if len(dup_roots) > 0:
-        # means some other roots also resolved to these during our search
-        # we need to ensure our code handles these too now
-        # FIXME enable
-        raise Exception(f"Final list of roots contain duplicates: {dup_roots}")
-        #pass
 
     return (roots, roots_attested_words_by_stanza)
