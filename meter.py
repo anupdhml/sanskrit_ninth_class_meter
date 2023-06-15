@@ -956,6 +956,7 @@ def check_meter_faults(scansion, no_of_syllables, caesura_position, meter):
             len(scansion_post_caesura) != meter_spec['short_after_caesura_relative_position']
             or scansion_post_caesura[-1] != MARKER_SYLLABLE_SHORT
         ):
+            # TODO just use name break here?
             faults['scansion_post_caesura'] = scansion_post_caesura
             # track the faulty position
             positions.append(
