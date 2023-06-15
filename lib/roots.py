@@ -153,7 +153,7 @@ def parse_whitney_roots(filepaths):
                 whitney_roots.append(
                     parse_whitney_rootline(line, present_class) | {
                         "language_period": language_period,
-                        #"present_class": present_class,
+                        "present_class": present_class,
                     }
                 )
 
