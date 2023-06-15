@@ -4610,17 +4610,278 @@
       "strong": {},
       "weak": {}
     },
-    "i": {
-      "strong": {},
+    "i 2": {
+      "strong": {
+        "01.066.10": [
+          {
+            "word": "ainot",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "3",
+              "tense": "IPRF"
+            }
+          }
+        ],
+        "04.010.07": [
+          {
+            "word": "inóṣi",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "2",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "04.016.07": [
+          {
+            "word": "ainoḥ",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "2",
+              "tense": "IPRF"
+            }
+          }
+        ],
+        "06.004.03": [
+          {
+            "word": "inóti",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "3",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "06.005.03": [
+          {
+            "word": "inoṣi",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "08.039.05": [
+          {
+            "word": "inóti",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "3",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "10.120.07": [
+          {
+            "word": "inoṣi",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ]
+      },
+      "weak": {
+        "06.010.07": [
+          {
+            "word": "inuhí",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IMP",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "09.029.04": [
+          {
+            "word": "inú",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IMP",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ]
+      }
+    },
+    "u 1": {
+      "strong": {
+        "05.031.01": [
+          {
+            "word": "unoti",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "3",
+              "position": "verse final",
+              "tense": "PRS"
+            }
+          }
+        ]
+      },
       "weak": {}
     },
-    "u": {
-      "strong": {},
-      "weak": {}
-    },
-    "r̥": {
-      "strong": {},
-      "weak": {}
+    "r̥ 1": {
+      "strong": {
+        "01.030.14": [
+          {
+            "word": "r̥ṇóḥ",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "INJ",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "01.030.15": [
+          {
+            "word": "r̥ṇóḥ",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "INJ",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "01.035.09": [
+          {
+            "word": "r̥ṇoti",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "3",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "01.174.02": [
+          {
+            "word": "r̥ṇóḥ",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "INJ",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "01.174.09": [
+          {
+            "word": "r̥ṇóḥ",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "INJ",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "06.018.05": [
+          {
+            "word": "r̥ṇóḥ",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "INJ",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "06.020.12": [
+          {
+            "word": "r̥ṇóḥ",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "INJ",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "08.024.06": [
+          {
+            "word": "r̥ṇomi",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "1",
+              "position": "verse final",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "09.102.08": [
+          {
+            "word": "r̥ṇóḥ",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "INJ",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ]
+      },
+      "weak": {
+        "05.045.06": [
+          {
+            "word": "r̥ṇutá",
+            "gloss": {
+              "voice": "MED",
+              "number": "SG",
+              "mood": "IND",
+              "person": "3",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ]
+      }
     },
     "kr̥": {
       "strong": {

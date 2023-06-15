@@ -57,6 +57,13 @@ def adjust_root_guess_to_vedaweb(root, variant_no, present_class):
             root = "pr̥ 1" # other root is pr̥ (2, be busy) which won't match
         elif root == "vr̥" and variant_no == '2': # choose, won't match
             root = "vr̥ vr̥̄" # other root is vr̥ ūr (just vr̥ in vedaweb) (1, cover) which WILL match
+        elif root == "i": # send
+            root = "i 2" # other root is i (1, go) which won't match
+        elif root == "u": # proclaim
+            root = "u 1" # there's no u 2 variant
+        elif root == "r̥": # go, send
+            root = "r̥ 1" # there's no r̥ 2 variant
+
     else:
         raise Exception(f"Unsupported present class: {present_class}")
 

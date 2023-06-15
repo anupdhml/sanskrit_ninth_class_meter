@@ -205,6 +205,7 @@ def get_attestations(whitney_roots):
         #if root["root_guess"] not in ["mi", "mi 1"]:
         #if root["root_guess"] not in ["pr̥", "pr̥ 1"]:
         #if root["root_guess"] not in ["vr̥ ūr", "vr̥ vr̥̄", "vr̥"]:
+        #if root["root_guess"] not in ["i 2", "u 1", "r̥ 1"]:
         #   continue
 
         # TODO remove this test filter
@@ -240,7 +241,7 @@ def get_attestations(whitney_roots):
             "ci 1", "ci", "mi 1", "mi",
             "vr̥ vr̥̄", # for "vr̥ ūr" we don't pass the root_guess and based on the stem it resolves to vr̥
             "pr̥ 1", "pr̥", # to dismabiguate from *spr̥* too
-            "i", "u", "r̥",
+            "i 2", "u 1", "r̥ 1",
         ]:
             root_for_disambiguating = root["root_guess"]
 
