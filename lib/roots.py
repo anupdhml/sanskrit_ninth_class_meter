@@ -22,13 +22,13 @@ def adjust_root_guess_to_vedaweb(root, variant_no, present_class):
             root = "jū"
         elif root == "ji":
             root = "jī"
-        elif root == "vr̥" and variant_no == '2':
+        elif root == "vr̥" and variant_no == '2': # choose, will match
             # variant_no 1 'cover' is attested only in AV. 2 is 'choose'
             # FIXME set stem as variant here too and ensure both are searched for
             # but long variant doesn't have any hits here so safe to ignore this here
             #root = "vr̥ ~ vr̥̄"
             # also if we pass it like this, we should also change the stems here
-            root = "vr̥ vr̥̄" # other root is vr̥(1, cover which won't match)
+            root = "vr̥ vr̥̄" # other root is vr̥ (1, cover which won't match in RV)
         # FIXME better way to pass these exceptions
         # modifying the root here ensures for now we only find matches for the variants
         # used in vedaweb
@@ -44,6 +44,8 @@ def adjust_root_guess_to_vedaweb(root, variant_no, present_class):
         # gR 2 "swallow" not (only in AVS)
         elif root == "gr̥" and variant_no == '1': # sing
             root = "gr̥̄ 1" # other root is gr̥ (2, swallow) which won't match
+        elif root == "i": # send (won't match in RV)
+            root = "i 2" # other root is i (1, go) which doesn't have ninth class
         #elif variant_no:
             # FIXME assign vedaweb equivalent variant numbers here?
         #    root += ' ' + variant_no
@@ -58,7 +60,7 @@ def adjust_root_guess_to_vedaweb(root, variant_no, present_class):
         elif root == "vr̥" and variant_no == '2': # choose, won't match
             root = "vr̥ vr̥̄" # other root is vr̥ ūr (just vr̥ in vedaweb) (1, cover) which WILL match
         elif root == "i": # send
-            root = "i 2" # other root is i (1, go) which won't match
+            root = "i 2" # other root is i (1, go) which doesn't have fifth class
         elif root == "u": # proclaim
             root = "u 1" # there's no u 2 variant
         elif root == "r̥": # go, send

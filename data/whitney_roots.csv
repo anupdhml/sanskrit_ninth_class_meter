@@ -1,5 +1,5 @@
 root_guess,variant_no,strong_stem,weak_stem,weak_only,attestation_texts,language_period,present_class
-i,,inā,inī,True,V.,Earlier,ninth
+i 2,,inā,inī,True,V.,Earlier,ninth
 iṣ,,iṣṇā,iṣṇī,False,,Earlier,ninth
 ubh,,ubhnā,ubhnī,False,V.,Earlier,ninth
 uṣ,,uṣṇā,uṣṇī,False,V.,Earlier,ninth
@@ -29,7 +29,7 @@ subh,,subhnā,subhnī,False,B.,Earlier,ninth
 skabh,,skabhnā,skabhnī,False,V.B.,Earlier,ninth
 spr̥,,spr̥ṇā,spr̥ṇī,False,B.,Earlier,ninth
 hr̥,,hr̥ṇā,hr̥ṇī,False,V.B.,Earlier,ninth
-hru,,hrunā,hrunī,False,V.,Earlier,ninth
+hru,,hruṇā,hruṇī,False,V.,Earlier,ninth
 aś,2,aśnā,aśnī,False,,Earlier & Later,ninth
 krī,,krīṇā,krīṇī,False,,Earlier & Later,ninth
 gr̥̄ 1,1,gr̥ṇā,gr̥ṇī,False,,Earlier & Later,ninth

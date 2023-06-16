@@ -1,6 +1,6 @@
 {
   "ninth": {
-    "i": {
+    "i 2": {
       "strong": {},
       "weak": {}
     },
@@ -1680,8 +1680,22 @@
         ]
       }
     },
-    "hru": {
-      "strong": {},
+    "hvr̥ hru": {
+      "strong": {
+        "01.166.12": [
+          {
+            "word": "hruṇāti",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "3",
+              "position": "verse final",
+              "tense": "PRS"
+            }
+          }
+        ]
+      },
       "weak": {}
     },
     "aś": {

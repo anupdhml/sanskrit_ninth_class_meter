@@ -197,7 +197,7 @@ def get_attestations(whitney_roots):
 
     for root in whitney_roots:
         #if root["present_class"] == NINTH_CLASS:
-        #if root["present_class"] == FIFTH_CLASS":
+        #if root["present_class"] == FIFTH_CLASS:
         #    continue
 
         #if root["root_guess"] not in ["kr̥"]:
@@ -207,6 +207,11 @@ def get_attestations(whitney_roots):
         #if root["root_guess"] not in ["vr̥ ūr", "vr̥ vr̥̄", "vr̥"]:
         #if root["root_guess"] not in ["i 2", "u 1", "r̥ 1"]:
         #   continue
+
+        #if root["root_guess"] not in ["i 2", "uṣ"]:
+        #if root["root_guess"] not in ["vr̥ vr̥̄", "vr̥", "aśⁱ", "aś", "gr̥̄ 1", "gr̥", "śrī", "śrī 2"]:
+        #if root["root_guess"] not in ["hru"]:
+        #    continue
 
         # TODO remove this test filter
         #if root["root_guess"] not in ["iṣ 1", "pū", "vr̥~ vr̥̄"]:
@@ -232,7 +237,7 @@ def get_attestations(whitney_roots):
         root_for_disambiguating = None
         if root["present_class"] == NINTH_CLASS and root["root_guess"] in [
             # FIXME auto-figure out by subset (if the stem is a subset already pass root to disambiguate)
-            "i", "uṣ", # to dismabiguate from *mi* and *muṣ*
+            "i 2", "uṣ", # to dismabiguate from *mi* and *muṣ*
             "vr̥ vr̥̄", "vr̥", "aśⁱ", "aś", "gr̥̄ 1", "gr̥",
             "śrī", "śrī 2", # FIXME vedaweb does not actually have the second variant at all
         ]:
