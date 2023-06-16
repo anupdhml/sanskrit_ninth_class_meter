@@ -2,8 +2,8 @@ import json
 import requests
 import time
 
-# from ./roots.py
-from lib.roots import NINTH_CLASS, FIFTH_CLASS
+# from src/lib/roots.py
+from src.lib.roots import NINTH_CLASS, FIFTH_CLASS
 
 from bs4 import BeautifulSoup
 from pprint import pprint

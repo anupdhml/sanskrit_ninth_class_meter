@@ -1,8 +1,7 @@
 import json
 import sys
 
-# from ./meter.py
-import meter
+import lib.meter as meter
 
 from pathlib import Path
 
