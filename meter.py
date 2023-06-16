@@ -115,7 +115,7 @@ TEST_PADAS = [
         }
     },
     # 5.41.10d
-    # metrical pauses
+    # metrical pauses (after vowel)
     {
         "pada_text": "śocíṣkeśo ̀ ní riṇāti vánā",
         "stanza_meter": "Triṣṭubh",
@@ -127,6 +127,18 @@ TEST_PADAS = [
             "caesura_position": 5,
             "search_term_positions": [7, 8],
             "search_term_found": "riṇā",
+        }
+    },
+    # 1.174.9.b
+    # metrical pauses (after consonant)
+    {
+        "pada_text": "r̥ṇór apáḥ ̀ sīrā́ ná srávantīḥ",
+        "stanza_meter": "Triṣṭubh",
+        "analysis": {
+            "parts": ["r̥", "ṇó", "r a", "páḥ", " \u0300", " ", "sī", "rā́", " ", "ná s", "rá", "van", "tīḥ"],
+            # SL SL · LL L SLL
+            "scansion": "SL_SL · ,LL |_LSLL",
+            "caesura_position": 5,
         }
     },
     # 1.51.8a
@@ -418,7 +430,7 @@ TEST_PADAS = [
     },
 ]
 
-#TEST_PADAS = [ TEST_PADAS[2] ]
+#TEST_PADAS = [ TEST_PADAS[-1] ]
 
 ###############################################################################
 
@@ -742,6 +754,15 @@ def get_pada_parts(text):
         if c_next == PAUSE and is_word_boundary(c_next_next_peeked):
             parts.append(current_part)
             parts.append(PAUSE)
+            parts.append(next(chars_iterator, '')) # adds the word boundary
+            current_part = '' # reset
+            continue
+        if c_next_next_peeked == PAUSE:
+            current_part += c_next
+            parts.append(current_part)
+            #parts.append(PAUSE)
+            parts.append(next(chars_iterator, '')) # adds the pause
+            # FIXME handle this better
             parts.append(next(chars_iterator, '')) # adds the word boundary
             current_part = '' # reset
             continue
