@@ -187,15 +187,16 @@ def check_for_dup_roots(roots, present_class):
 
 ###############################################################################
 
-def get_attestations(whitney_roots):
-    roots = []
+def get_attestations(roots):
+    roots_with_attestations = []
 
-    roots_attested_words_by_stanza = {
+    # word list is much bigger so keep it separate
+    roots_with_attested_words = {
         NINTH_CLASS: {},
         FIFTH_CLASS: {},
     }
 
-    for root in whitney_roots:
+    for root in roots:
         #if root["present_class"] == NINTH_CLASS:
         #if root["present_class"] == FIFTH_CLASS:
         #    continue
@@ -225,7 +226,7 @@ def get_attestations(whitney_roots):
         #     root["root"] = root["root_guess"]
         #     root["strong_attestations"] = ''
         #     root["weak_attestations"] = ''
-        #     roots.append(root)
+        #     roots_with_attestations.append(root)
         #     continue
 
         # test cases
@@ -298,10 +299,10 @@ def get_attestations(whitney_roots):
         #root["strong_attestations_data"] = results_strong
         #root["weak_attestations_data"] = results_weak
 
-        roots.append(root)
+        roots_with_attestations.append(root)
 
         # save full results data, for use later
-        roots_attested_words_by_stanza[root["present_class"]][root["root"]] = {
+        roots_with_attested_words[root["present_class"]][root["root"]] = {
             "strong": results_strong["results"],
             "weak": results_weak["results"]
         }
@@ -316,8 +317,8 @@ def get_attestations(whitney_roots):
         # so that we don't hammer the api
         #time.sleep(0.5)
 
-    check_for_dup_roots(roots, NINTH_CLASS)
-    check_for_dup_roots(roots, FIFTH_CLASS)
-    #pprint(roots)
+    check_for_dup_roots(roots_with_attestations, NINTH_CLASS)
+    check_for_dup_roots(roots_with_attestations, FIFTH_CLASS)
+    #pprint(roots_with_attestations)
 
-    return (roots, roots_attested_words_by_stanza)
+    return (roots_with_attestations, roots_with_attested_words)
