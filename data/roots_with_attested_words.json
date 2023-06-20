@@ -1698,9 +1698,62 @@
       },
       "weak": {}
     },
-    "aś": {
-      "strong": {},
-      "weak": {}
+    "aśⁱ": {
+      "strong": {
+        "09.067.31": [
+          {
+            "word": "aśnāti",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "3",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "10.085.03": [
+          {
+            "word": "aśnāti",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "3",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ],
+        "10.085.04": [
+          {
+            "word": "aśnāti",
+            "gloss": {
+              "voice": "ACT",
+              "number": "SG",
+              "mood": "IND",
+              "person": "3",
+              "position": "verse final",
+              "tense": "PRS"
+            }
+          }
+        ]
+      },
+      "weak": {
+        "07.073.02": [
+          {
+            "word": "aśnītám",
+            "gloss": {
+              "voice": "ACT",
+              "number": "DU",
+              "mood": "OPT",
+              "person": "2",
+              "position": "intermediate",
+              "tense": "PRS"
+            }
+          }
+        ]
+      }
     },
     "krī": {
       "strong": {
@@ -4545,62 +4598,9 @@
         ]
       }
     },
-    "aśⁱ": {
-      "strong": {
-        "09.067.31": [
-          {
-            "word": "aśnāti",
-            "gloss": {
-              "voice": "ACT",
-              "number": "SG",
-              "mood": "IND",
-              "person": "3",
-              "tense": "PRS"
-            }
-          }
-        ],
-        "10.085.03": [
-          {
-            "word": "aśnāti",
-            "gloss": {
-              "voice": "ACT",
-              "number": "SG",
-              "mood": "IND",
-              "person": "3",
-              "position": "intermediate",
-              "tense": "PRS"
-            }
-          }
-        ],
-        "10.085.04": [
-          {
-            "word": "aśnāti",
-            "gloss": {
-              "voice": "ACT",
-              "number": "SG",
-              "mood": "IND",
-              "person": "3",
-              "position": "verse final",
-              "tense": "PRS"
-            }
-          }
-        ]
-      },
-      "weak": {
-        "07.073.02": [
-          {
-            "word": "aśnītám",
-            "gloss": {
-              "voice": "ACT",
-              "number": "DU",
-              "mood": "OPT",
-              "person": "2",
-              "position": "intermediate",
-              "tense": "PRS"
-            }
-          }
-        ]
-      }
+    "aś": {
+      "strong": {},
+      "weak": {}
     },
     "kuṣ": {
       "strong": {},

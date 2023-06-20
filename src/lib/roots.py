@@ -38,8 +38,8 @@ def adjust_root_guess_to_vedaweb(root, variant_no, present_class):
             root = "śrī 2" # other root is śrī (1, mix) which WILL match
         # aS 1 attain: not (only in mahabhharata 'aSnIs')
         # aS 2 eat yes
-        elif root == "aś" and variant_no == '1': # eat
-            root = "aśⁱ" # other root is aś (2, attain) which won't match
+        elif root == "aś" and variant_no == '2': # eat
+            root = "aśⁱ" # other root is aś (1, attain) which won't match
         # gR as gr̥̄ 1 "sing" attested
         # gR 2 "swallow" not (only in AVS)
         elif root == "gr̥" and variant_no == '1': # sing
