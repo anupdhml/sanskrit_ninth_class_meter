@@ -88,6 +88,7 @@ MARKER_CAESURA = ','
 MARKER_WORD_BOUNDARY_IN_SYLLABLE = '_'
 
 METER_GAYATRI = "Gāyatrī"
+METER_GAYATRI_TROCHAIC = "Gāyatrī (Trochaic)"
 METER_ANUSTUBH = "Aṇuṣṭubh"
 METER_TRISTUBH = "Triṣṭubh"
 METER_JAGATI = "Jagatī"
@@ -104,6 +105,13 @@ METER_SPECS = {
         "cadence_short_positions": [5, 7],
         "cadence_long_positions": [6],
         "scansion_cadence_main": PATTERN_IAMBIC, # positions 5,6,7
+    },
+    METER_GAYATRI_TROCHAIC: {
+        "no_of_syllables": 8,
+        "cadence_position": 4,
+        "cadence_short_positions": [6],
+        "cadence_long_positions": [5, 7],
+        "scansion_cadence_main": PATTERN_TROCHAIC, # positions 5,6,7
     },
     METER_ANUSTUBH: {
         "no_of_syllables": 8,

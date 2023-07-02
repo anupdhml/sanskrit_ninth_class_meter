@@ -420,9 +420,24 @@ TEST_PADAS = [
             "parts": ["ín", "dre", "máṁ", " ", "só", "maṁ", " ", "śrī", "ṇī", "hi"],
             "scansion": "LLL L|L LLS",
             "caesura_position": -1,
-            "fault_positions": [5, 7],
+            "fault_positions": [5, 7], # with iambic cadence
             "search_term_positions": [6, 7],
-            "search_term_fault_positions": [7],
+            "search_term_fault_positions": [7], # stem vowel
+        }
+    },
+    # 8.2.11
+    # potential trochaic gayatri pada
+    {
+        "pada_text": "índremáṁ sómaṁ śrīṇīhi",
+        "stanza_meter": "Gāyatrī (Trochaic)",
+        "search_term": "śrīṇī",
+        "analysis": {
+            "parts": ["ín", "dre", "máṁ", " ", "só", "maṁ", " ", "śrī", "ṇī", "hi"],
+            "scansion": "LLL L|L LLS",
+            "caesura_position": -1,
+            "fault_positions": [6], # with trochaic cadence
+            "search_term_positions": [6, 7],
+            "search_term_fault_positions": [6], # root vowel
         }
     },
 ]
