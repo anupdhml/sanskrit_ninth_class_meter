@@ -1,7 +1,6 @@
 ### Old Patterns in the Meter: The Curious Case of Sanskrit Ninth Class Vowels
 
-
-For details on the study, please see [README.pdf](README.pdf).
+WIP. For details on the study, please see [README.pdf](README.pdf).
 
 ---
 
