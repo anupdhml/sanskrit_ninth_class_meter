@@ -209,9 +209,12 @@ def annotate_line(line, roots_with_attested_words):
 
             pada["stanza_meter"] = stanza["stanzaType"] or ''
 
-            # TODO get these info from hellewig too?
             # historical info
-            pada["stanza_strata"] = stanza["strata"]
+            # TODO get these info from hellewig too?
+            # normalize smallcase strata values
+            pada["stanza_strata"] = stanza["strata"].upper()
+            # if false, based on both meter and linguistic evidence
+            pada["stanza_strata_based_on_meter_only"] = stanza["strata"].islower()
             pada["stanza_late_addition"] = stanza["lateAdditions"] or ''
 
             # hymn extra metadata (maybe handy)
